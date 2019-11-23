@@ -1,0 +1,122 @@
+{
+  "basics": {
+    "name": "Pulkit Agrawal",
+    "label": "Software Engineer",
+    "picture": "",
+    "email": "agrawal.pulkit1994@gmail.com",
+    "phone": "+91-9206255513",
+    "website": "https://hackersoon.com",
+    "summary": "3 years of experience in Full Stack Software Development.",
+    "location": {
+      "city": "Bangalore",
+      "countryCode": "India",
+      "region": "Karnataka"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "pulkit-agrawal-1a3315a0",
+        "url": "linkedin.com/in/pulkit-agrawal-1a3315a0"
+      },
+      {
+        "network": "GitHub",
+        "username": "pulkit69",
+        "url": "github.com/pulkit69"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Rapido - India's Largest Bike App",
+      "position": "Software Engineer",
+      "website": "https://rapido.bike",
+      "startDate": "2019-01-04",
+      "summary": "Working as a Devops engingeer to scale the application for high load.",
+      "highlights": [
+        "Setup Kubernetes Environment in GCP.",
+        "Tuning of kafka and mongo production servers.",
+        "Setup Jenkins and SonarQube pipelines with Spinnaker.",
+        "Developed Rest API's using Python flask-Restful."
+      ]
+    },
+    {
+      "company": "Tricon Infotech Private Limited",
+      "position": "Software Engineer",
+      "website": "https://triconinfotech.com",
+      "startDate": "2016-04-07",
+      "endDate": "2019-01-04",
+      "summary": "Working as a Software engingeer to develop microservice based Project.",
+      "highlights": [
+        "Sentimental analysis of Twitter Tweets and news articles using GCP NLP API's and Neo4j.",
+        "Created many workflows and Data pipelines Using Apache Airflow.",
+        "Developed a Matching-Engine pipeline which try to find Best Match of Ringgold ID from bulk data using Fuzzy Logic.",
+        "Developed a Counter Report Analytics Pipeline Which generates Most Popular/Most Denial Books Based on live events Streaming and shows the recommendation of books for Institutes.",
+        "Basic Machine Learning libraries for recommendation system & most popular products.",
+        "AWS Infrastructure provisioning using terraform and serverless.",
+        "Rest API development With TDD Using NodeJs/Flask.",
+        "Developed a end-to-end web application(Micro services Based Architecture) by using mean stack technologies.",
+        "Developed a common Authorisation API Module Which enable authentication, login/registration using OAuth2, verification of all API's using JWT."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Primary Skills",
+      "level": "Master",
+      "keywords": [
+        "Python",
+        "Kubernetes",
+        "MicroServices",
+        "NodeJs",
+        "Docker",
+        "GCP"
+      ]
+    },
+    {
+      "name": "Secondary Skills",
+      "level": "Master",
+      "keywords": [
+        "AWS",
+        "AngularJs",
+        "Golang",
+        "Apache Spark",
+        "Apache Airflow",
+        "Kafka",
+        "MongoDB"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": " Employee of the Quarter Award for the ",
+      "date": "2019-01-01",
+      "awarder": "Tricon Infotech",
+      "summary": "3rd Quarter of 2018."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Dr. A.P.J. Abdul Kalam Technical University Uttar Pradesh, Lucknow",
+      "area": "Information Technology",
+      "studyType": "Bachelor",
+      "startDate": "2012-01-06",
+      "endDate": "2016-01-06",
+      "percentage": "83%",
+      "courses": [
+        "DB1101 - Basic SQL",
+        "CS2011 - Java Introduction"
+      ]
+    }
+  ],
+  "interests": [
+    {
+      "name": "Diary Writing"
+    }
+  ],
+  "references": [
+    {
+      "name": "Sumit Mittal",
+      "reference": "It is my pleasure to recommend Pulkit, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company."
+    }
+  ]
+}
