@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm install"
+    "start": "npm install && node server.js"
   },
   "author": "Pulkit Agrawal",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "resume-cli": "^1.2.7"
   }
 }
