@@ -5,8 +5,8 @@
     "picture": "self.jpg",
     "email": "agrawal.pulkit1994@gmail.com",
     "phone": "+91-9206255513",
-    "website": "https://hackersoon.com",
-    "summary": "3 years of experience in Full Stack Software Development.",
+    "website": "https://profiles.hackersoon.com/pulkit",
+    "summary": "3.5 years of experience in Software Development.",
     "location": {
       "city": "Bangalore",
       "countryCode": "India",
@@ -19,9 +19,9 @@
         "url": "https://www.linkedin.com/in/agrawal-pulkit/"
       },
       {
-        "network": "GitHub",
-        "username": "pulkit69",
-        "url": "https://github.com/pulkit69"
+        "network": "Medium",
+        "username": "@agrawal.pulkit1994",
+        "url": "https://medium.com/@agrawal.pulkit1994"
       }
     ]
   },
@@ -33,10 +33,15 @@
       "startDate": "2019-01-04",
       "summary": "Working as a Devops engingeer to scale the application for high load.",
       "highlights": [
-        "Setup Kubernetes Environment in GCP.",
-        "Tuning of kafka and mongo production servers.",
-        "Setup Jenkins and SonarQube pipelines with Spinnaker.",
-        "Developed Rest API's using Python flask-Restful."
+        "Migration of whole Infrastructure from traditonal virtual machines to Kubernetes.",
+        "Automation with Ansible and Terraform.",
+        "Successful integration of Logging and Monitoring Stack.",
+        "CI/CD with Jenkins and gocd.",
+        "Config Management with consul and vault.",
+        "Dockerization of services and web-apps.",
+        "Developed Rest APIs using Python, Nodejs based on Microservice Architecture.",
+        "Worked in multiple internal tools and scipts using Golang.",
+        "Setup common utils and helpers libraries for reusabe of code in multiple microservices."
       ]
     },
     {
@@ -74,15 +79,20 @@
     },
     {
       "name": "Secondary Skills",
-      "level": "Master",
+      "level": "Intermediate",
       "keywords": [
         "AWS",
         "AngularJs",
         "Golang",
         "Apache Spark",
         "Apache Airflow",
-        "Kafka",
-        "MongoDB"
+        "Apache Kafka",
+        "MongoDB",
+        "Ansible",
+        "Consul & Vault",
+        "Monitoring & Logging",
+        "Load Balancing & Autoscaling",
+        "Terraform"
       ]
     }
   ],
@@ -96,27 +106,17 @@
   ],
   "education": [
     {
-      "institution": "Dr. A.P.J. Abdul Kalam Technical University Uttar Pradesh, Lucknow",
+      "institution": "Krishna Institute of Engg. and Technology, India",
       "area": "Information Technology",
       "studyType": "Bachelor",
       "startDate": "2012-01-06",
       "endDate": "2016-01-06",
-      "percentage": "83%",
-      "courses": [
-        "DB1101 - Basic SQL",
-        "CS2011 - Java Introduction"
-      ]
+      "percentage": "83%"
     }
   ],
   "interests": [
     {
       "name": "Diary Writing"
-    }
-  ],
-  "references": [
-    {
-      "name": "Sumit Mittal",
-      "reference": "It is my pleasure to recommend Pulkit, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company."
     }
   ]
 }
