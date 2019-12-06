@@ -33,7 +33,7 @@
             if (typeof window.onload != 'function') {
                 window.onload = func;
             } else {
-                window.onload = function () {
+                window.onload = function() {
                     if (oldonload) {
                         oldonload();
                     }
@@ -126,12 +126,12 @@
         function processButtonBackground() {
 
             if (invite_styletype == 1) {
-                $("h3:visible>.button").each(function (index) {
+                $("h3:visible>.button").each(function(index) {
                     //$('#detail' + $(this).attr('id').split('button')[1]).attr('id', 'detail' + (index + 1) );			
                     $(this).attr('id', 'button' + (index + 1));
                 });
 
-                $("h3:visible+div>.detail").each(function (index) {
+                $("h3:visible+div>.detail").each(function(index) {
                     $(this).attr('id', 'detail' + (index + 1))
                 });
 
@@ -141,17 +141,17 @@
         function initProcessButtonBackground() {
 
             if (invite_styletype == 1) {
-                $("h3:visible>.button").each(function (index) {
+                $("h3:visible>.button").each(function(index) {
                     $(this).attr('id', 'button' + (index + 1))
                 });
-                $("h3:visible+div>.detail").each(function (index) {
+                $("h3:visible+div>.detail").each(function(index) {
                     $(this).attr('id', 'detail' + (index + 1))
                 });
             } else {
-                $("h3>.button").each(function (index) {
+                $("h3>.button").each(function(index) {
                     $(this).attr('id', $(this).attr('name'))
                 });
-                $("h3+div>.detail").each(function (index) {
+                $("h3+div>.detail").each(function(index) {
                     $(this).attr('id', $(this).attr('name'))
                 });
             }
@@ -161,7 +161,7 @@
 
 
         var oldFunc;
-        var mapCallBackFunc = function () { };
+        var mapCallBackFunc = function() {};
 
 
 
@@ -204,7 +204,7 @@
 
 
 
-        $(document).ready(function () {
+        $(document).ready(function() {
 
 
             $("#accordion").accordion({
@@ -218,7 +218,7 @@
             //$("#accordion").accordion("activate",0);
             //$("#accordion").accordion("activate","#accordion10");
 
-            $("#accordion").bind('accordionchange', function (event, ui) {
+            $("#accordion").bind('accordionchange', function(event, ui) {
                 //   ui.newHeader // jQuery object, activated header
                 //   ui.oldHeader // jQuery object, previous header
                 //   ui.newContent // jQuery object, activated content
@@ -297,12 +297,12 @@
 
 
     <script language="javascript">
-        < !--
+        <!--
 
-            function init() {
+        function init() {
 
 
-            }
+        }
 
 
         function replaceAll(oldStr, findStr, repStr) {
@@ -399,56 +399,56 @@
 
 
     <script language="javascript">
-        < !--
+        <!--
 
 
-            function addRow(invite_detail_id, parent_node, maxid) {
-
-
-
-                //取得屬於要應用新增列的區塊
-                var obj = document.getElementById(parent_node);
-                //取得目前有多少欄位
-                //var sIndex=obj.getElementsByTagName('div').length+1;
-                var sIndex = maxid;
-
-                //依照原表單格式,先建一個div
-                var div = document.createElement('div');
-                div.id = 's' + sIndex;
-
-                //再建立文字欄位,並指定相關屬性
-                var input = document.createElement('input');
-                input.type = 'radio';
-                input.name = 't' + parent_node.replace('q', '');
-
-
-                var txt = document.createElement('span');
-                txt.id = 'o' + maxid;
-                txt.innerHTML = ' new option';
+        function addRow(invite_detail_id, parent_node, maxid) {
 
 
 
-                div.appendChild(input);
-                div.appendChild(txt);
+            //取得屬於要應用新增列的區塊
+            var obj = document.getElementById(parent_node);
+            //取得目前有多少欄位
+            //var sIndex=obj.getElementsByTagName('div').length+1;
+            var sIndex = maxid;
 
-                obj.appendChild(div);
+            //依照原表單格式,先建一個div
+            var div = document.createElement('div');
+            div.id = 's' + sIndex;
+
+            //再建立文字欄位,並指定相關屬性
+            var input = document.createElement('input');
+            input.type = 'radio';
+            input.name = 't' + parent_node.replace('q', '');
+
+
+            var txt = document.createElement('span');
+            txt.id = 'o' + maxid;
+            txt.innerHTML = ' new option';
 
 
 
-                var obj2 = eval('document.iform' + invite_detail_id + '.t' + parent_node.replace('q', ''));
-                if (typeof (obj2.length) == 'undefined') {
+            div.appendChild(input);
+            div.appendChild(txt);
 
-                    obj2.style.display = 'none';
+            obj.appendChild(div);
 
-                } else {
 
-                    for (var i = 0; i < obj2.length; i++) {
 
-                        obj2[i].style.display = '';
-                    }
+            var obj2 = eval('document.iform' + invite_detail_id + '.t' + parent_node.replace('q', ''));
+            if (typeof(obj2.length) == 'undefined') {
+
+                obj2.style.display = 'none';
+
+            } else {
+
+                for (var i = 0; i < obj2.length; i++) {
+
+                    obj2[i].style.display = '';
                 }
-
             }
+
+        }
 
         function delRow(invite_detail_id, q, t) {
 
@@ -459,7 +459,7 @@
 
 
             var obj2 = eval('document.iform' + invite_detail_id + '.t' + q.replace('q', ''));
-            if (typeof (obj2.length) == 'undefined') {
+            if (typeof(obj2.length) == 'undefined') {
 
                 obj2.style.display = 'none';
 
@@ -685,7 +685,7 @@
 
 
 
-            $("#rsvptable" + invite_detail_id + " tr[style*='block']").each(function (n) {
+            $("#rsvptable" + invite_detail_id + " tr[style*='block']").each(function(n) {
                 n++;
 
                 $(this).find("span:eq(0)").html(n);
@@ -728,7 +728,7 @@
 
             obj2 = eval('document.iform' + invite_detail_id + '.t' + id);
 
-            if (typeof (obj2.length) == 'undefined') {
+            if (typeof(obj2.length) == 'undefined') {
 
                 obj2.checked = true;
 
@@ -786,7 +786,7 @@
 
             obj2 = eval('document.iform' + invite_detail_id + '.t' + id);
 
-            if (typeof (obj2.length) == 'undefined') {
+            if (typeof(obj2.length) == 'undefined') {
 
                 obj2.checked = true;
 
@@ -803,7 +803,7 @@
         }
 
 
-        String.prototype.Trim = function () {
+        String.prototype.Trim = function() {
 
             return this.replace(/(^\s*)|(\s*$)/g, "");
 
@@ -849,14 +849,13 @@
     </script>
 
     <style type="text/css">
-        body {
+            body {
             font-family: 'Merienda One', cursive;
             margin-left: 4px;
             margin-top: 4px;
             margin-right: 4px;
             font-size: 90%;
         }
-
         /*
 html,body {
 	font-family:'Merienda One', cursive;
@@ -868,24 +867,24 @@ html,body {
     overflow-x: hidden;
 }
 */
-
+        
         body {
             background-color: #00877b;
         }
-
+        
         .fontcolor-button-title {
             color: inherit;
         }
-
+        
         .fontcolor-detail-mm {
             color: inherit;
         }
-
+        
         .ui-widget {
             /*font-family:Georgia, "Times New Roman", Times, serif;*/
             font-family: 'Merienda One', cursive;
         }
-
+        
         .play_video_button {
             border: solid 1px #CCC;
             /* 邊框樣式 */
@@ -896,7 +895,6 @@ html,body {
             box-shadow: 1px 1px 5px #999;
             /* Opera 10.5 + */
         }
-
         /*
 .header_style {
 	-webkit-box-shadow: rgba(0,0,0,.3) 1px 1px 2px;
@@ -904,7 +902,7 @@ html,body {
 }
 */
         /*no use now */
-
+        
         .title {
             -webkit-border-radius: 6px;
             -moz-border-radius: 6px;
@@ -931,16 +929,14 @@ html,body {
             /* IE10+ */
             background: linear-gradient(top, #fcecfc 0%, #fba6e1 50%, #fd89d7 51%, #ff87c3 100%);
             /* W3C */
-            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#fcecfc', endColorstr='#ff87c3', GradientType=0);
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fcecfc', endColorstr='#ff87c3', GradientType=0);
             /*IE6-9 */
         }
-
         /*jquery UI css overwrite*/
-
+        
         .ui-accordion-content,
         .detail,
         .pswp__caption {
-
             /*
 	filter: alpha(opacity=10);
 	opacity:0.4;
@@ -953,7 +949,6 @@ html,body {
                 height: 20px;
                 font-size: 14px;
             }
-
             textarea {
                 font-size: 14px;
             }
@@ -961,8 +956,7 @@ html,body {
 
 
 
-    <link class="customcss" href="https://cdn.youvivid.com/css/cynthia_leaf/custom.css" rel="stylesheet"
-        type="text/css">
+    <link class="customcss" href="https://cdn.youvivid.com/css/cynthia_leaf/custom.css" rel="stylesheet" type="text/css">
     <link class="themecss" href="https://cdn.youvivid.com/css/common_invite.css" rel="stylesheet" type="text/css">
 
     <link class="fontcss" href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet" type="text/css">
@@ -990,58 +984,58 @@ html,body {
     <script src="https://cdn.youvivid.com/js/alertify_2/alertify.min.js"></script>
 
     <script type="text/javascript">
-            // custom OK and Cancel label
-            // default: OK, Cancel
+        // custom OK and Cancel label
+        // default: OK, Cancel
 
-            alertify.defaults = {
+        alertify.defaults = {
             // dialogs defaults
             autoReset: true,
-                basic: false,
-                    closable: false,
-                        closableByDimmer: true,
-                            frameless: false,
-                                maintainFocus: false, // <== global default not per instance, applies to all dialogs
-                                    maximizable: true,
-                                        modal: true,
-                                            movable: true,
-                                                moveBounded: false,
-                                                    overflow: true,
-                                                        padding: true,
-                                                            pinnable: true,
-                                                                pinned: true,
-                                                                    preventBodyShift: false, // <== global default not per instance, applies to all dialogs
-                                                                        resizable: true,
-                                                                            startMaximized: false,
-                                                                                transition: 'slide',
+            basic: false,
+            closable: false,
+            closableByDimmer: true,
+            frameless: false,
+            maintainFocus: false, // <== global default not per instance, applies to all dialogs
+            maximizable: true,
+            modal: true,
+            movable: true,
+            moveBounded: false,
+            overflow: true,
+            padding: true,
+            pinnable: true,
+            pinned: true,
+            preventBodyShift: false, // <== global default not per instance, applies to all dialogs
+            resizable: true,
+            startMaximized: false,
+            transition: 'slide',
 
-                                                                                    // notifier defaults
-                                                                                    notifier: {
+            // notifier defaults
+            notifier: {
                 // auto-dismiss wait time (in seconds)  
                 delay: 5,
-                    // default position
-                    position: 'bottom-right',
-                        // adds a close button to notifier messages
-                        closeButton: false
+                // default position
+                position: 'bottom-right',
+                // adds a close button to notifier messages
+                closeButton: false
             },
 
             // language resources 
             glossary: {
                 // dialogs default title
                 title: '',
-                    // ok button text
-                    ok: 'OK',
-                        // cancel button text
-                        cancel: 'Cancel'
+                // ok button text
+                ok: 'OK',
+                // cancel button text
+                cancel: 'Cancel'
             },
 
             // theme settings
             theme: {
                 // class name attached to prompt dialog input textbox.
                 input: 'form-control',
-                    // class name attached to ok button
-                    ok: 'btn btn-primary',
-                        // class name attached to cancel button 
-                        cancel: 'btn btn-danger'
+                // class name attached to ok button
+                ok: 'btn btn-primary',
+                // class name attached to cancel button 
+                cancel: 'btn btn-danger'
             }
         };
 
@@ -1104,18 +1098,15 @@ html,body {
     <link class="fontcss_detail48175808" id="Alex Brush" rel="stylesheet" type="text/css" href="">
     <link class="fontcss_detail48175808" id="Arizonia" rel="stylesheet" type="text/css" href="">
     <link class="fontcss_detail48175808" id="Handlee" rel="stylesheet" type="text/css" href="">
-    <link class="fontcss_detail48175808" id="Dancing Script" rel="stylesheet" type="text/css"
-        href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700">
+    <link class="fontcss_detail48175808" id="Dancing Script" rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700">
     <link class="fontcss_detail48175808" id="Merienda One" rel="stylesheet" type="text/css" href="">
     <link class="fontcss_detail48175808" id="Inconsolata" rel="stylesheet" type="text/css" href="">
     <link class="fontcss_detail48175808" id="Cousine" rel="stylesheet" type="text/css" href="">
     <link class="fontcss_detail48175808" id="PT Mono" rel="stylesheet" type="text/css" href="">
     <link class="fontcss_detail48175808" id="Nova Mono" rel="stylesheet" type="text/css" href="">
 
-    <script type="text/javascript" charset="UTF-8"
-        src="https://maps.googleapis.com/maps-api-v3/api/js/39/1/common.js"></script>
-    <script type="text/javascript" charset="UTF-8"
-        src="https://maps.googleapis.com/maps-api-v3/api/js/39/1/util.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/39/1/common.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/39/1/util.js"></script>
 </head>
 
 <body marginwidth="0">
@@ -1138,7 +1129,7 @@ html,body {
             -ms-animation-duration: 2s;
             animation-duration: 2s;
         }
-
+        
         #loading_bg {
             width: 337px;
             height: 495px;
@@ -1152,7 +1143,7 @@ html,body {
             -ms-animation-duration: 1.6s;
             animation-duration: 1.6s;
         }
-
+        
         #loading_bg2 {
             width: 100%;
             height: 100%;
@@ -1164,7 +1155,7 @@ html,body {
             animation-duration: 1.6s;
             z-index: 300;
         }
-
+        
         #loading_circle_outer {
             position: absolute;
             width: 100%;
@@ -1178,12 +1169,12 @@ html,body {
             height: 100%;
             z-index: 300;
         }
-
+        
         #loading_circle {
             display: table-cell;
             vertical-align: middle;
         }
-
+        
         #loading_circle_1 {
             background: center top url(//cdn.youvivid.com/css/cover/p1.png) no-repeat;
             background-size: 180px 42px;
@@ -1194,7 +1185,7 @@ html,body {
             -ms-animation-duration: 1.6s;
             animation-duration: 1.6s;
         }
-
+        
         #loading_circle_2 {
             background: center bottom url(//cdn.youvivid.com/css/cover/p2.png) no-repeat;
             background-size: 255px 15px;
@@ -1205,7 +1196,7 @@ html,body {
             -ms-animation-duration: 0.5s;
             animation-duration: 0.5s;
         }
-
+        
         #loading_circle_3 {
             text-align: center;
             color: #FFF;
@@ -1218,7 +1209,7 @@ html,body {
             -ms-animation-duration: 1s;
             animation-duration: 1s;
         }
-
+        
         #loading_circle_4 {
             background: center bottom url(//cdn.youvivid.com/css/cover/p3.png) no-repeat;
             background-size: 255px 15px;
@@ -1229,7 +1220,7 @@ html,body {
             -ms-animation-duration: 0.5s;
             animation-duration: 0.5s;
         }
-
+        
         #loading_circle_5 {
             font-family: verdana, tahoma, arial, serif;
             text-align: center;
@@ -1243,7 +1234,7 @@ html,body {
             -ms-animation-duration: 0.6s;
             animation-duration: 0.6s;
         }
-
+        
         #loading_circle_6 {
             background: center bottom url(//cdn.youvivid.com/css/cover/p4.png) no-repeat;
             background-size: 150px 8px;
@@ -1254,7 +1245,7 @@ html,body {
             -ms-animation-duration: 1.6s;
             animation-duration: 1.6s;
         }
-
+        
         #loading_circle_7 {
             text-align: center;
             color: #FFF;
@@ -1266,7 +1257,7 @@ html,body {
             -ms-animation-duration: 1.6s;
             animation-duration: 1.6s;
         }
-
+        
         #loading_circle_8 {
             background: center bottom url(//cdn.youvivid.com/css/cover/p5.png) no-repeat;
             background-size: 180px 40px;
@@ -1278,7 +1269,7 @@ html,body {
             -ms-animation-duration: 1.6s;
             animation-duration: 1.6s;
         }
-
+        
         #click_open {
             right: 40px;
             bottom: 0;
@@ -1292,94 +1283,94 @@ html,body {
             -ms-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
         }
-
+        
         .hide-div {
             /*display:none;*/
             visibility: hidden;
         }
-
+        
         .hide-div-display {
             display: none;
         }
     </style>
 
     <script language="javascript">
-        < !--
-            $(document).ready(function () {
-                /*	
-                    if (window.self != window.top) {
-                        $(document.body).addClass("in-iframe");
-                    }
-                */
-
-
-
-
-                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                    $('#Loading').on('touchstart', function (e) {
-                        //stopLoading();
-                        if (bWinOnLoadFired == 0) {
-                            winOnloadFunc();
-                        }
-                    });
-                } else {
-                    $('#Loading').on('click', function (e) {
-                        //stopLoading();
-                        if (bWinOnLoadFired == 0) {
-                            winOnloadFunc();
-                        }
-                    });
-
+        <!--
+        $(document).ready(function() {
+            /*	
+                if (window.self != window.top) {
+                    $(document.body).addClass("in-iframe");
                 }
+            */
 
-                $('#loading_bg').removeClass('hide-div');
-                $('#loading_bg').addClass('animated fadeIn');
 
-                $('#loading_bg2').removeClass('hide-div');
-                $('#loading_bg2').addClass('animated fadeIn');
 
-                $('#loading_bg2').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-                    $('#loading_circle_2').removeClass('hide-div');
-                    $('#loading_circle_2').addClass('animated fadeInUp');
-                    $('#loading_circle_4').removeClass('hide-div');
-                    $('#loading_circle_4').addClass('animated fadeInDown');
+
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('#Loading').on('touchstart', function(e) {
+                    //stopLoading();
+                    if (bWinOnLoadFired == 0) {
+                        winOnloadFunc();
+                    }
+                });
+            } else {
+                $('#Loading').on('click', function(e) {
+                    //stopLoading();
+                    if (bWinOnLoadFired == 0) {
+                        winOnloadFunc();
+                    }
                 });
 
+            }
 
-                $('#loading_circle_2').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-                    $('#loading_circle_3').removeClass('hide-div');
-                    $('#loading_circle_3').addClass('animated zoomIn');
-                    $('#loading_circle_1').removeClass('hide-div');
-                    $('#loading_circle_1').addClass('animated bounceInDown');
-                    $('#loading_circle_6').removeClass('hide-div');
-                    $('#loading_circle_6').addClass('animated bounceInUp');
-                    $('#loading_circle_7').removeClass('hide-div');
-                    $('#loading_circle_7').addClass('animated bounceInUp');
-                    $('#loading_circle_8').removeClass('hide-div');
-                    $('#loading_circle_8').addClass('animated bounceInUp');
-                });
+            $('#loading_bg').removeClass('hide-div');
+            $('#loading_bg').addClass('animated fadeIn');
 
-                $('#loading_circle_1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-                    $('#loading_circle_5').removeClass('hide-div');
-                    $('#loading_circle_5').addClass('animated lightSpeedIn');
-                });
+            $('#loading_bg2').removeClass('hide-div');
+            $('#loading_bg2').addClass('animated fadeIn');
 
-                $('#loading_circle_5').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-                    setTimeout(function () {
-                        //alert("bWinOnLoadFired");
-                        if (bWinOnLoadFired == 0) {
-                            //winOnloadFunc();		
-                            $('#click_open').removeClass('hide-div');
-                            $('#click_open').addClass('animated pulse');
+            $('#loading_bg2').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                $('#loading_circle_2').removeClass('hide-div');
+                $('#loading_circle_2').addClass('animated fadeInUp');
+                $('#loading_circle_4').removeClass('hide-div');
+                $('#loading_circle_4').addClass('animated fadeInDown');
+            });
 
-                        }
-                        // Do something after 20 seconds
-                    }, 2000);
 
-                });
+            $('#loading_circle_2').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                $('#loading_circle_3').removeClass('hide-div');
+                $('#loading_circle_3').addClass('animated zoomIn');
+                $('#loading_circle_1').removeClass('hide-div');
+                $('#loading_circle_1').addClass('animated bounceInDown');
+                $('#loading_circle_6').removeClass('hide-div');
+                $('#loading_circle_6').addClass('animated bounceInUp');
+                $('#loading_circle_7').removeClass('hide-div');
+                $('#loading_circle_7').addClass('animated bounceInUp');
+                $('#loading_circle_8').removeClass('hide-div');
+                $('#loading_circle_8').addClass('animated bounceInUp');
+            });
 
+            $('#loading_circle_1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                $('#loading_circle_5').removeClass('hide-div');
+                $('#loading_circle_5').addClass('animated lightSpeedIn');
+            });
+
+            $('#loading_circle_5').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                setTimeout(function() {
+                    //alert("bWinOnLoadFired");
+                    if (bWinOnLoadFired == 0) {
+                        //winOnloadFunc();		
+                        $('#click_open').removeClass('hide-div');
+                        $('#click_open').addClass('animated pulse');
+
+                    }
+                    // Do something after 20 seconds
+                }, 2000);
 
             });
+
+
+        });
 
         function stopLoading() {
             if ($.browser.msie && parseInt($.browser.version, 10) <= 9) {
@@ -1388,7 +1379,7 @@ html,body {
 
                 $("#Loading").addClass('animated fadeOut');
 
-                $('#Loading').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                $('#Loading').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
                     $('#Loading').addClass('hide-div');
                     $('#Loading').addClass('hide-div-display');
                 });
@@ -1410,7 +1401,7 @@ html,body {
 
         var bWinOnLoadFired = 0;
 
-        $(window).load(function () {
+        $(window).load(function() {
             if ($.browser.msie && parseInt($.browser.version, 10) <= 9) {
                 if (bWinOnLoadFired == 0) {
                     winOnloadFunc();
@@ -1421,8 +1412,8 @@ html,body {
 
         });
 
-        $(function () {
-            setTimeout(function () {
+        $(function() {
+            setTimeout(function() {
                 //alert("bWinOnLoadFired");
                 if (bWinOnLoadFired == 0) {
                     winOnloadFunc();
@@ -1464,97 +1455,97 @@ html,body {
 
 
     <script language="javascript" type="text/javascript">
-            $(document).ready(function () {
-                /*	
-                    if (window.self != window.top) {
-                        $(document.body).addClass("in-iframe");
-                    }
-                */
+        $(document).ready(function() {
+            /*	
+            	if (window.self != window.top) {
+            		$(document.body).addClass("in-iframe");
+            	}
+            */
 
-                if (bMute == 0) $("#mbut").addClass('mof');
-
-
-                function mon() {
-                    $("#jquery_jplayer_1").jPlayer("play");
-                    //alert('func mon');
-                }
-
-                function mof() {
-                    $("#jquery_jplayer_1").jPlayer("pause");
-                    //alert('func mof');
-                }
+            if (bMute == 0) $("#mbut").addClass('mof');
 
 
+            function mon() {
+                $("#jquery_jplayer_1").jPlayer("play");
+                //alert('func mon');
+            }
+
+            function mof() {
+                $("#jquery_jplayer_1").jPlayer("pause");
+                //alert('func mof');
+            }
 
 
 
-                $("#jquery_jplayer_1").jPlayer({
-                    ready: function () {
-                        $(this).jPlayer("setMedia", {
-                            mp3: "audios_system/musicnotfound.mp3"
-                        }).jPlayer("play");
-                        var click = document.ontouchstart === undefined ? 'click' : 'touchstart';
-                        var kickoff = function () {
-                            if (bVideoPlaying == 1) {
-                                $("#jquery_jplayer_1").jPlayer("pause");
-                            } else {
-                                $("#jquery_jplayer_1").jPlayer("play");
-                                //alert('play');
-                            }
-                            //alert('kickoff');
-
-                            //$("#MainBody,#Loading").off( "click", kickoff );
 
 
-                        };
+            $("#jquery_jplayer_1").jPlayer({
+                ready: function() {
+                    $(this).jPlayer("setMedia", {
+                        mp3: "audios_system/musicnotfound.mp3"
+                    }).jPlayer("play");
+                    var click = document.ontouchstart === undefined ? 'click' : 'touchstart';
+                    var kickoff = function() {
+                        if (bVideoPlaying == 1) {
+                            $("#jquery_jplayer_1").jPlayer("pause");
+                        } else {
+                            $("#jquery_jplayer_1").jPlayer("play");
+                            //alert('play');
+                        }
+                        //alert('kickoff');
 
-                        $("#MainBody,#Loading,#mbut").on("click", kickoff);
-
-
-                        $("#jquery_jplayer_1").bind($.jPlayer.event.play, function (event) {
-                            if (bMute == 0) {
-                                $("#mbut").removeClass('mof');
-                                $("#mbut").removeClass('mon');
-                                $("#mbut").addClass('mon');
-                                $("#mbut").off("click", mof);
-                                $("#mbut").off("click", mon);
-                                $("#mbut").on("click", mof);
-                            } else {
-                                $("#mbut").removeClass('mof');
-                                $("#mbut").removeClass('mon');
-                                $("#mbut").off("click", mof);
-                                $("#mbut").off("click", mon);
-                            }
-                            $("#MainBody,#Loading,#mbut").off("click", kickoff);
-                            //alert('event play, bmute = ' + bMute);
-
-                        });
-                        $("#jquery_jplayer_1").bind($.jPlayer.event.pause, function (event) {
-                            if (bMute == 0) {
-                                $("#mbut").removeClass('mof');
-                                $("#mbut").removeClass('mon');
-                                $("#mbut").addClass('mof');
-                                $("#mbut").off("click", mof);
-                                $("#mbut").off("click", mon);
-                                $("#mbut").on("click", mon);
-                            } else {
-                                $("#mbut").removeClass('mof');
-                                $("#mbut").removeClass('mon');
-                                $("#mbut").off("click", mof);
-                                $("#mbut").off("click", mon);
-                            }
-                            //alert('event pause');
-
-                        });
+                        //$("#MainBody,#Loading").off( "click", kickoff );
 
 
-                    },
-                    swfPath: "/js",
+                    };
+
+                    $("#MainBody,#Loading,#mbut").on("click", kickoff);
 
 
-                    loop: false
-                });
+                    $("#jquery_jplayer_1").bind($.jPlayer.event.play, function(event) {
+                        if (bMute == 0) {
+                            $("#mbut").removeClass('mof');
+                            $("#mbut").removeClass('mon');
+                            $("#mbut").addClass('mon');
+                            $("#mbut").off("click", mof);
+                            $("#mbut").off("click", mon);
+                            $("#mbut").on("click", mof);
+                        } else {
+                            $("#mbut").removeClass('mof');
+                            $("#mbut").removeClass('mon');
+                            $("#mbut").off("click", mof);
+                            $("#mbut").off("click", mon);
+                        }
+                        $("#MainBody,#Loading,#mbut").off("click", kickoff);
+                        //alert('event play, bmute = ' + bMute);
+
+                    });
+                    $("#jquery_jplayer_1").bind($.jPlayer.event.pause, function(event) {
+                        if (bMute == 0) {
+                            $("#mbut").removeClass('mof');
+                            $("#mbut").removeClass('mon');
+                            $("#mbut").addClass('mof');
+                            $("#mbut").off("click", mof);
+                            $("#mbut").off("click", mon);
+                            $("#mbut").on("click", mon);
+                        } else {
+                            $("#mbut").removeClass('mof');
+                            $("#mbut").removeClass('mon');
+                            $("#mbut").off("click", mof);
+                            $("#mbut").off("click", mon);
+                        }
+                        //alert('event pause');
+
+                    });
+
+
+                },
+                swfPath: "/js",
+
+
+                loop: false
             });
+        });
     </script>
 
 
@@ -1568,7 +1559,7 @@ html,body {
             z-index: 300;
             background: url(//cdn.youvivid.com/images_funssage/m_play2.png) no-repeat;
         }
-
+        
         .mof {
             position: fixed;
             width: 42px;
@@ -1578,11 +1569,11 @@ html,body {
             z-index: 300;
             background: url(//cdn.youvivid.com/images_funssage/m_stop2.png) no-repeat;
         }
-
+        
         #preload-19 {
             background: url(//cdn.youvivid.com/images_funssage/m_play2.png) no-repeat -9999px -9999px;
         }
-
+        
         #preload-20 {
             background: url(//cdn.youvivid.com/images_funssage/m_stop2.png) no-repeat -9999px -9999px;
         }
@@ -1594,30 +1585,24 @@ html,body {
         <div id="coverpage"></div>
         <div id="MainContent">
 
-            <div id="freeAD"
-                style="background-color: rgb(255, 255, 255); position: fixed; left: 0px; z-index: 1000; width: 100%; height: 90px; display: none;">
+            <div id="freeAD" style="background-color: rgb(255, 255, 255); position: fixed; left: 0px; z-index: 1000; width: 100%; height: 90px; display: none;">
                 <div style="margin: auto; width:320px; height:90px">
 
-                    <div
-                        style="height:20px; line-height: 20px; color: #00C; font-family:Arial, Helvetica, sans-serif; text-align:center">
+                    <div style="height:20px; line-height: 20px; color: #00C; font-family:Arial, Helvetica, sans-serif; text-align:center">
 
-                        <a href="m_invite_send.asp?invite_id=1182623" style="color:inherit;">[ The invitation will be
-                            expired in 2 day ]</a>
+                        <a href="m_invite_send.asp?invite_id=1182623" style="color:inherit;">[ The invitation will be expired in 2 day ]</a>
 
                     </div>
 
 
 
 
-                    <!-- <div align="center" style="padding:5px 0px 5px 0px;">
+                    <div align="center" style="padding:5px 0px 5px 0px;">
                         <a class="myButton" href="m_invite_send.asp?invite_id=1182623">Pay online to upgrade</a>
 
-                    </div> -->
+                    </div>
 
-                    <!-- <div style="height:20px; line-height: 20px; cursor:pointer; color:#666; font-family:verdana, tahoma, arial, serif"
-                        align="center"
-                        onclick="document.getElementById('freeAD').style.display = 'none';document.getElementById('freeADPlaceHolder').style.display = 'none';">
-                        Tap here to hide prompt</div> -->
+                    <div style="height:20px; line-height: 20px; cursor:pointer; color:#666; font-family:verdana, tahoma, arial, serif" align="center" onclick="document.getElementById('freeAD').style.display = 'none';document.getElementById('freeADPlaceHolder').style.display = 'none';">Tap here to hide prompt</div>
 
 
 
@@ -1625,8 +1610,7 @@ html,body {
 
                 </div>
             </div>
-            <div id="freeADPlaceHolder"
-                style="background-color: rgb(255, 255, 255); width: 100%; height: 90px; display: none;">
+            <div id="freeADPlaceHolder" style="background-color: rgb(255, 255, 255); width: 100%; height: 90px; display: none;">
             </div>
 
             <div id="outter">
@@ -1654,9 +1638,7 @@ html,body {
                                                     <div class="main-title-ml">
 
                                                         <div class="main-title-mm">
-                                                            <div id="maintitlehtml"><span
-                                                                    style="text-decoration: none; font-style: normal; font-size: 20px; font-weight: normal;">Ruchi
-                                                                    &amp; Pulkit's<br>Wedding</span></div>
+                                                            <div id="maintitlehtml"><span style="text-decoration: none; font-style: normal; font-size: 20px; font-weight: normal;">Ruchi &amp; Pulkit's<br>Wedding</span></div>
                                                             <div id="maintitle_decoration1"></div>
 
                                                         </div>
@@ -1698,25 +1680,15 @@ html,body {
                                             <div id="main_image_container">
 
 
-                                                <div class="invite_webimg_album auto"
-                                                    style="background: url(&quot;https://youvivid-jp-s3-uploads7img.youvivid.com/images/2019/49/s19125V9NUDvW8fDrTP.jpg?x-img-process=fit-in/2000x2000/&quot;) 50% 50% / cover no-repeat; min-width: 100%; min-height: 100%; display: block;">
-                                                </div>
+                                                <div class="invite_webimg_album auto" style="background: url(&quot;https://youvivid-jp-s3-uploads7img.youvivid.com/images/2019/49/s19125V9NUDvW8fDrTP.jpg?x-img-process=fit-in/2000x2000/&quot;) 50% 50% / cover no-repeat; min-width: 100%; min-height: 100%; display: block;"></div>
 
-                                                <div class="invite_webimg_album"
-                                                    style="background: url(&quot;https://youvivid-jp-s3-uploads7cdn.youvivid.com/invite_wimage/s191257eJx177DFwoVZ_1575532261996.jpg&quot;) 50% 50% / cover no-repeat; min-width: 100%; min-height: 100%; display: none;">
-                                                </div>
+                                                <div class="invite_webimg_album" style="background: url(&quot;https://youvivid-jp-s3-uploads7cdn.youvivid.com/invite_wimage/s191257eJx177DFwoVZ_1575532261996.jpg&quot;) 50% 50% / cover no-repeat; min-width: 100%; min-height: 100%; display: none;"></div>
 
-                                                <div class="invite_webimg_album"
-                                                    style="background: url(&quot;https://youvivid-jp-s3-uploads7cdn.youvivid.com/invite_wimage/s19125wVJe7NsN2ykyM_1575532246493.jpg&quot;) 50.1747% 49.4382% / cover no-repeat; min-width: 100%; min-height: 100%; display: none;">
-                                                </div>
+                                                <div class="invite_webimg_album" style="background: url(&quot;https://youvivid-jp-s3-uploads7cdn.youvivid.com/invite_wimage/s19125wVJe7NsN2ykyM_1575532246493.jpg&quot;) 50.1747% 49.4382% / cover no-repeat; min-width: 100%; min-height: 100%; display: none;"></div>
 
-                                                <div class="invite_webimg_album" id="invite_webimg_album_mainimage"
-                                                    style="background: url(&quot;https://youvivid-jp-s3-uploads7img.youvivid.com/images/2019/49/s19125MXPQs3L95aFrr.jpg?x-img-process=fit-in/2000x2000/&quot;) center center / cover no-repeat; min-width: 100%; min-height: 100%; display: none;">
-                                                </div>
+                                                <div class="invite_webimg_album" id="invite_webimg_album_mainimage" style="background: url(&quot;https://youvivid-jp-s3-uploads7img.youvivid.com/images/2019/49/s19125MXPQs3L95aFrr.jpg?x-img-process=fit-in/2000x2000/&quot;) center center / cover no-repeat; min-width: 100%; min-height: 100%; display: none;"></div>
 
-                                                <img id="invite_webimg" style=" display:block"
-                                                    src="https://youvivid-jp-s3-uploads7img.youvivid.com/images/2019/49/s19125MXPQs3L95aFrr.jpg?x-img-process=fit-in/2000x2000/"
-                                                    width="100%" alt="Mobile Wedding Invitations">
+                                                <img id="invite_webimg" style=" display:block" src="https://youvivid-jp-s3-uploads7img.youvivid.com/images/2019/49/s19125MXPQs3L95aFrr.jpg?x-img-process=fit-in/2000x2000/" width="100%" alt="Mobile Wedding Invitations">
                                             </div>
 
                                             <div id="img_videobutton_placeholder" style="position:relative;">
@@ -1730,7 +1702,7 @@ html,body {
                                                     width: 100%;
                                                     height: 100%
                                                 }
-
+                                                
                                                 .invite_webimg_album {
                                                     float: left;
                                                     position: absolute;
@@ -1739,29 +1711,26 @@ html,body {
                                                     transform: scale(1.09, 1.09);
                                                     -webkit-transform: scale(1.09, 1.09);
                                                 }
-
                                                 /*.invite_webimg_album:last-child{display: block; -webkit-transform: scale(1.2,1.2);}*/
-
+                                                
                                                 .auto {
                                                     animation: imgScale 4s ease-out;
                                                     -webkit-animation: imgScale 4s ease-out;
                                                 }
-
+                                                
                                                 @keyframes imgScale {
                                                     0% {
                                                         transform: scale(1, 1);
                                                     }
-
                                                     100% {
                                                         transform: scale(1.09, 1.09);
                                                     }
                                                 }
-
+                                                
                                                 @-webkit-keyframes imgScale {
                                                     0% {
                                                         -webkit-transform: scale(1, 1);
                                                     }
-
                                                     100% {
                                                         -webkit-transform: scale(1.09, 1.09);
                                                     }
@@ -1769,7 +1738,7 @@ html,body {
                                             </style>
 
                                             <script type="text/javascript">
-                                                $(function () {
+                                                $(function() {
                                                     /*	
                                                     	$('#invite_webimg').on('load', function () {
                                                     		$("#main_image_container").width($(this).width()).height($(this).height());
@@ -1800,7 +1769,7 @@ html,body {
                                                     if (img_count > 1) {
 
                                                         now_img = img_count - 1;
-                                                        slideshowTimer = setInterval(function () {
+                                                        slideshowTimer = setInterval(function() {
                                                             if (now_img == 0) {
                                                                 next_img = img_count - 1;
                                                             } else {
@@ -1904,7 +1873,7 @@ html,body {
                                                 */
 
 
-                                                $(function () {
+                                                $(function() {
                                                     //if (invite_mediatype == 1) {
                                                     //	$( "#img_decoration1,#img_decoration2,#img_decoration3").css('cursor', 'pointer');	
                                                     //} else {
@@ -1915,7 +1884,7 @@ html,body {
 
 
 
-                                                    $("#img_videobutton").click(function () {
+                                                    $("#img_videobutton").click(function() {
                                                         //alert("playVideo");
 
                                                         if (invite_mediatype == 1) {
@@ -1953,9 +1922,7 @@ html,body {
                                                     <div class="sub-title-ml">
 
                                                         <div class="sub-title-mm">
-                                                            <div id="subtitlehtml"><span
-                                                                    style="font-weight: normal; font-size: 22px; ">January
-                                                                    17th, 2020</span></div>
+                                                            <div id="subtitlehtml"><span style="font-weight: normal; font-size: 22px; ">January 17th, 2020</span></div>
 
                                                         </div>
 
@@ -2014,9 +1981,7 @@ html,body {
 
 
 
-                <h3 class="detail-compact ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-top"
-                    style="display:" id="invite_detail_title48175808" role="tab" aria-expanded="true"
-                    aria-selected="true" tabindex="0"><span class="ui-icon ui-icon-triangle-1-s"></span>
+                <h3 class="detail-compact ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-top" style="display:" id="invite_detail_title48175808" role="tab" aria-expanded="true" aria-selected="true" tabindex="0"><span class="ui-icon ui-icon-triangle-1-s"></span>
 
                     <div name="button1" id="button1" class="button button_detail_id_48175808">
 
@@ -2031,11 +1996,7 @@ html,body {
                         <div class="button-mr">
                             <div class="button-ml">
                                 <div class="button-mm">
-                                    <a href="javaScript:void(0);"><img class="iconimage" alt="1.png"
-                                            src="https://cdn.youvivid.com/css/cynthia_leaf/images/icons/1.png"
-                                            border="0" align="absmiddle">&nbsp;<span id="invite_detail_name48175808"
-                                            class="button-title"><span
-                                                class="fontcolor-button-title">Invitation</span></span>&nbsp;</a>
+                                    <a href="javaScript:void(0);"><img class="iconimage" alt="1.png" src="https://cdn.youvivid.com/css/cynthia_leaf/images/icons/1.png" border="0" align="absmiddle">&nbsp;<span id="invite_detail_name48175808" class="button-title"><span class="fontcolor-button-title">Invitation</span></span>&nbsp;</a>
                                 </div>
                             </div>
                         </div>
@@ -2048,8 +2009,7 @@ html,body {
                     </div>
                 </h3>
 
-                <div class="accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active"
-                    id="invite_detail_content48175808" role="tabpanel">
+                <div class="accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" id="invite_detail_content48175808" role="tabpanel">
 
                     <div name="detail1" id="detail1" class="detail">
 
@@ -2069,32 +2029,22 @@ html,body {
 
 
                                         <div class="invite_detail_editor" id="invite_detail_editor48175808">
-                                            <p style="text-align: center;"><span style="font-size:20px;"><span
-                                                        style="font-family:dancing script,cursive;">Because you have
-                                                        shared in our lives and supported our love, we<br>
-                                                        <span style="font-size:28px;">Ruchi</span><br> and
-                                                        <br>
-                                                        <span style="font-size:28px;">Pulkit</span><br> request the
-                                                        pleasure of your company<br> at the celebration of our
-                                                        marriage</span>
+                                            <p style="text-align: center;"><span style="font-size:20px;"><span style="font-family:dancing script,cursive;">Because you have shared in our lives and supported our love, we<br>
+<span style="font-size:28px;">Ruchi</span><br> and
+                                                <br>
+                                                <span style="font-size:28px;">Pulkit</span><br> request the pleasure of your company<br> at the celebration of our marriage</span>
                                                 </span>
                                             </p>
 
-                                            <p style="text-align: center;"><span style="font-size:20px;"><span
-                                                        style="font-family:dancing script,cursive;">Friday, January 17,
-                                                        2020<br>
-                                                        at 8:00 PM</span></span>
+                                            <p style="text-align: center;"><span style="font-size:20px;"><span style="font-family:dancing script,cursive;">Friday, January 17, 2020<br>
+at 8:00 PM</span></span>
                                             </p>
 
-                                            <p style="text-align: center;"><span style="font-size:20px;"><span
-                                                        style="font-family:dancing script,cursive;">The Grand
-                                                        Melrose<br>
-                                                        GT Road Aligarh</span></span>
+                                            <p style="text-align: center;"><span style="font-size:20px;"><span style="font-family:dancing script,cursive;">The Grand Melrose<br>
+GT Road Aligarh</span></span>
                                             </p>
 
-                                            <p style="text-align: center;"><span style="font-size:20px;"><span
-                                                        style="font-family:dancing script,cursive;">Dinner and dancing
-                                                        to follow</span></span>
+                                            <p style="text-align: center;"><span style="font-size:20px;"><span style="font-family:dancing script,cursive;">Dinner and dancing to follow</span></span>
                                             </p>
 
                                         </div>
@@ -2175,11 +2125,11 @@ html,body {
 
 
 
-                                            $(document).ready(function () {
+                                            $(document).ready(function() {
 
                                                 try { // prevent from load alifont error cause rsvp submit stop
                                                     reloadWebFont48175808();
-                                                } catch (err) { }
+                                                } catch (err) {}
 
                                                 bReloadWebFontOnce48175808 = 0;
 
@@ -2209,9 +2159,7 @@ html,body {
 
 
 
-                <h3 class="detail-compact ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"
-                    style="display:" id="invite_detail_title48175811" role="tab" aria-expanded="false"
-                    aria-selected="false" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-e"></span>
+                <h3 class="detail-compact ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" style="display:" id="invite_detail_title48175811" role="tab" aria-expanded="false" aria-selected="false" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-e"></span>
 
                     <div name="button4" id="button4" class="button button_detail_id_48175811">
 
@@ -2226,11 +2174,7 @@ html,body {
                         <div class="button-mr">
                             <div class="button-ml">
                                 <div class="button-mm">
-                                    <a href="javaScript:void(0);"><img class="iconimage" alt="4.png"
-                                            src="https://cdn.youvivid.com/css/cynthia_leaf/images/icons/4.png"
-                                            border="0" align="absmiddle">&nbsp;<span id="invite_detail_name48175811"
-                                            class="button-title"><span
-                                                class="fontcolor-button-title">Directions</span></span>&nbsp;</a>
+                                    <a href="javaScript:void(0);"><img class="iconimage" alt="4.png" src="https://cdn.youvivid.com/css/cynthia_leaf/images/icons/4.png" border="0" align="absmiddle">&nbsp;<span id="invite_detail_name48175811" class="button-title"><span class="fontcolor-button-title">Directions</span></span>&nbsp;</a>
                                 </div>
                             </div>
                         </div>
@@ -2243,8 +2187,7 @@ html,body {
                     </div>
                 </h3>
 
-                <div class="accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"
-                    id="invite_detail_content48175811" role="tabpanel" style="display: none;">
+                <div class="accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="invite_detail_content48175811" role="tabpanel" style="display: none;">
 
                     <div name="detail4" id="detail4" class="detail">
 
@@ -2263,28 +2206,22 @@ html,body {
 
 
 
-                                        <input type="hidden" name="invite_detail_mapimgurl48175811"
-                                            id="invite_detail_mapimgurl48175811" value="">
+                                        <input type="hidden" name="invite_detail_mapimgurl48175811" id="invite_detail_mapimgurl48175811" value="">
 
-                                        <img class="mapimg" id="invite_detail_mapimg48175811"
-                                            style="width: 100%; border: thin solid rgb(153, 153, 153); display: none;"
-                                            src="" width="100%">
+                                        <img class="mapimg" id="invite_detail_mapimg48175811" style="width: 100%; border: thin solid rgb(153, 153, 153); display: none;" src="" width="100%">
 
 
 
-                                        <!-- <iframe id="map_canvas48175811" width="100%" height="300" frameborder="0" style="border: thin solid" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCF5MS1Oeo_dPBEQu9hyzZc5WnBPJaBwkE&amp;q=27.9010807,78.05313550000005&amp;center=27.9010807,78.05313550000005&amp;zoom=16"
+                                        <!-- <iframe id="map_canvas48175811" width="100%" height="300" frameborder="0" style="border: thin solid" src="https://maps.apple.com/?q=27.9010807,78.05313550000005&amp;center=27.9010807,78.05313550000005&amp;zoom=16"
                                             allowfullscreen="">
-    </iframe>-->
+    </iframe> -->
 
-                                        <div id="map_desc48175811" align="center">The Grand Melrose<br>GT Road
-                                            Aligarh<br>9458257769</div>
 
+                                        <div id="map_desc48175811" align="center">The Grand Melrose<br>GT Road Aligarh<br>9458257769</div>
 
                                         <div id="map_direction48175811" style="width:100%" align="center">
 
-                                            <input id="map_direction_button48175811" name="map_direction_button48175811"
-                                                onclick="google_map_direction48175811();" type="button"
-                                                value=" Navigate ">
+                                            <input id="map_direction_button48175811" name="map_direction_button48175811" onclick="google_map_direction48175811();" type="button" value=" Navigate ">
                                             <script language="javascript">
                                                 function google_map_direction48175811() {
 
@@ -2308,7 +2245,7 @@ html,body {
 
 
                                         <script language="javascript">
-                                            $(document).ready(function () {
+                                            $(document).ready(function() {
                                                 //init
                                                 if ($("#invite_detail_mapimgurl48175811").val() == '') {
                                                     $("#invite_detail_mapimg48175811").hide();
@@ -2346,9 +2283,7 @@ html,body {
 
 
 
-                <div id="accordion_bottom" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"
-                    role="tab" aria-expanded="false" aria-selected="false" tabindex="-1"><span
-                        class="ui-icon ui-icon-triangle-1-e"></span></div>
+                <div id="accordion_bottom" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" role="tab" aria-expanded="false" aria-selected="false" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-e"></span></div>
             </div>
 
 
@@ -2464,15 +2399,12 @@ html,body {
                 </div>
             </div> -->
 
-            <a id="autoMobileVideo"
-                href="mobile_invite_autovideo.asp?sn=M37F3Z&amp;autovideourl=&amp;ts=1575599902"></a>
+            <a id="autoMobileVideo" href="mobile_invite_autovideo.asp?sn=M37F3Z&amp;autovideourl=&amp;ts=1575599902"></a>
 
         </div>
     </div>
 
-    <div id="jquery_jplayer_1" style="width: 0px; height: 0px;"><img id="jp_poster_0"
-            style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata"
-            src="https://en.youvivid.net/audios_system/musicnotfound.mp3"></audio></div>
+    <div id="jquery_jplayer_1" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata" src="https://en.youvivid.net/audios_system/musicnotfound.mp3"></audio></div>
 
 
 
@@ -2536,10 +2468,10 @@ html,body {
                 </div>
 
                 <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-                </button>
+            </button>
 
                 <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-                </button>
+            </button>
 
                 <div class="pswp__caption">
                     <div class="pswp__caption__center"></div>
@@ -2592,8 +2524,7 @@ html,body {
     <!-- <script src="https://cdn.youvivid.com/js/setcookie_timezone3.js" type="text/javascript"></script> -->
 
 
-    <script type="text/javascript"
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCF5MS1Oeo_dPBEQu9hyzZc5WnBPJaBwkE&amp;callback=mapCallBackFunc"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCF5MS1Oeo_dPBEQu9hyzZc5WnBPJaBwkE&amp;callback=mapCallBackFunc"></script>
 </body>
 
 </html>
