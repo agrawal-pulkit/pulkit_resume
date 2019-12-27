@@ -5,7 +5,20 @@
     <!-- <link href="https://en.youvivid.net/_vM37F3Z" rel="canonical"> -->
     <meta name="viewport" content="width=317, minimum-scale=0.5, maximum-scale=2.5, user-scalable=yes">
     <title>Ruchi &amp; Pulkit's Wedding</title>
-    <meta name="description" content="2020/01/17 8:00 PM The Grand Melrose">
+    <meta name="description" content="2020/01/17 8:00 PM | The Grand Melrose">
+
+    <!--  Essential META Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ruchi & Pulkit's Wedding">
+    <meta property="og:description" content="17th January 2020, 8:00 PM | The Grand Melrose, Aligarh">
+    <meta property="og:image" content="https://profiles.hackersoon.com/images/thumbnail.jpg">
+    <meta property="og:url" content="https://profiles.hackersoon.com/pulkit-wedding">
+    <meta name="twitter:card" content="Ruchi & Pulkit invites you to their Wedding on 17th January, 2020 at The Grand Melrose, Aligarh">
+
+    <!--  Non-Essential, But Recommended -->
+    <meta property="og:site_name" content="HackerSoon">
+    <meta name="twitter:image:alt" content="Ruchi & Pulkit's Wedding Invitation">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
     <script src="https://cdn.youvivid.com/js/jquery-latest.js"></script>
@@ -668,13 +681,26 @@
             }
         }
         /*
-                filter: alpha(opacity=10);
-                opacity:0.4;
-            */
+            filter: alpha(opacity=10);
+            opacity:0.4;
+        */
         /*	background-image:url(https://cdn.youvivid.com/images/index_bg_02.jpg);
-                background-repeat: repeat; 
-                background-position: center center; 
-            */
+            background-repeat: repeat; 
+            background-position: center center; 
+        */
+        
+        #footer {
+            height: 72px !important;
+            padding: 5px 0;
+            background: #2d2722 !important;
+        }
+        
+        #footer #copyright {
+            height: 100%;
+            padding: 0 !important;
+            background: center center url('https://cdn.youvivid.com/css/cynthia_leaf/images/copyright.png') no-repeat !important;
+            background-size: 100% 27px !important;
+        }
     </style>
 
     <link class="customcss" href="https://cdn.youvivid.com/css/cynthia_leaf/custom.css" rel="stylesheet" type="text/css">
@@ -1741,17 +1767,29 @@
                                         <script type="text/javascript">
                                             // images goes here
                                             var arr = [
-                                            "images/IMG_0038-min.jpg"
-                                            ,"images/IMG_0280-min.jpg"
-                                            ,"images/DSC_0549-min.jpg"
-                                            ,"images/DSC_0580-min.jpg"
-                                            ,"images/IMG_0406-min.jpg"
-                                            ,"images/DSC_0275-min.jpg"
-                                            ,"images/DSC_0583-01-min.jpeg"
-                                            ,"images/DSC_0562-min.jpg"
-                                            ,"images/DSC_05331-min.jpg"
-                                            ,"images/DSC_037610-min.jpg"
+                                                "images/01.jpg",
+                                                "images/02.jpg",
+                                                "images/03.jpg",
+                                                "images/04.jpg",
+                                                "images/05.jpg",
+                                                "images/06.jpg",
+                                                "images/07.jpg",
+                                                "images/08.jpg",
+                                                "images/09.jpg",
+                                                "images/10.jpg"
                                             ]; //an array of image sources
+                                            // var arr = [
+                                            //     "images/IMG_0038-min.jpg",
+                                            //     "images/IMG_0280-min.jpg",
+                                            //     "images/DSC_0549-min.jpg",
+                                            //     "images/DSC_0580-min.jpg",
+                                            //     "images/IMG_0406-min.jpg",
+                                            //     "images/DSC_0275-min.jpg",
+                                            //     "images/DSC_0583-01-min.jpeg",
+                                            //     "images/DSC_0562-min.jpg",
+                                            //     "images/DSC_05331-min.jpg",
+                                            //     "images/DSC_037610-min.jpg"
+                                            // ]; //an array of image sources
                                             var pos = 0; //initializes image position in the array
                                             $(document).ready(function() {
                                                 var interval = 7000; //interval for slide
@@ -1766,7 +1804,6 @@
                                                 /* initializes the small circles html*/
                                                 for (var i = 0; i < arr.length; i++) {
                                                     htm += '<div id="' + i + '" class="circle" onclick="circleClick(' + i + ')"> </div> ';
-
                                                 }
 
                                                 $('#circles').html(htm); //show small circles
@@ -1789,7 +1826,7 @@
                                                             pos = 0;
                                                         }
 
-                                                        $('#slider').html('<img src="' + arr[pos] + '" class="img-slide img' + pos + ' image-animated">'); //shows image
+                                                        $('#slider').html('<span class="helper"></span><img src="' + arr[pos] + '" class="img-slide img' + pos + ' image-animated">'); //shows image
                                                         $('#' + pos).css({
                                                             'background': '#fff',
                                                             'color': '#fff'
@@ -1816,7 +1853,7 @@
                                                     if (pos > arr.length - 2) {
                                                         pos = -1;
                                                     }
-                                                    $('#slider').html('<img src="' + arr[pos + 1] + '" class="img-slide image-animated">'); //show image
+                                                    $('#slider').html('<span class="helper"></span><img src="' + arr[pos + 1] + '" class="img-slide image-animated">'); //show image
                                                     pos++;
 
                                                     $('#' + pos).css({
@@ -1841,7 +1878,7 @@
                                                     if (pos < 1) {
                                                         pos = arr.length;
                                                     }
-                                                    $('#slider').html('<img src="' + arr[pos - 1] + '" class="img-slide image-animated">');
+                                                    $('#slider').html('<span class="helper"></span><img src="' + arr[pos - 1] + '" class="img-slide image-animated">');
                                                     pos--;
 
                                                     $('#' + pos).css({
@@ -1880,7 +1917,7 @@
                                             /* displays image represented by the small circle */
                                             function circleClick(position) {
                                                 if (position != pos) {
-                                                    $('#slider').html('<img src="' + arr[position] + '" class="img-slide image-animated">'); //show image
+                                                    $('#slider').html('<span class="helper"></span><img src="' + arr[position] + '" class="img-slide image-animated">'); //show image
 
                                                     $('#' + position).css({
                                                         'background': '#fff',
@@ -1901,15 +1938,44 @@
                                         <style>
                                             #slider-main {
                                                 width: 100%;
+                                                height: 70vh;
+                                                max-height: 420px;
                                                 overflow: hidden;
                                                 position: relative;
                                             }
                                             
-                                            .img-slide {
+                                            #slider {
                                                 width: 100%;
-                                                height: 460px;
-                                                z-index: 5;
-                                                overflow-y: hidden;
+                                                height: 100%;
+                                                position: relative;
+                                                /* text-align: center; */
+                                            }
+                                            /* .helper {
+                                                display: inline-block;
+                                                height: 100%;
+                                                vertical-align: middle;
+                                                white-space: nowrap;
+                                            } */
+                                            
+                                            .img-slide {
+                                                max-height: 100%;
+                                                max-width: 100%;
+                                                width: auto;
+                                                height: auto;
+                                                position: absolute;
+                                                top: 0;
+                                                bottom: 0;
+                                                left: 0;
+                                                right: 0;
+                                                margin: auto;
+                                                /* width: 100%;
+                                                height: auto; */
+                                                /* vertical-align: middle;
+                                                width: 80vh;
+                                                height: 100%;
+                                                max-width: 80vh;
+                                                z-index: 5; */
+                                                /* overflow-y: hidden; */
                                             }
                                             
                                             #prev {
@@ -1952,6 +2018,7 @@
                                                 z-index: 90;
                                                 /* margin-top: -15vh;
                                                 margin-left: 20%; */
+                                                width: 109px;
                                                 position: absolute;
                                                 bottom: 0px;
                                                 left: 50%;
@@ -1987,9 +2054,9 @@
                                             }
                                             
                                             @media (max-width: 767px) {
-                                                .img-slide {
+                                                /* .img-slide {
                                                     height: 40vh;
-                                                }
+                                                } */
                                                 /* #prev {
                                                     font-size: 30px !important;
                                                     margin-top: 12vh;
@@ -2011,6 +2078,55 @@
                                                 } */
                                             }
                                         </style>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="detail-br">
+                            <div class="detail-bl">
+                                <div class="detail-bm"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="detail-compact ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" style="display:" id="invite_detail_title48175810" role="tab" aria-expanded="false" aria-selected="false" tabindex="2">
+
+                    <span class="ui-icon ui-icon-triangle-1-s"></span>
+                    <div name="button3" id="button3" class="button button_detail_id_48175810">
+                        <div class="button-tr">
+                            <div class="button-tl">
+                                <div class="button-tm"></div>
+                            </div>
+                        </div>
+                        <div class="button-mr">
+                            <div class="button-ml">
+                                <div class="button-mm">
+                                    <a href="javaScript:void(0);"><img class="iconimage" alt="1.png" src="https://cdn.youvivid.com/css/cynthia_leaf/images/icons/1.png" border="0" align="absmiddle">&nbsp;<span id="invite_detail_name48175810" class="button-title"><span class="fontcolor-button-title">Video</span></span>&nbsp;</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-br">
+                            <div class="button-bl">
+                                <div class="button-bm"></div>
+                            </div>
+                        </div>
+                    </div>
+                </h3>
+
+                <div class="accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" id="invite_detail_content48175810" role="tabpanel">
+                    <div name="detail2" id="detai2" class="detail">
+                        <div class="detail-tr">
+                            <div class="detail-tl">
+                                <div class="detail-tm"></div>
+                            </div>
+                        </div>
+                        <div class="detail-mr">
+                            <div class="detail-ml">
+                                <div class="detail-mm">
+                                    <div class="fontcolor-detail-mm">
+                                        <iframe width="264" height="315" src="https://www.youtube.com/embed/2XIMB2Iv0vI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                 </div>
 
@@ -2065,12 +2181,16 @@
                                             allowfullscreen=""></iframe> -->
 
                                         <div id="map_desc48175811" align="center">The Grand Melrose<br>GT Road Aligarh<br>9458257769</div>
+                                        <div id="map_desc48175812" align="center" style="margin: 10px 0px; font-size: 12px;">Click on the image below to get directions to location</div>
                                         <div id="map_direction48175811" style="width:100%" align="center">
-                                            <input id="map_direction_button48175811" name="map_direction_button48175811" onclick="google_map_direction48175811();" type="button" value=" Navigate ">
+                                            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3526.0289331890867!2d78.05094681454271!3d27.901085423559056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3974a5cc32afd289%3A0x3f122c488298b9a5!2sOYO%2015383%20Hotel%20Grand%20Melrose!5e0!3m2!1sen!2sin!4v1577389424735!5m2!1sen!2sin"
+                                                width="264" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe> -->
+                                            <img src="./images/map.png" style="width:100%;" onclick="google_map_direction48175811();" />
+                                            <!-- <input id="map_direction_button48175811" name="map_direction_button48175811" onclick="google_map_direction48175811();" type="button" value=" Navigate "> -->
                                             <script language="javascript">
                                                 function google_map_direction48175811() {
-                                                    //url_buf = "https://maps.google.com/maps?q=" + map48175811_latmarker+","+map48175811_lngmarker+"&z="+ map48175811_zoom ;
-                                                    url_buf = "https://maps.apple.com/?q=" + map48175811_latmarker + "," + map48175811_lngmarker + "&z=" + map48175811_zoom;
+                                                    url_buf = "https://maps.google.com/maps?q=" + map48175811_latmarker + "," + map48175811_lngmarker + "&z=" + map48175811_zoom;
+                                                    // url_buf = "https://maps.apple.com/?q=" + map48175811_latmarker + "," + map48175811_lngmarker + "&z=" + map48175811_zoom;
 
                                                     $("#jquery_jplayer_1").jPlayer("pause");
                                                     window.open(url_buf);
@@ -2108,81 +2228,68 @@
                 <div id="accordion_bottom" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" role="tab" aria-expanded="false" aria-selected="false" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-e"></span></div>
             </div>
 
-            <!-- <h3 class="detail-compact" style="display:">
-                <div name="button4" id="button4" class="button ui-state-active">
-                    <div class="button-tr">
-                        <div class="button-tl">
-                            <div class="button-tm"></div>
-                        </div>
-                    </div>
-                    <div class="button-mr">
-                        <div class="button-ml">
-                            <div class="button-mm">
-                                <a href="javaScript:void(0);"><img class="iconimage" alt="4.png" src="https://cdn.youvivid.com/css/cynthia_leaf/images/icons/1.png" border="0" align="absmiddle">&nbsp;<span id="invite_detail_name48175811" class="button-title"><span class="fontcolor-button-title">Free version</span></span>&nbsp;</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="button-br">
-                        <div class="button-bl">
-                            <div class="button-bm"></div>
-                        </div>
-                    </div>
-                </div>
-            </h3>
-
-            <div class="accordion" id="invite_detail_content_ad">
-                <div name="detail4" id="detail4" class="detail">
-                    <div class="detail-tr">
-                        <div class="detail-tl">
-                            <div class="detail-tm"></div>
-                        </div>
-                    </div>
-                    <div class="detail-mr">
-                        <div class="detail-ml">
-                            <div class="detail-mm">
-                                <div class="fontcolor-detail-mm">
-                                    <div style="border-radius: 10px; border: thin dotted; padding: 6px 0 6px 0; margin:0 0 15px 0; background-color:#FFF; font-family:verdana, tahoma, arial, serif">
-                                        <div id="freeAD" style="width:100%; text-align:center;">
-                                            <div style="color: #F93; padding: 6px 0; text-align:center">
-                                                <div style="width:100%; color: #00C; padding: 6px 0; text-align:center; font-family:Arial, Helvetica, sans-serif; letter-spacing: 0px;">
-                                                    <a href="m_invite_send.asp?invite_id=1182623" style="color:inherit;">[ The invitation will be expired in 2 day ]</a>
-                                                </div>
-                                            </div>
-                                            <a href="/?ad=miu" target="_new"><img width="100%" src="https://cdn.youvivid.com/images/youvivid_banner1_en.jpg"></a>
-                                        </div>
-                                        <div style="width:100%; color: #00C; padding: 6px 0; text-align:center">
-                                            <a href="m_invite_send.asp?invite_id=1182623" style="color:inherit;">[ Pay online to upgrade ]</a>
-                                        </div>
-                                    </div>
-                                    <div style="width:100%; margin-top:15px; text-align:center">
-                                        <a class="myButton" target="_blank" href="/make-invitations-for-weddings?ad=miu">Go make free invitation</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="detail-br">
-                        <div class="detail-bl">
-                            <div class="detail-bm"></div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
             <!--<div id="PhotoSwipeTarget"></div>-->
 
-            <!-- <div id="footer">
+            <div id="footer">
                 <div id="copyright">
                     <div id="copyright-text">
                         <div id="copyright-text-content">
-                            <span class="fontcolor-button-title">Powered by YouVivid.net</span>
+                            <div class="author-line">
+                                Made with
+                                <div class="heart-shape"></div>
+                                by Friends
+                            </div>
+                            <div class="fontcolor-button-title">Powered by HackerSoon</div>
+
+                            <style>
+                                .author-line {
+                                    line-height: 40px;
+                                    padding-top: 8px;
+                                }
+                                
+                                .heart-shape {
+                                    margin: 0 5px;
+                                    display: inline-block;
+                                    position: relative;
+                                    width: 20px;
+                                    height: 20px;
+                                    -webkit-transform: rotate(45deg);
+                                    -moz-transform: rotate(45deg);
+                                    -ms-transform: rotate(45deg);
+                                    -o-transform: rotate(45deg);
+                                    transform: rotate(45deg);
+                                    background-color: rgba(255, 0, 0, 1);
+                                }
+                                
+                                .heart-shape:before,
+                                .heart-shape:after {
+                                    position: absolute;
+                                    width: 20px;
+                                    height: 20px;
+                                    content: '';
+                                    -webkit-border-radius: 50%;
+                                    -moz-border-radius: 50%;
+                                    -o-border-radius: 50%;
+                                    border-radius: 50%;
+                                    background-color: rgba(255, 0, 0, 1);
+                                }
+                                
+                                .heart-shape:before {
+                                    bottom: 0px;
+                                    left: -10px;
+                                }
+                                
+                                .heart-shape:after {
+                                    top: -10px;
+                                    right: 0px;
+                                }
+                            </style>
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
 
-            <a id="autoMobileVideo" href="mobile_invite_autovideo.asp?sn=M37F3Z&amp;autovideourl=&amp;ts=1575599902"></a>
+            <!-- <a id="autoMobileVideo" href="  .asp?sn=M37F3Z&amp;autovideourl=&amp;ts=1575599902"></a> -->
 
         </div>
     </div>
