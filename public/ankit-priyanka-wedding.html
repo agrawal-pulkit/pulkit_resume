@@ -1,0 +1,2371 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- <link href="https://en.youvivid.net/_vM37F3Z" rel="canonical"> -->
+    <meta name="viewport" content="width=317, minimum-scale=0.5, maximum-scale=2.5, user-scalable=yes">
+    <title>Ankit &amp; Priyanka's Wedding</title>
+    <meta name="description" content="09/02/2020 | Vishal Vatika, Najafgarh, Delhi">
+
+    <!--  Essential META Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ankit & Priyanka's Wedding">
+    <meta property="og:description" content="9th February 2020 | Vishal Vatika, Deenpur, Shyam Vihar-II, Najafgarh, Delhi">
+    <meta property="og:image" content="https://profiles.hackersoon.com/images/thumbnail.jpg">
+    <meta property="og:url" content="https://profiles.hackersoon.com/ankit-priyanka-wedding">
+    <meta name="twitter:card" content="Ankit & Priyanka invites you to their Wedding on 9th February, 2020 at Vishal Vatika, Deenpur, Shyam Vihar-II, Najafgarh, Delhi">
+
+    <!--  Non-Essential, But Recommended -->
+    <meta property="og:site_name" content="HackerSoon">
+    <meta name="twitter:image:alt" content="Ankit & Priyanka's Wedding Invitation">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+    <script src="./assets/js/jquery-latest.js"></script>
+    <script type="text/javascript" src="./assets/js/jquery-ui-1.8.18.full.min.js"></script>
+    <script type="text/javascript" src="./assets/js/jquery.jplayer.min.js"></script>
+
+    <script type="text/javascript">
+        function RefreshImage(valImageId) {
+            var objImage = document.getElementById(valImageId)
+            if (objImage == undefined) {
+                return;
+            }
+            var now = new Date();
+            objImage.src = objImage.src.split('?')[0] + '?x=' + now.toUTCString();
+        }
+        var instanceClose;
+
+        function addWinOnloadEvent(func) {
+            var oldonload = window.onload;
+            if (typeof window.onload != 'function') {
+                window.onload = func;
+            } else {
+                window.onload = function() {
+                    if (oldonload) {
+                        oldonload();
+                    }
+                    func();
+                }
+            }
+        }
+
+        //?建求XMLHttpRequest?象
+        function createRequest() {
+            try {
+                request = new XMLHttpRequest();
+            } catch (trymicrosoft) {
+                try {
+                    request = new ActiveXObject("Msxml2.XMLHTTP");
+                } catch (othermicrosoft) {
+                    try {
+                        request = new ActiveXObject("Microsoft.XMLHTTP");
+                    } catch (failed) {
+                        request = false;
+                    }
+                }
+            }
+            if (!request)
+                alert("ERROR XMLHttpRequest!");
+        }
+
+        function filterEmoji(text) {
+            var ranges = [
+                '\ud83c[\udf00-\udfff]',
+                '\ud83d[\udc00-\ude4f]',
+                '\ud83d[\ude80-\udeff]'
+            ];
+            return text.replace(new RegExp(ranges.join('|'), 'g'), '');
+        }
+
+        function getMinTextInOrder(txt) {
+            var txt_array_inorder = filterEmoji(txt).split('').sort();
+
+            if (txt_array_inorder.length > 0) {
+                txt_min = txt_array_inorder[0];
+                prechr = txt_array_inorder[0];
+                for (i = 1; i < txt_array_inorder.length; i++) {
+                    if (txt_array_inorder[i] != prechr) {
+                        prechr = txt_array_inorder[i];
+                        txt_min = txt_min + txt_array_inorder[i];
+                    }
+                }
+            } else {
+                txt_min = "";
+            }
+            return txt_min;
+        }
+    </script>
+
+    <!-- <script type="text/javascript">
+        if (window == window.top) {
+            //if ( 3 > 2 &&  swfobject.hasFlashPlayerVersion("8.0.0")  ) {
+            if (3 > 2) {
+                // has Flash
+                window.location.href = "mobile_invite_view.asp?sn=M37F3Z&ts=1575571102";
+            }
+        }
+    </script> -->
+
+    <link rel="stylesheet" href="./assets/css/animate.min.css">
+    <link rel="stylesheet" href="./assets/Photoswipe-4.1.3/photoswipe.css">
+    <link rel="stylesheet" href="./assets/Photoswipe-4.1.3/default-skin.leo.css">
+    <script src="./assets/Photoswipe-4.1.3/photoswipe.min.js"></script>
+    <script src="./assets/Photoswipe-4.1.3/photoswipe-ui-default.leo.js"></script>
+
+    <script type="text/javascript">
+        var invite_styletype = 0;
+
+        function processButtonBackground() {
+            if (invite_styletype == 1) {
+                $("h3:visible>.button").each(function(index) {
+                    //$('#detail' + $(this).attr('id').split('button')[1]).attr('id', 'detail' + (index + 1) );			
+                    $(this).attr('id', 'button' + (index + 1));
+                });
+                $("h3:visible+div>.detail").each(function(index) {
+                    $(this).attr('id', 'detail' + (index + 1))
+                });
+            }
+        }
+
+        function initProcessButtonBackground() {
+            if (invite_styletype == 1) {
+                $("h3:visible>.button").each(function(index) {
+                    $(this).attr('id', 'button' + (index + 1))
+                });
+                $("h3:visible+div>.detail").each(function(index) {
+                    $(this).attr('id', 'detail' + (index + 1))
+                });
+            } else {
+                $("h3>.button").each(function(index) {
+                    $(this).attr('id', $(this).attr('name'))
+                });
+                $("h3+div>.detail").each(function(index) {
+                    $(this).attr('id', $(this).attr('name'))
+                });
+            }
+        }
+
+        var oldFunc;
+        var mapCallBackFunc = function() {};
+
+        var dragFlag48175811 = false;
+        var start48175811 = 0,
+            end48175811 = 0;
+
+        function thisTouchStart48175811(e) {
+            dragFlag48175811 = true;
+            start48175811 = e.touches[0].pageY;
+        }
+
+        function thisTouchEnd48175811() {
+            dragFlag48175811 = false;
+        }
+
+        function thisTouchMove48175811(e) {
+            if (!dragFlag48175811) return;
+            end48175811 = e.touches[0].pageY;
+            window.scrollBy(0, (start48175811 - end48175811));
+        }
+
+        var map48175811 = null;
+        var marker48175811;
+        var map48175811_zoom = 16;
+        var map48175811_latcenter = 28.58843;
+        var map48175811_lngcenter = 77.00432;
+        var map48175811_latmarker = 28.58843;
+        var map48175811_lngmarker = 77.00432;
+
+        $(document).ready(function() {
+            $("#accordion").accordion({
+                autoHeight: false
+            }, {
+                collapsible: true,
+                active: 0
+            });
+            //$("#accordion").accordion("activate",0);
+            //$("#accordion").accordion("activate","#accordion10");
+            $("#accordion").bind('accordionchange', function(event, ui) {
+                if ($(ui.newHeader).offset() != null) {
+                    $('html, body').animate({
+                        scrollTop: $(ui.newHeader).offset().top
+                    });
+                }
+                bVideoPlaying = 0;
+            });
+        });
+
+        var bPlayVideo = 1;
+
+        function clickObj(o) {
+            //	bPlayVideo=0;
+            var o = document.getElementById(o);
+
+            if (document.all) {
+                o.click();
+            } else {
+                var e = document.createEvent('MouseEvent');
+                e.initEvent('click', false, false);
+                o.dispatchEvent(e);
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        function loadScript() {
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCF5MS1Oeo_dPBEQu9hyzZc5WnBPJaBwkE&callback=mapCallBackFunc';
+            document.body.appendChild(script);
+            setSlideshow();
+        }
+    </script>
+
+    <script type="text/javascript">
+        function parseYoutubeVID(url) {
+            //urlBuf = url.toLowerCase();
+            urlBuf = url;
+            var youtubeVID = urlBuf.match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
+            if (youtubeVID != null) {
+                return youtubeVID[1];
+            } else {
+                return "ERR";
+            }
+        }
+    </script>
+
+    <script language="javascript">
+        <!--
+        function init() {}
+
+        function replaceAll(oldStr, findStr, repStr) {
+            var srchNdx = 0;
+            var newStr = "";
+            while (oldStr.indexOf(findStr, srchNdx) != -1) {
+                newStr += oldStr.substring(srchNdx, oldStr.indexOf(findStr, srchNdx));
+                newStr += repStr;
+                srchNdx = (oldStr.indexOf(findStr, srchNdx) + findStr.length);
+            }
+            newStr += oldStr.substring(srchNdx, oldStr.length);
+            return newStr;
+        }
+
+        /*
+        function getGlobalMobile(no) {
+        	start = String(no.slice(0,1));
+        	if (start == "+" ) {
+        		return String(no.slice(1,no.length))
+        	} else {
+        		if (start == "0") {
+        			return  "91" + String(no.slice(1,no.length)) 
+        		} else {
+        			return "91" + no 
+        		}
+        	} 
+        }
+        */
+
+        function getGlobalMobile(no) {
+            var tmp_no, inter_no;
+            var preset_cc = '91';
+            start = String(no.slice(0, 1));
+            if (start == "+") {
+                tmp_no = String(no.slice(1, no.length)); //remove leading +
+                if (String(tmp_no.slice(0, preset_cc.length)) == preset_cc && String(tmp_no.slice(preset_cc.length, preset_cc.length + 1)) == '0') {
+                    inter_no = preset_cc + String(tmp_no.slice(preset_cc.length + 1, tmp_no.length));
+                } else {
+                    inter_no = tmp_no;
+                }
+            } else {
+                if (start == "0") {
+                    inter_no = preset_cc + String(no.slice(1, no.length))
+                } else {
+                    if (String(no.slice(0, preset_cc.length)) == preset_cc) {
+                        if (String(no.slice(preset_cc.length, preset_cc.length + 1)) == '0') {
+                            inter_no = preset_cc + String(no.slice(preset_cc.length + 1, no.length));
+                        } else {
+                            inter_no = no;
+                        }
+                    } else {
+                        inter_no = preset_cc + no;
+                    }
+                }
+            }
+            return inter_no;
+        }
+
+        function checkMobileNumber(mo) {
+            if (String(mo.slice(0, 1)) == "+") {
+                if (isNaN(mo.slice(1, mo.length))) {
+                    return false;
+                }
+                if (mo.length < 5) {
+                    return false;
+                }
+            } else {
+                if (isNaN(mo)) {
+                    return false;
+                }
+                if (mo.length < 6) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        -->
+    </script>
+
+    <script language="javascript">
+        <!--
+        function addRow(invite_detail_id, parent_node, maxid) {
+            var obj = document.getElementById(parent_node);
+            //var sIndex=obj.getElementsByTagName('div').length+1;
+            var sIndex = maxid;
+
+            var div = document.createElement('div');
+            div.id = 's' + sIndex;
+
+            var input = document.createElement('input');
+            input.type = 'radio';
+            input.name = 't' + parent_node.replace('q', '');
+
+            var txt = document.createElement('span');
+            txt.id = 'o' + maxid;
+            txt.innerHTML = ' new option';
+
+            div.appendChild(input);
+            div.appendChild(txt);
+            obj.appendChild(div);
+
+            var obj2 = eval('document.iform' + invite_detail_id + '.t' + parent_node.replace('q', ''));
+            if (typeof(obj2.length) == 'undefined') {
+                obj2.style.display = 'none';
+            } else {
+                for (var i = 0; i < obj2.length; i++) {
+                    obj2[i].style.display = '';
+                }
+            }
+        }
+
+        function delRow(invite_detail_id, q, t) {
+            d = document.getElementById(t);
+            d.parentNode.removeChild(d);
+
+            var obj2 = eval('document.iform' + invite_detail_id + '.t' + q.replace('q', ''));
+            if (typeof(obj2.length) == 'undefined') {
+                obj2.style.display = 'none';
+            } else {
+                for (var i = 0; i < obj2.length; i++) {
+                    obj2[i].style.display = '';
+                }
+            }
+        }
+
+        function setQuestionTitle(qq, txt) {
+            document.getElementById('qq' + qq).innerHTML = txt;
+        }
+
+        function showCheckin(invite_detail_id, bcheckin) {
+            var obj = eval('document.iform' + invite_detail_id);
+            if (bcheckin == true) {
+                $("#qrcode_F000F975333C9F7A35748175811").css({
+                    "display": ""
+                });
+                obj.bcheckin.value = "1";
+            } else {
+                $("#qrcode_F000F975333C9F7A35748175811").css({
+                    "display": "none"
+                });
+                obj.bcheckin.value = "0";
+            }
+        }
+
+        function setOptionTitle(invite_detail_id, o, txt) {
+            var range_array, inputstr, qid;
+            var leftstr, rightstr, midstr, leftpos, rightpos;
+            var txtlength;
+            var option_title, option_title_left, option_title_right;
+
+            option_title = txt;
+            option_title_right = option_title;
+
+            leftstr = '';
+            rightstr = '';
+            midstr = '';
+            inputstr = '';
+
+            qid = document.getElementById('o' + o).parentNode.parentNode.id.replace('q', '');
+
+            if (option_title.split('{').length - 1 > 1) {
+                txtlength = 20;
+            } else {
+                txtlength = 20;
+            }
+
+            if (option_title.split('{').length - 1 > 0) {
+                for (var n = 0; n < option_title.split('{').length - 1; n++) {
+                    //if (leftpos >= 0 && rightpos > 0){
+                    option_title_left = option_title_right;
+                    leftstr = "";
+                    rightstr = "";
+                    midstr = "";
+                    leftpos = parseInt(option_title_left.indexOf('{'));
+                    rightpos = parseInt(option_title_left.indexOf('}'));
+
+                    leftstr = option_title_left.substring(0, leftpos);
+                    midstr = option_title_left.substring(leftpos + 1, rightpos);
+
+                    inputstr += leftstr;
+
+                    if (midstr == '') {
+                        inputstr += '&nbsp;<input type="text" id="n' + qid + '" name="n' + qid + '" value="" size="' + txtlength + '" onkeyup="setOptionValue(' + invite_detail_id + ', ' + qid + ', this.value, ' + replaceAll(option_title, "'", "\'") + ', ' + o + ')" onblur="setOptionValue(' + invite_detail_id + ', ' + qid + ', this.value, ' + replaceAll(option_title, "'", "\'") + ', ' + o + ')">&nbsp;';
+                    } else if (midstr.toLowerCase().indexOf('br') > 0) {
+                        inputstr += '&nbsp;<textarea style="display:inline-block;vertical-align:top;" name="n' + qid + '" cols="' + txtlength + '" rows="' + midstr.toLowerCase().split('br').length + '" onkeyup="setOptionValue( ' + invite_detail_id + ',' + qid + ', this.value, ' + replaceAll(option_title, "'", "\'") + ', ' + o + ')" onblur="setOptionValue( ' + invite_detail_id + ',' + qid + ', this.value, ' + replaceAll(option_title, "'", "\'") + ', ' + o + ')"></textarea>';
+                    } else {
+                        //inputstr = '';
+                        inputstr += '&nbsp;<select id="n' + qid + '" name="n' + qid + '" onchange="setOptionValue(' + invite_detail_id + ', ' + qid + ', this.value, ' + replaceAll(option_title, "'", "\'") + ', ' + o + ')">';
+                        inputstr += '<option value="">Select</option>';
+                        option_array = midstr.split('|');
+                        //alert(option_array.length);
+                        cc = 1;
+                        for (i = 0; i < option_array.length; i++) {
+                            range_array = option_array[i].split('-');
+                            if (range_array.length == 2) {
+                                for (j = parseInt(range_array[0]); j <= parseInt(range_array[1]); j++) {
+                                    inputstr += '<option value="' + j + '">' + j + '</option>';
+                                    cc = cc + 1;
+                                }
+                            } else {
+                                inputstr += '<option value="' + option_array[i] + '">' + option_array[i] + '</option>';
+                            }
+                            cc = cc + 1;
+                        }
+                        inputstr += '</select>&nbsp;';
+                    }
+                    // inputstr += leftstr;
+
+                    leftpos = parseInt(option_title_left.indexOf('{'));
+                    rightpos = parseInt(option_title_left.indexOf('}'));
+                    option_title_right = option_title_left.substring(rightpos + 1, txt.length);
+                }
+                inputstr += option_title_right;
+                document.getElementById('o' + o).innerHTML = inputstr;
+            } else {
+                document.getElementById('o' + o).innerHTML = ' ' + txt;
+            }
+        }
+
+        function updateSelect(parent_node, str) {
+            var s = document.getElementById(parent_node.replace('q', 't'));
+            var arr = new Array();
+            arr = parent.document.getElementById(parent_node).getElementsByTagName('input');
+
+            s.options.length = 0;
+            s.options[0] = new Option('Select', 0);
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i].value.Trim().length != 0) {
+                    s.options[i + 1] = new Option(arr[i].value, arr[i].value);
+                    if (arr[i].value == str) s.options[i + 1].selected = true;
+                }
+            }
+        }
+
+        function showMust(invite_detail_id, parent_node, check) {
+            var iform = eval('document.iform' + invite_detail_id + '.' + parent_node);
+            if (check) {
+                iform.value = '1';
+                document.getElementById(parent_node.replace('b', 'nn')).innerHTML = '(Required)';
+            } else {
+                iform.value = '0';
+                document.getElementById(parent_node.replace('b', 'nn')).innerHTML = '';
+            }
+        }
+
+        function showQuestion(invite_detail_id, parent_node, check) {
+            if (check) {
+                document.getElementById(parent_node.replace('q', 'ta')).style.display = 'block';
+            } else {
+                document.getElementById(parent_node.replace('q', 'ta')).style.display = 'none';
+                document.getElementById(parent_node.replace('q', 'nn')).innerHTML = '';
+            }
+
+            var n = 0;
+            //console.log($("#rsvptable" + invite_detail_id + " tr[style*='display: block']"));
+            $("#rsvptable" + invite_detail_id + " tr[style*='block']").each(function(n) {
+                n++;
+                $(this).find("span:eq(0)").html(n);
+            });
+        }
+
+
+        function setOptionValue(invite_detail_id, id, txt, order, optionid) {
+            var obj, obj2, obj3;
+            var val;
+            obj = eval('document.iform' + invite_detail_id + '.q' + id);
+            obj3 = document.getElementsByName('n' + id + '_' + optionid);
+            //if (typeof(obj3.length) == 'undefined'){
+            if (obj3.length == 1) {
+                obj.value = txt;
+            } else {
+                val = '';
+                for (var i = 0; i < obj3.length; i++) {
+                    val += '^' + obj3[i].value + '^';
+                }
+                val = replaceAll(val, '^^', '|');
+                val = replaceAll(val, '^', '');
+                obj.value = val;
+            }
+            obj2 = eval('document.iform' + invite_detail_id + '.t' + id);
+            if (typeof(obj2.length) == 'undefined') {
+                obj2.checked = true;
+            } else {
+                for (var i = 0; i < obj2.length; i++) {
+                    if (obj2[i].value == order) {
+                        obj2[i].checked = true;
+                    }
+                }
+            }
+        }
+
+        function setOptionValue_noValue(invite_detail_id, id, txt, order, optionid) {
+            var obj, obj2, obj3;
+            var val;
+            var obj4;
+            obj = eval('document.iform' + invite_detail_id + '.q' + id);
+            //obj3 = eval('document.iform' + invite_detail_id + '.n' + id + '_' + optionid);
+            obj3 = document.getElementsByName('n' + id + '_' + optionid);
+            //if (typeof(obj3.length) == 'undefined'){
+            obj4 = eval('document.iform' + invite_detail_id + '.' + txt);
+            if (obj3.length == 1) {
+                obj.value = obj4.value;
+            } else {
+                val = '';
+                for (var i = 0; i < obj3.length; i++) {
+                    val += '^' + obj3[i].value + '^';
+                }
+                val = replaceAll(val, '^^', '|');
+                val = replaceAll(val, '^', '');
+                obj.value = val;
+            }
+
+            obj2 = eval('document.iform' + invite_detail_id + '.t' + id);
+            if (typeof(obj2.length) == 'undefined') {
+                obj2.checked = true;
+            } else {
+                for (var i = 0; i < obj2.length; i++) {
+                    if (obj2[i].value == order) {
+                        obj2[i].checked = true;
+                    }
+                }
+            }
+        }
+
+        String.prototype.Trim = function() {
+            return this.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+        var bVideoPlaying = 0;
+        var bMute = 1;
+        //var audioPlayer; //initialize in $(window).load(function()
+        function setMusic(mp3Url) {
+            if (mp3Url.indexOf("musicnotfound.mp3") >= 0) {
+                bMute = 1;
+                $("#jquery_jplayer_1").jPlayer("option", "loop", false);
+            } else {
+                bMute = 0;
+                $("#jquery_jplayer_1").jPlayer("option", "loop", true);
+            }
+            $("#jquery_jplayer_1").jPlayer("pause");
+            $("#jquery_jplayer_1").jPlayer("setMedia", {
+                mp3: mp3Url
+            }).jPlayer("play");
+        }
+        -->
+    </script>
+
+    <style type="text/css">
+        body {
+            font-family: 'Merienda One', cursive;
+            margin-left: 4px;
+            margin-top: 4px;
+            margin-right: 4px;
+            font-size: 90%;
+        }
+        /*
+            html,body {
+                font-family:'Merienda One', cursive;
+                font-size:90%;
+                width: 100%;
+                height: 100%;
+                margin: 0px;
+                padding: 0px;
+                overflow-x: hidden;
+            }
+        */
+        
+        body {
+            background-color: #00877b;
+        }
+        
+        .fontcolor-button-title {
+            color: inherit;
+        }
+        
+        .fontcolor-detail-mm {
+            color: inherit;
+        }
+        
+        .ui-widget {
+            /*font-family:Georgia, "Times New Roman", Times, serif;*/
+            font-family: 'Merienda One', cursive;
+        }
+        
+        .play_video_button {
+            border: solid 1px #CCC;
+            -moz-box-shadow: 1px 1px 5px #999;
+            /* Firefox */
+            -webkit-box-shadow: 1px 1px 5px #999;
+            /* Safari 和 Chrome */
+            box-shadow: 1px 1px 5px #999;
+            /* Opera 10.5 + */
+        }
+        /*
+        .header_style {
+            -webkit-box-shadow: rgba(0,0,0,.3) 1px 1px 2px;
+            margin-bottom: 8px;
+        }
+        */
+        /*no use now */
+        
+        .title {
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            -webkit-box-shadow: rgba(0, 0, 0, .3) 1px 1px 2px;
+            border: 0px solid #E0E0E0;
+            background-color: #ff87c3;
+            /* Changes the homepage menu background color */
+            text-align: center;
+            padding: 3px 0 3px 0;
+            margin-bottom: 5px;
+            font-size: 120%;
+            color: #999;
+            background: #ff87c3;
+            /* Old browsers */
+            background: -moz-linear-gradient(top, #fcecfc 0%, #fba6e1 50%, #fd89d7 51%, #ff87c3 100%);
+            /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fcecfc), color-stop(50%, #fba6e1), color-stop(51%, #fd89d7), color-stop(100%, #ff87c3));
+            /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #fcecfc 0%, #fba6e1 50%, #fd89d7 51%, #ff87c3 100%);
+            /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #fcecfc 0%, #fba6e1 50%, #fd89d7 51%, #ff87c3 100%);
+            /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #fcecfc 0%, #fba6e1 50%, #fd89d7 51%, #ff87c3 100%);
+            /* IE10+ */
+            background: linear-gradient(top, #fcecfc 0%, #fba6e1 50%, #fd89d7 51%, #ff87c3 100%);
+            /* W3C */
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fcecfc', endColorstr='#ff87c3', GradientType=0);
+            /*IE6-9 */
+        }
+        /*jquery UI css overwrite*/
+        
+        .ui-accordion-content,
+        .detail,
+        .pswp__caption {
+            input {
+                height: 20px;
+                font-size: 14px;
+            }
+            textarea {
+                font-size: 14px;
+            }
+        }
+        /*
+            filter: alpha(opacity=10);
+            opacity:0.4;
+        */
+        /*	background-image:url(https://cdn.youvivid.com/images/index_bg_02.jpg);
+            background-repeat: repeat; 
+            background-position: center center; 
+        */
+        
+        #footer {
+            height: 72px !important;
+            padding: 5px 0;
+            background: #2d2722 !important;
+        }
+        
+        #footer #copyright {
+            height: 100%;
+            padding: 0 !important;
+            background: center center url('./assets/images/copyright.png') no-repeat !important;
+            background-size: 100% 27px !important;
+        }
+    </style>
+
+    <link class="customcss" href="./assets/css/custom.css" rel="stylesheet" type="text/css">
+    <link class="themecss" href="./assets/css/common_invite.css" rel="stylesheet" type="text/css">
+    <link class="fontcss" href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet" type="text/css">
+
+    <style>
+        * {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-font-smoothing: antialiased
+        }
+    </style>
+
+    <!-- include alertify script -->
+    <!-- include alertify.css -->
+    <link rel="stylesheet" href="./assets/alertify_2/alertify.leo.min.css">
+
+    <style>
+        .alertify-notifier,
+        .ajs-message,
+        .ajs-error,
+        .ajs-content {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+
+    <script src="./assets/alertify_2/alertify.min.js"></script>
+
+    <script type="text/javascript">
+        // custom OK and Cancel label
+        // default: OK, Cancel
+
+        alertify.defaults = {
+            // dialogs defaults
+            autoReset: true,
+            basic: false,
+            closable: false,
+            closableByDimmer: true,
+            frameless: false,
+            maintainFocus: false, // <== global default not per instance, applies to all dialogs
+            maximizable: true,
+            modal: true,
+            movable: true,
+            moveBounded: false,
+            overflow: true,
+            padding: true,
+            pinnable: true,
+            pinned: true,
+            preventBodyShift: false, // <== global default not per instance, applies to all dialogs
+            resizable: true,
+            startMaximized: false,
+            transition: 'slide',
+
+            // notifier defaults
+            notifier: {
+                // auto-dismiss wait time (in seconds)  
+                delay: 5,
+                // default position
+                position: 'bottom-right',
+                // adds a close button to notifier messages
+                closeButton: false
+            },
+
+            // language resources 
+            glossary: {
+                // dialogs default title
+                title: '',
+                // ok button text
+                ok: 'OK',
+                // cancel button text
+                cancel: 'Cancel'
+            },
+
+            // theme settings
+            theme: {
+                // class name attached to prompt dialog input textbox.
+                input: 'form-control',
+                // class name attached to ok button
+                ok: 'btn btn-primary',
+                // class name attached to cancel button 
+                cancel: 'btn btn-danger'
+            }
+        };
+
+
+        /*
+        alertify.defaults.transition = "slide";
+        alertify.defaults.theme.ok = "btn btn-primary";
+        alertify.defaults.theme.cancel = "btn btn-danger";
+        alertify.defaults.theme.input = "form-control";
+        alertify.defaults.glossary.title = "";
+        alertify.defaults.glossary.ok = "OK";
+        alertify.defaults.glossary.cancel = "Cancel";
+        */
+    </script>
+
+    <script type="text/javascript" src="./assets/js/math.uuid.js"></script>
+    <script type="text/javascript" src="./assets/js/plupload.full.min.js"></script>
+    <!-- activate language -->
+    <script type="text/javascript" src="./assets/js/i18n/en_US.js"></script>
+    <script>
+        // run the currently selected effect
+        function runEffect(controlID, page) {
+            // get effect type from
+            var selectedEffect = "blind";
+            // most effect types need no options passed by default
+            var options = {};
+            //options = { percent: 0 };
+            //options = { to: { width: 100%, height: auto } };
+            // run the effect
+            $("#page-" + controlID + "-" + page).toggle(selectedEffect, options, 500);
+            $("#more-" + controlID + "-" + (page - 1)).toggle("puff", options, 500);
+        };
+    </script>
+
+    <link rel="stylesheet" href="./assets/css/invite_my_button.css">
+
+    <link class="fontcss_detail48175808" id="Martel" rel="stylesheet" type="text/css" href="">
+    <link class="fontcss_detail48175808" id="Caudex" rel="stylesheet" type="text/css" href="">
+    <link class="fontcss_detail48175808" id="Lora" rel="stylesheet" type="text/css" href="">
+    <link class="fontcss_detail48175808" id="Bree Serif" rel="stylesheet" type="text/css" href="">
+    <link class="fontcss_detail48175808" id="Raleway" rel="stylesheet" type="text/css" href="">
+    <link class="fontcss_detail48175808" id="Allerta" rel="stylesheet" type="text/css" href="">
+    <link class="fontcss_detail48175808" id="Roboto" rel="stylesheet" type="text/css" href="">
+    <link class="fontcss_detail48175808" id="Ubuntu" rel="stylesheet" type="text/css" href="">
+    <link class="fontcss_detail48175808" id="Rubik One" rel="stylesheet" type="text/css" href="">
+    <link class="fontcss_detail48175808" id="Lobster Two" rel="stylesheet" type="text/css" href="">
+    <link class="fontcss_detail48175808" id="Oleo Script" rel="stylesheet" type="text/css" href="">
+    <link class="fontcss_detail48175808" id="Abril Fatface" rel="stylesheet" type="text/css" href="">
+    <link class="fontcss_detail48175808" id="Poiret One" rel="stylesheet" type="text/css" href="">
+    <link class="fontcss_detail48175808" id="Mystery Quest" rel="stylesheet" type="text/css" href="">
+    <link class="fontcss_detail48175808" id="Leckerli One" rel="stylesheet" type="text/css" href="">
+    <link class="fontcss_detail48175808" id="Parisienne" rel="stylesheet" type="text/css" href="">
+    <link class="fontcss_detail48175808" id="Alex Brush" rel="stylesheet" type="text/css" href="">
+    <link class="fontcss_detail48175808" id="Arizonia" rel="stylesheet" type="text/css" href="">
+    <link class="fontcss_detail48175808" id="Handlee" rel="stylesheet" type="text/css" href="">
+    <link class="fontcss_detail48175808" id="Dancing Script" rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700">
+    <link class="fontcss_detail48175808" id="Merienda One" rel="stylesheet" type="text/css" href="">
+    <link class="fontcss_detail48175808" id="Inconsolata" rel="stylesheet" type="text/css" href="">
+    <link class="fontcss_detail48175808" id="Cousine" rel="stylesheet" type="text/css" href="">
+    <link class="fontcss_detail48175808" id="PT Mono" rel="stylesheet" type="text/css" href="">
+    <link class="fontcss_detail48175808" id="Nova Mono" rel="stylesheet" type="text/css" href="">
+
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/39/1/common.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/39/1/util.js"></script>
+</head>
+
+<body marginwidth="0">
+    <style>
+        #Loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 337px;
+            height: 495px;
+            background: #CCCCCC;
+            margin: 0px 0px 0px 0px;
+            z-index: 1001;
+            -webkit-animation-duration: 2s;
+            -moz-animation-duration: 2s;
+            -ms-animation-duration: 2s;
+            animation-duration: 2s;
+        }
+        
+        #loading_bg {
+            width: 337px;
+            height: 495px;
+            background: center center url('./assets/images/user/s19125QZqzOzzFUIaQx.jpg?x-img-process=fit-in/2000x2000/'), linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), center center url('./assets/images/user/s19125QZqzOzzFUIaQx.jpg?x-img-process=fit-in/2000x2000/');
+            background-repeat: no-repeat, no-repeat, repeat;
+            background-size: contain, cover, contain;
+            margin: auto;
+            z-index: 300;
+            -webkit-animation-duration: 1.6s;
+            -moz-animation-duration: 1.6s;
+            -ms-animation-duration: 1.6s;
+            animation-duration: 1.6s;
+        }
+        
+        #loading_bg2 {
+            width: 100%;
+            height: 100%;
+            background: center center url(./assets/images/cover/msk.png);
+            margin: 0px 0px 0px 0px;
+            -webkit-animation-duration: 1.6s;
+            -moz-animation-duration: 1.6s;
+            -ms-animation-duration: 1.6s;
+            animation-duration: 1.6s;
+            z-index: 300;
+        }
+        
+        #loading_circle_outer {
+            position: absolute;
+            width: 100%;
+            /*height:150px; */
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            display: table;
+            height: 100%;
+            z-index: 300;
+        }
+        
+        #loading_circle {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        
+        #loading_circle_1 {
+            background: center top url(./assets/images/cover/p1.png) no-repeat;
+            background-size: 180px 42px;
+            height: 55px;
+            width: 100%;
+            -webkit-animation-duration: 1.6s;
+            -moz-animation-duration: 1.6s;
+            -ms-animation-duration: 1.6s;
+            animation-duration: 1.6s;
+        }
+        
+        #loading_circle_2 {
+            background: center bottom url(./assets/images/cover/p2.png) no-repeat;
+            background-size: 255px 15px;
+            height: 15px;
+            width: 100%;
+            -webkit-animation-duration: 0.5s;
+            -moz-animation-duration: 0.5s;
+            -ms-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+        }
+        
+        #loading_circle_3 {
+            text-align: center;
+            color: #FFF;
+            font-size: 22px;
+            line-height: 1.1;
+            font-weight: normal;
+            padding: 14px;
+            -webkit-animation-duration: 1s;
+            -moz-animation-duration: 1s;
+            -ms-animation-duration: 1s;
+            animation-duration: 1s;
+        }
+        
+        #loading_circle_4 {
+            background: center bottom url(./assets/images/cover/p3.png) no-repeat;
+            background-size: 255px 15px;
+            height: 15px;
+            width: 100%;
+            -webkit-animation-duration: 0.5s;
+            -moz-animation-duration: 0.5s;
+            -ms-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+        }
+        
+        #loading_circle_5 {
+            font-family: verdana, tahoma, arial, serif;
+            text-align: center;
+            color: #CFF;
+            font-size: 16px;
+            line-height: 1.1;
+            font-weight: normal;
+            padding: 10px;
+            -webkit-animation-duration: 0.6s;
+            -moz-animation-duration: 0.6s;
+            -ms-animation-duration: 0.6s;
+            animation-duration: 0.6s;
+        }
+        
+        #loading_circle_6 {
+            background: center bottom url(./assets/images/cover/p4.png) no-repeat;
+            background-size: 150px 8px;
+            height: 8px;
+            width: 100%;
+            -webkit-animation-duration: 1.6s;
+            -moz-animation-duration: 1.6s;
+            -ms-animation-duration: 1.6s;
+            animation-duration: 1.6s;
+        }
+        
+        #loading_circle_7 {
+            text-align: center;
+            color: #FFF;
+            font-size: 14px;
+            line-height: 1.1;
+            padding: 3px;
+            -webkit-animation-duration: 1.6s;
+            -moz-animation-duration: 1.6s;
+            -ms-animation-duration: 1.6s;
+            animation-duration: 1.6s;
+        }
+        
+        #loading_circle_8 {
+            background: center bottom url(./assets/images/cover/p5.png) no-repeat;
+            background-size: 180px 40px;
+            height: 50px;
+            width: 100%;
+            margin-top: -20px;
+            -webkit-animation-duration: 1.6s;
+            -moz-animation-duration: 1.6s;
+            -ms-animation-duration: 1.6s;
+            animation-duration: 1.6s;
+        }
+        
+        #click_open {
+            right: 40px;
+            bottom: 0;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-style: italic;
+            position: absolute;
+            font-family: verdana, tahoma, arial, serif;
+            -webkit-animation-iteration-count: infinite;
+            -moz-animation-iteration-count: infinite;
+            -ms-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
+        
+        .hide-div {
+            /*display:none;*/
+            visibility: hidden;
+        }
+        
+        .hide-div-display {
+            display: none;
+        }
+    </style>
+
+    <script language="javascript">
+        <!--
+        $(document).ready(function() {
+            /*	
+                if (window.self != window.top) {
+                    $(document.body).addClass("in-iframe");
+                }
+            */
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('#Loading').on('touchstart', function(e) {
+                    //stopLoading();
+                    if (bWinOnLoadFired == 0) {
+                        winOnloadFunc();
+                    }
+                });
+            } else {
+                $('#Loading').on('click', function(e) {
+                    //stopLoading();
+                    if (bWinOnLoadFired == 0) {
+                        winOnloadFunc();
+                    }
+                });
+            }
+
+            $('#loading_bg').removeClass('hide-div');
+            $('#loading_bg').addClass('animated fadeIn');
+
+            $('#loading_bg2').removeClass('hide-div');
+            $('#loading_bg2').addClass('animated fadeIn');
+
+            $('#loading_bg2').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                $('#loading_circle_2').removeClass('hide-div');
+                $('#loading_circle_2').addClass('animated fadeInUp');
+                $('#loading_circle_4').removeClass('hide-div');
+                $('#loading_circle_4').addClass('animated fadeInDown');
+            });
+
+            $('#loading_circle_2').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                $('#loading_circle_3').removeClass('hide-div');
+                $('#loading_circle_3').addClass('animated zoomIn');
+                $('#loading_circle_1').removeClass('hide-div');
+                $('#loading_circle_1').addClass('animated bounceInDown');
+                $('#loading_circle_6').removeClass('hide-div');
+                $('#loading_circle_6').addClass('animated bounceInUp');
+                $('#loading_circle_7').removeClass('hide-div');
+                $('#loading_circle_7').addClass('animated bounceInUp');
+                $('#loading_circle_8').removeClass('hide-div');
+                $('#loading_circle_8').addClass('animated bounceInUp');
+            });
+
+            $('#loading_circle_1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                $('#loading_circle_5').removeClass('hide-div');
+                $('#loading_circle_5').addClass('animated lightSpeedIn');
+            });
+
+            $('#loading_circle_5').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                setTimeout(function() {
+                    if (bWinOnLoadFired == 0) {
+                        //winOnloadFunc();		
+                        $('#click_open').removeClass('hide-div');
+                        $('#click_open').addClass('animated pulse');
+                    }
+                }, 2000);
+            });
+        });
+
+        function stopLoading() {
+            if ($.browser.msie && parseInt($.browser.version, 10) <= 9) {
+                $("#Loading").fadeOut();
+            } else {
+                $("#Loading").addClass('animated fadeOut');
+                $('#Loading').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                    $('#Loading').addClass('hide-div');
+                    $('#Loading').addClass('hide-div-display');
+                });
+            }
+            //audioPlayer = $("#xaudio")[0];
+        }
+
+        function winOnloadFunc() {
+            bWinOnLoadFired = 1;
+            stopLoading();
+            loadScript();
+        }
+
+        var bWinOnLoadFired = 0;
+        $(window).load(function() {
+            if ($.browser.msie && parseInt($.browser.version, 10) <= 9) {
+                if (bWinOnLoadFired == 0) {
+                    winOnloadFunc();
+                }
+            }
+        });
+
+        $(function() {
+            setTimeout(function() {
+                if (bWinOnLoadFired == 0) {
+                    winOnloadFunc();
+                }
+            }, 30000);
+        });
+        -->
+    </script>
+
+    <!-- <div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" > -->
+    <div id="Loading" class="animated fadeOut hide-div hide-div-display">
+        <div id="loading_bg" class="animated fadeIn">
+            <div id="loading_bg2" class="animated fadeIn"></div>
+        </div>
+
+        <div id="loading_circle_outer">
+            <div id="loading_circle">
+                <div id="loading_circle_1" class="animated bounceInDown"></div>
+                <div id="loading_circle_2" class="animated fadeInUp"></div>
+                <div id="loading_circle_3" class="animated zoomIn">You are invited</div>
+                <div id="loading_circle_4" class="animated fadeInDown"></div>
+                <div id="loading_circle_5" class="animated lightSpeedIn">Ankit &amp; Priyanka's Wedding</div>
+                <div id="loading_circle_6" class="animated bounceInUp"></div>
+                <div id="loading_circle_7" class="animated bounceInUp">January 17th, 2020</div>
+                <div id="loading_circle_8" class="animated bounceInUp"></div>
+            </div>
+        </div>
+        <div id="click_open" class="animated pulse">Tap screen to open</div>
+    </div>
+
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function() {
+            /*	
+            	if (window.self != window.top) {
+            		$(document.body).addClass("in-iframe");
+            	}
+            */
+            if (bMute == 0) $("#mbut").addClass('mof');
+
+            function mon() {
+                $("#jquery_jplayer_1").jPlayer("play");
+            }
+
+            function mof() {
+                $("#jquery_jplayer_1").jPlayer("pause");
+            }
+
+            $("#jquery_jplayer_1").jPlayer({
+                ready: function() {
+                    $(this).jPlayer("setMedia", {
+                        mp3: "audios_system/musicnotfound.mp3"
+                    }).jPlayer("play");
+                    var click = document.ontouchstart === undefined ? 'click' : 'touchstart';
+                    var kickoff = function() {
+                        if (bVideoPlaying == 1) {
+                            $("#jquery_jplayer_1").jPlayer("pause");
+                        } else {
+                            $("#jquery_jplayer_1").jPlayer("play");
+                        }
+                    };
+
+                    $("#MainBody,#Loading,#mbut").on("click", kickoff);
+
+                    $("#jquery_jplayer_1").bind($.jPlayer.event.play, function(event) {
+                        if (bMute == 0) {
+                            $("#mbut").removeClass('mof');
+                            $("#mbut").removeClass('mon');
+                            $("#mbut").addClass('mon');
+                            $("#mbut").off("click", mof);
+                            $("#mbut").off("click", mon);
+                            $("#mbut").on("click", mof);
+                        } else {
+                            $("#mbut").removeClass('mof');
+                            $("#mbut").removeClass('mon');
+                            $("#mbut").off("click", mof);
+                            $("#mbut").off("click", mon);
+                        }
+                        $("#MainBody,#Loading,#mbut").off("click", kickoff);
+                    });
+                    $("#jquery_jplayer_1").bind($.jPlayer.event.pause, function(event) {
+                        if (bMute == 0) {
+                            $("#mbut").removeClass('mof');
+                            $("#mbut").removeClass('mon');
+                            $("#mbut").addClass('mof');
+                            $("#mbut").off("click", mof);
+                            $("#mbut").off("click", mon);
+                            $("#mbut").on("click", mon);
+                        } else {
+                            $("#mbut").removeClass('mof');
+                            $("#mbut").removeClass('mon');
+                            $("#mbut").off("click", mof);
+                            $("#mbut").off("click", mon);
+                        }
+                    });
+                },
+                swfPath: "/js",
+                loop: false
+            });
+        });
+    </script>
+
+    <style>
+        .mon {
+            position: fixed;
+            width: 42px;
+            height: 42px;
+            right: 10px;
+            top: 5px;
+            z-index: 300;
+            background: url(./assets/images/icons/m_play2.png) no-repeat;
+        }
+        
+        .mof {
+            position: fixed;
+            width: 42px;
+            height: 42px;
+            right: 10px;
+            top: 5px;
+            z-index: 300;
+            background: url(./assets/images/icons/m_stop2.png) no-repeat;
+        }
+        
+        #preload-19 {
+            background: url(./assets/images/icons/m_play2.png) no-repeat -9999px -9999px;
+        }
+        
+        #preload-20 {
+            background: url(./assets/images/icons/m_stop2.png) no-repeat -9999px -9999px;
+        }
+    </style>
+    <div id="mbut"></div>
+
+    <div id="MainBody">
+        <div id="coverpage"></div>
+        <div id="MainContent">
+            <!-- <div id="freeAD" style="background-color: rgb(255, 255, 255); position: fixed; left: 0px; z-index: 1000; width: 100%; height: 90px; display: none;">
+                <div style="margin: auto; width:320px; height:90px">
+                    <div style="height:20px; line-height: 20px; color: #00C; font-family:Arial, Helvetica, sans-serif; text-align:center">
+                        <a href="m_invite_send.asp?invite_id=1182623" style="color:inherit;">[ The invitation will be expired in 2 day ]</a>
+                    </div>
+                    <div align="center" style="padding:5px 0px 5px 0px;">
+                        <a class="myButton" href="m_invite_send.asp?invite_id=1182623">Pay online to upgrade</a>
+                    </div>
+                    <div style="height:20px; line-height: 20px; cursor:pointer; color:#666; font-family:verdana, tahoma, arial, serif" align="center" onclick="document.getElementById('freeAD').style.display = 'none';document.getElementById('freeADPlaceHolder').style.display = 'none';">Tap here to hide prompt</div>
+                </div>
+            </div>
+            <div id="freeADPlaceHolder" style="background-color: rgb(255, 255, 255); width: 100%; height: 90px; display: none;">
+            </div> -->
+
+            <div id="outter">
+                <div class="outter-main-tr">
+                    <div class="outter-main-tl">
+                        <div class="outter-main-tm"></div>
+                    </div>
+                </div>
+                <div class="outter-main-mr">
+                    <div class="outter-main-ml">
+                        <div class="ui-widget-header ui-corner-all">
+                            <div id="inner">
+                                <div class="inner-main-tr">
+                                    <div class="inner-main-tl">
+                                        <div class="inner-main-tm">
+                                            <div id="main-title">
+                                                <div class="main-title-tr">
+                                                    <div class="main-title-tl">
+                                                        <div class="main-title-tm">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="main-title-mr">
+                                                    <div class="main-title-ml">
+                                                        <div class="main-title-mm">
+                                                            <div id="maintitlehtml"><span style="text-decoration: none; font-style: normal; font-size: 20px; font-weight: normal;">Ankit &amp; Priyanka's<br>Wedding</span></div>
+                                                            <div id="maintitle_decoration1"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="main-title-br">
+                                                    <div class="main-title-bl">
+                                                        <div class="main-title-bm">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inner-main-mr">
+                                    <div id="img_decoration1"></div>
+                                    <div id="img_decoration2"></div>
+                                    <div id="img_decoration4"></div>
+                                    <div class="inner-main-ml">
+                                        <div id="frame1_1">
+                                            <div id="frame1_2">
+                                                <div id="frame1_3"></div>
+                                            </div>
+                                        </div>
+                                        <div id="frame2_1">
+                                            <div id="frame2_2">
+                                                <div id="frame2_3"></div>
+                                            </div>
+                                        </div>
+                                        <div id="frame3_1">
+                                            <div id="frame3_2">
+                                                <div id="frame3_3"></div>
+                                            </div>
+                                        </div>
+                                        <div class="inner-main-mm">
+                                            <div id="main_image_container">
+                                                <div class="invite_webimg_album auto" style="background: url('./images/ankit/main/ankit_gallery_01.jpg?x-img-process=fit-in/2000x2000/') 50% 50% / cover no-repeat; min-width: 100%; min-height: 100%; display: block;"></div>
+
+                                                <div class="invite_webimg_album" style="background: url('./images/ankit/main/ankit_gallery_02.jpg') 50% 50% / cover no-repeat; min-width: 100%; min-height: 100%; display: none;"></div>
+
+                                                <div class="invite_webimg_album" style="background: url('./images/ankit/main/ankit_main_3.jpg') 50.1747% 49.4382% / cover no-repeat; min-width: 100%; min-height: 100%; display: none;"></div>
+
+                                                <div class="invite_webimg_album" id="invite_webimg_album_mainimage" style="background: url('./images/ankit/main/ankit_main_4.jpg?x-img-process=fit-in/2000x2000/') center center / cover no-repeat; min-width: 100%; min-height: 100%; display: none;"></div>
+
+                                                <img id="invite_webimg" style=" display:block" src="./images/ankit/main/ankit_main_4.jpg?x-img-process=fit-in/2000x2000/" width="100%" alt="Mobile Wedding Invitations">
+                                            </div>
+
+                                            <div id="img_videobutton_placeholder" style="position:relative;">
+                                                <div id="img_videobutton" style="display:none;"></div>
+                                            </div>
+
+                                            <style type="text/css">
+                                                #main_image_container {
+                                                    position: relative;
+                                                    overflow: hidden;
+                                                    width: 100%;
+                                                    height: 100%
+                                                }
+                                                
+                                                .invite_webimg_album {
+                                                    float: left;
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: 0;
+                                                    transform: scale(1.09, 1.09);
+                                                    -webkit-transform: scale(1.09, 1.09);
+                                                }
+                                                /*.invite_webimg_album:last-child{display: block; -webkit-transform: scale(1.2,1.2);}*/
+                                                
+                                                .auto {
+                                                    animation: imgScale 4s ease-out;
+                                                    -webkit-animation: imgScale 4s ease-out;
+                                                }
+                                                
+                                                @keyframes imgScale {
+                                                    0% {
+                                                        transform: scale(1, 1);
+                                                    }
+                                                    100% {
+                                                        transform: scale(1.09, 1.09);
+                                                    }
+                                                }
+                                                
+                                                @-webkit-keyframes imgScale {
+                                                    0% {
+                                                        -webkit-transform: scale(1, 1);
+                                                    }
+                                                    100% {
+                                                        -webkit-transform: scale(1.09, 1.09);
+                                                    }
+                                                }
+                                            </style>
+
+                                            <script type="text/javascript">
+                                                $(function() {
+                                                    /*	
+                                                    	$('#invite_webimg').on('load', function () {
+                                                    		$("#main_image_container").width($(this).width()).height($(this).height());
+                                                    		//alert('#invite_webimg onload, w=' + $(this).width() + ', h=' + $(this).height() );
+                                                    	}).each(function() {
+                                                    		if(this.complete) $(this).load();
+                                                    	});
+                                                    */
+                                                });
+
+                                                var now_img = 0,
+                                                    img_count = 0;
+                                                var slideshowTimer
+
+                                                function setSlideshow() {
+
+                                                    //$("#main_image_container").width($('#invite_webimg').width()).height($('#invite_webimg').height());
+                                                    if (slideshowTimer) {
+                                                        clearInterval(slideshowTimer);
+                                                    }
+                                                    img_count = $('.invite_webimg_album').length;
+                                                    if (img_count > 1) {
+                                                        now_img = img_count - 1;
+                                                        slideshowTimer = setInterval(function() {
+                                                            if (now_img == 0) {
+                                                                next_img = img_count - 1;
+                                                            } else {
+                                                                next_img = now_img - 1;
+                                                            }
+                                                            $(".invite_webimg_album").eq(next_img).fadeIn(1000).addClass('auto');
+                                                            $(".invite_webimg_album").eq(now_img).fadeOut(2000).removeClass('auto');
+                                                            now_img = next_img;
+                                                        }, 4000);
+                                                    } else {
+
+                                                    }
+                                                }
+
+                                                function addSlideshowItem(fileurl) {
+                                                    $("#main_image_container").prepend("<div class='invite_webimg_album' style='background:url(\"" + fileurl + "\") no-repeat center center; background-size: cover; min-width:100%; min-height:100%' ></div>");
+                                                }
+
+                                                function addSlideshowItem_pos(fileurl, pos) {
+                                                    if (pos.length == 0)
+                                                        pos = "50% 50%";
+                                                    $("#main_image_container").prepend("<div class='invite_webimg_album' style='background:url(\"" + fileurl + "\") no-repeat; background-position: " + pos + "; background-size: cover; min-width:100%; min-height:100%' ></div>");
+                                                }
+                                            </script>
+
+                                            <script>
+                                                var startX, startY;
+                                                // detect if touch event supported or not
+                                                if ('ontouchstart' in document.documentElement) {
+                                                    document.getElementById("invite_webimg").addEventListener("touchmove", handleMove, false);
+                                                    document.getElementById("invite_webimg").addEventListener("touchend", handleEnd, false);
+                                                    document.getElementById("invite_webimg").addEventListener("touchstart", handleStart, false);
+                                                }
+
+                                                function handleStart(event) {
+                                                    //event.preventDefault();
+                                                    var touch = event.touches[0];
+                                                    startX = parseInt(touch.pageX);
+                                                    startY = parseInt(touch.pageY);
+                                                }
+
+                                                function handleEnd(event) {
+
+                                                }
+
+                                                function handleMove(event) {
+                                                    //event.preventDefault();
+                                                    var x, y;
+                                                    var touch = event.touches[0];
+                                                    x = parseInt(touch.pageX) - startX;
+                                                    y = parseInt(touch.pageY) - startY;
+
+                                                    if ($("#Gallery0 li").size() > 0) {
+                                                        if ((Math.abs(x) > Math.abs(y)) && (Math.abs(x) > 150)) {
+                                                            instance0.show(0);
+                                                        }
+                                                    }
+                                                }
+
+                                                // default mv parameter 
+                                                var invite_mediatype = 0;
+                                                var invite_preview_objurl;
+                                                var invite_preview_usrdata;
+
+                                                /*	
+                                                	$(document).ready(function() {
+                                                        //init
+                                                        if (invite_mediatype == 1) {
+                                                            $( "#img_videobutton").show();
+                                                            $( "#img_videobutton_placeholder").show();
+                                                        } else {
+                                                            $( "#img_videobutton").hide();
+                                                            $( "#img_videobutton_placeholder").hide();
+                                                        }
+                                                	});
+                                                */
+
+                                                $(function() {
+                                                    //if (invite_mediatype == 1) {
+                                                    //	$( "#img_decoration1,#img_decoration2,#img_decoration3").css('cursor', 'pointer');	
+                                                    //} else {
+                                                    //	$( "#img_decoration1,#img_decoration2,#img_decoration3").css('cursor', 'default');	
+                                                    //}
+
+                                                    $("#img_videobutton").click(function() {
+                                                        if (invite_mediatype == 1) {
+                                                            self.parent.switchSrc_variable4(invite_preview_objurl, invite_preview_usrdata);
+                                                        }
+                                                        return false;
+                                                    });
+                                                });
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inner-main-br">
+                                    <div id="img_decoration3"></div>
+                                    <div class="inner-main-bl">
+                                        <div class="inner-main-bm">
+
+                                            <div id="sub-title">
+                                                <div class="sub-title-tr">
+                                                    <div class="sub-title-tl">
+                                                        <div class="sub-title-tm"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="sub-title-mr">
+                                                    <div class="sub-title-ml">
+                                                        <div class="sub-title-mm">
+                                                            <div id="subtitlehtml"><span style="font-weight: normal; font-size: 22px;">9th February, 2020</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sub-title-br">
+                                                    <div class="sub-title-bl">
+                                                        <div class="sub-title-bm"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="outter-main-br">
+                    <div class="outter-main-bl">
+                        <div class="outter-main-bm"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- preload placeholder for custom.css assets-->
+            <div id="preload-01"></div>
+            <div id="preload-02"></div>
+            <div id="preload-03"></div>
+            <div id="preload-04"></div>
+            <div id="preload-05"></div>
+            <div id="preload-06"></div>
+            <div id="preload-07"></div>
+            <div id="preload-08"></div>
+            <div id="preload-09"></div>
+            <div id="preload-10"></div>
+            <div id="preload-11"></div>
+            <div id="preload-12"></div>
+            <div id="preload-13"></div>
+            <div id="preload-14"></div>
+            <div id="preload-15"></div>
+            <div id="preload-16"></div>
+            <div id="preload-17"></div>
+            <div id="preload-18"></div>
+            <div id="preload-19"></div>
+            <div id="preload-20"></div>
+
+            <div id="accordion" class="ui-accordion ui-widget ui-helper-reset ui-accordion-icons" role="tablist">
+                <h3 class="detail-compact ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-top" style="display:" id="invite_detail_title48175808" role="tab" aria-expanded="true" aria-selected="true" tabindex="0">
+
+                    <span class="ui-icon ui-icon-triangle-1-s"></span>
+                    <div name="button1" id="button1" class="button button_detail_id_48175808">
+                        <div class="button-tr">
+                            <div class="button-tl">
+                                <div class="button-tm"></div>
+                            </div>
+                        </div>
+                        <div class="button-mr">
+                            <div class="button-ml">
+                                <div class="button-mm">
+                                    <a href="javaScript:void(0);"><img class="iconimage" alt="1.png" src="./assets/images/icons/1.png" border="0" align="absmiddle">&nbsp;<span id="invite_detail_name48175808" class="button-title"><span class="fontcolor-button-title">Invitation</span></span>&nbsp;</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-br">
+                            <div class="button-bl">
+                                <div class="button-bm"></div>
+                            </div>
+                        </div>
+                    </div>
+                </h3>
+
+                <div class="accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" id="invite_detail_content48175808" role="tabpanel">
+                    <div name="detail1" id="detail1" class="detail">
+                        <div class="detail-tr">
+                            <div class="detail-tl">
+                                <div class="detail-tm"></div>
+                            </div>
+                        </div>
+                        <div class="detail-mr">
+                            <div class="detail-ml">
+                                <div class="detail-mm">
+                                    <div class="fontcolor-detail-mm">
+
+                                        <div class="invite_detail_editor" id="invite_detail_editor48175808">
+                                            <p style="text-align: center;">
+                                                <span style="font-size:20px;">
+                                                    <span style="font-family:dancing script,cursive;">Your presence will only extend the joy<br> and the smiles on our face.<br> We can't afford to miss<br> the pleasure of your presence on<br><span style="font-size:21px; font-weight:bold;">Sunday, 9th February, 2020</span><br>at
+                                                the celebration of our marriage.</span>
+                                                </span>
+                                            </p>
+                                            <!-- <p style="text-align: center;">
+                                                <span style="font-size:22px; font-weight:bold;">
+                                                    <span style="font-family:dancing script,cursive;">Sunday, February 09, 2020</span>
+                                                </span>
+                                            </p> -->
+                                            <br>
+                                            <p style="text-align: center;">
+                                                <span style="font-size:20px;">
+                                                    <span style="font-family:dancing script,cursive;">
+                                                        <span style="font-size:21px; font-weight:bold;">Vishal Vatika</span><br>Deenpur, Shyam Vihar-II<br>Najafgarh, Delhi
+                                                </span>
+                                                </span>
+                                            </p>
+
+                                            <p style="text-align: center;">
+                                                <span style="font-size:20px;">
+                                                    <span style="font-family:dancing script,cursive;">Dinner and dancing to follow</span>
+                                                </span>
+                                            </p>
+
+                                        </div>
+                                        <script type="text/javascript">
+                                            function reloadWebFont48175808() {
+                                                $("link.fontcss_detail48175808").remove();
+
+                                                var webfontinfo_array = ['Martel|Martel|//fonts.googleapis.com/css?family=Martel|3', 'Caudex|Caudex|//fonts.googleapis.com/css?family=Caudex|3', 'Lora|Lora|//fonts.googleapis.com/css?family=Lora|3', 'Bree Serif|Bree Serif|//fonts.googleapis.com/css?family=Bree+Serif|3', 'Raleway|Raleway|//fonts.googleapis.com/css?family=Raleway|3', 'Allerta|Allerta|//fonts.googleapis.com/css?family=Allerta|3', 'Roboto|Roboto|//fonts.googleapis.com/css?family=Roboto|3', 'Ubuntu|Ubuntu|//fonts.googleapis.com/css?family=Ubuntu|3', 'Rubik One|Rubik One|//fonts.googleapis.com/css?family=Rubik+One|3', 'Lobster Two|Lobster Two|//fonts.googleapis.com/css?family=Lobster+Two|3', 'Oleo Script|Oleo Script|//fonts.googleapis.com/css?family=Oleo+Script|3', 'Abril Fatface|Abril Fatface|//fonts.googleapis.com/css?family=Abril+Fatface|3', 'Poiret One|Poiret One|//fonts.googleapis.com/css?family=Poiret+One|3', 'Mystery Quest|Mystery Quest|//fonts.googleapis.com/css?family=Mystery+Quest|3', 'Leckerli One|Leckerli One|//fonts.googleapis.com/css?family=Leckerli+One|3', 'Parisienne|Parisienne|//fonts.googleapis.com/css?family=Parisienne|3', 'Alex Brush|Alex Brush|//fonts.googleapis.com/css?family=Alex+Brush&subset=latin,latin-ext|3', 'Arizonia|Arizonia|//fonts.googleapis.com/css?family=Arizonia|3', 'Handlee|Handlee|//fonts.googleapis.com/css?family=Handlee|3', 'Dancing Script|Dancing Script|//fonts.googleapis.com/css?family=Dancing+Script:400,700|3', 'Merienda One|Merienda One|//fonts.googleapis.com/css?family=Merienda+One|3', 'Inconsolata|Inconsolata|//fonts.googleapis.com/css?family=Inconsolata:700|3', 'Cousine|Cousine|//fonts.googleapis.com/css?family=Cousine|3', 'PT Mono|PT Mono|//fonts.googleapis.com/css?family=PT+Mono|3', 'Nova Mono|Nova Mono|//fonts.googleapis.com/css?family=Nova+Mono|3'];
+                                                var htmltext = $("#invite_detail_editor48175808").html();
+                                                plaintext = htmltext.replace(/(<[^<|>]+?>|\r\n|\n|\r|^\s*|\s*$|\s+|&nbsp;)/gim, '');
+
+                                                plaintext_min = getMinTextInOrder(plaintext);
+
+                                                contentcss_list = "";
+
+                                                for (cc = 0; cc < webfontinfo_array.length; cc++) {
+                                                    tmp_webfontname = webfontinfo_array[cc].split('|')[0];
+                                                    //	alert(tmp_webfontname);	
+                                                    tmp_webfont = webfontinfo_array[cc].split('|')[1];
+                                                    tmp_webfonturl = webfontinfo_array[cc].split('|')[2];
+                                                    tmp_webfonttype = webfontinfo_array[cc].split('|')[3];
+
+                                                    if (htmltext.toUpperCase().indexOf(tmp_webfont.toUpperCase()) >= 0) {
+                                                        var_text = plaintext_min;
+                                                        if (tmp_webfonttype == 1) {
+                                                            $(document).find('head').append('<link class="fontcss_detail48175808" id="' + tmp_webfont + '" rel="stylesheet" type="text/css" href="' + tmp_webfonturl + "&text=" + encodeURIComponent(var_text) + '">');
+                                                        } else if (tmp_webfonttype == 3) { //google webfont pure english,  no text parameter
+                                                            $(document).find('head').append('<link class="fontcss_detail48175808" id="' + tmp_webfont + '" rel="stylesheet" type="text/css" href="' + tmp_webfonturl + '">');
+                                                        } else {
+                                                            post_url = tmp_webfonturl.split('?')[0];
+                                                            post_vars = tmp_webfonturl.split('?')[1] + "&text=" + encodeURIComponent(var_text);
+                                                            createRequest();
+                                                            //post_url = "http://cn.youvivid.com/test_test.asp";
+
+                                                            if ($.browser.msie && parseInt($.browser.version, 10) <= 7) {
+                                                                post_url = "https://en.youvivid.net/mobile_invite_getcontentcssurl.asp";
+                                                            } else {
+                                                                serverUrl = 'https://en.youvivid.net/';
+                                                                post_url = "https://awsfont.youvivid.net/Fonts/csslink";
+                                                            }
+                                                            request.open("POST", post_url, false);
+
+                                                            request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                                                            request.send(post_vars);
+                                                            post_response = request.responseText;
+
+                                                            // this is for testing 
+                                                            //$(document).find('head').append('<link class="fontcss_detail" id="' + tmp_webfont + '" rel="stylesheet" type="text/css" href="'+ tmp_webfonturl + "&text=" + encodeURIComponent(var_text) +'">');
+                                                            $(document).find('head').append('<link class="fontcss_detail48175808" id="' + tmp_webfont + '" rel="stylesheet" type="text/css" href="' + post_response + '">');
+                                                        }
+                                                    } else {
+                                                        var_text = tmp_webfontname;
+                                                        if (tmp_webfonttype == 1) {
+                                                            $(document).find('head').append('<link class="fontcss_detail48175808" id="' + tmp_webfont + '" rel="stylesheet" type="text/css" href="' + tmp_webfonturl + "&text=" + encodeURIComponent(var_text) + '">');
+                                                        } else {
+                                                            $(document).find('head').append('<link class="fontcss_detail48175808" id="' + tmp_webfont + '" rel="stylesheet" type="text/css" href="">');
+                                                        }
+                                                    }
+                                                    //if (htmltext.toUpperCase().indexOf(tmp_webfont.toUpperCase()) >= 0) {
+                                                }
+                                            }
+                                            //end of function reloadWebFont48175808(){
+
+                                            $(document).ready(function() {
+                                                try { // prevent from load alifont error cause rsvp submit stop
+                                                    reloadWebFont48175808();
+                                                } catch (err) {}
+                                                bReloadWebFontOnce48175808 = 0;
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="detail-br">
+                            <div class="detail-bl">
+                                <div class="detail-bm"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="detail-compact ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" style="display:" id="invite_detail_title48175809" role="tab" aria-expanded="false" aria-selected="false" tabindex="1">
+
+                    <span class="ui-icon ui-icon-triangle-1-s"></span>
+                    <div name="button2" id="button2" class="button button_detail_id_48175809">
+                        <div class="button-tr">
+                            <div class="button-tl">
+                                <div class="button-tm"></div>
+                            </div>
+                        </div>
+                        <div class="button-mr">
+                            <div class="button-ml">
+                                <div class="button-mm">
+                                    <a href="javaScript:void(0);"><img class="iconimage" alt="1.png" src="./assets/images/icons/1.png" border="0" align="absmiddle">&nbsp;<span id="invite_detail_name48175809" class="button-title"><span class="fontcolor-button-title">Gallery</span></span>&nbsp;</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-br">
+                            <div class="button-bl">
+                                <div class="button-bm"></div>
+                            </div>
+                        </div>
+                    </div>
+                </h3>
+
+                <div class="accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" id="invite_detail_content48175809" role="tabpanel">
+                    <div name="detail2" id="detai2" class="detail">
+                        <div class="detail-tr">
+                            <div class="detail-tl">
+                                <div class="detail-tm"></div>
+                            </div>
+                        </div>
+                        <div class="detail-mr">
+                            <div class="detail-ml">
+                                <div class="detail-mm">
+                                    <div class="fontcolor-detail-mm">
+
+                                        <div class="invite_detail_editor" id="invite_detail_editor48175809">
+                                            <!-- main image slider container -->
+                                            <div id="slider-main">
+                                                <!-- previous button -->
+                                                <button id="prev"><i class="fa fa-angle-double-left"></i></button>
+                                                <!-- image container -->
+                                                <div id="slider"></div>
+                                                <!-- next button -->
+                                                <button id="next"><i class="fa fa-angle-double-right"></i></button>
+                                                <!-- small circles container -->
+                                                <div id="circles"></div>
+                                            </div>
+                                            <!-- end of main image slider container -->
+
+                                        </div>
+                                        <script type="text/javascript">
+                                            // images goes here
+                                            var arr = [
+                                                "images/ankit/gallery/ankit_gallery_01.jpg",
+                                                "images/ankit/gallery/ankit_gallery_02.jpg",
+                                                "images/ankit/gallery/ankit_gallery_03.jpg",
+                                                "images/ankit/gallery/ankit_gallery_04.jpg",
+                                                "images/ankit/gallery/ankit_gallery_05.jpg",
+                                                "images/ankit/gallery/ankit_gallery_06.jpg",
+                                                "images/ankit/gallery/ankit_gallery_07.jpg",
+                                                "images/ankit/gallery/ankit_gallery_08.jpg",
+                                                // "images/ankit/gallery/ankit_gallery_09.jpg",
+                                                // "images/ankit/gallery/ankit_gallery_10.jpg"
+                                            ]; //an array of image sources
+
+                                            var pos = 0; //initializes image position in the array
+                                            $(document).ready(function() {
+                                                var interval = 7000; //interval for slide
+                                                var loaderHtml = '';
+                                                arr.forEach(function(src) {
+                                                    loaderHtml += '<img src="' + src + '">';
+                                                });
+
+                                                $('.load-images').html(loaderHtml);
+
+                                                var htm = '';
+                                                /* initializes the small circles html*/
+                                                for (var i = 0; i < arr.length; i++) {
+                                                    htm += '<div id="' + i + '" class="circle" onclick="circleClick(' + i + ')"> </div> ';
+                                                }
+
+                                                $('#circles').html(htm); //show small circles
+                                                $('#slider').html('<img src="' + arr[0] + '" class="img-slide image-animated"">'); //show first image
+                                                $('#0').css({
+                                                    'background': '#fff',
+                                                    'color': '#fff'
+                                                }); //sets the background of the first small circle to black
+
+
+                                                /* Auto slides the images with the image sources array given as first argument and interval as second argument */
+                                                function autoSlide(arr, interval) {
+
+                                                    setInterval(function() {
+                                                        $('.img-slide').css({
+                                                            'opacity': '.1 !important'
+                                                        });
+                                                        pos++;
+                                                        if (pos > arr.length - 1) {
+                                                            pos = 0;
+                                                        }
+
+                                                        $('#slider').html('<span class="helper"></span><img src="' + arr[pos] + '" class="img-slide img' + pos + ' image-animated">'); //shows image
+                                                        $('#' + pos).css({
+                                                            'background': '#fff',
+                                                            'color': '#fff'
+                                                        }); //sets background-color of circle representing the current active image to black
+                                                        $('#' + (pos - 1)).css({
+                                                            'background': 'transparent',
+                                                            'color': 'transparent'
+                                                        }); //sets background-color of circle before active to white
+                                                        if (pos == 0) {
+                                                            $('#' + (arr.length - 1)).css({
+                                                                'background': 'transparent',
+                                                                'color': 'transparent'
+                                                            });
+                                                        }
+
+                                                    }, interval);
+                                                }
+                                                /* end of function autoSlide */
+
+                                                autoSlide(arr, interval); //calls function autoSlide
+
+                                                /* displays next image */
+                                                function next() {
+                                                    if (pos > arr.length - 2) {
+                                                        pos = -1;
+                                                    }
+                                                    $('#slider').html('<span class="helper"></span><img src="' + arr[pos + 1] + '" class="img-slide image-animated">'); //show image
+                                                    pos++;
+
+                                                    $('#' + pos).css({
+                                                        'background': '#fff',
+                                                        'color': '#fff'
+                                                    }); //sets background-color of circle representing the current active image to black
+                                                    $('#' + (pos - 1)).css({
+                                                        'background': 'transparent',
+                                                        'color': 'transparent'
+                                                    }); //sets background-color of circle before active to white
+                                                    if (pos == 0) {
+                                                        $('#' + (arr.length - 1)).css({
+                                                            'background': 'transparent',
+                                                            'color': 'transparent'
+                                                        });
+                                                    }
+                                                }
+                                                /* end of function next  */
+
+                                                /* displays previous image */
+                                                function previous() {
+                                                    if (pos < 1) {
+                                                        pos = arr.length;
+                                                    }
+                                                    $('#slider').html('<span class="helper"></span><img src="' + arr[pos - 1] + '" class="img-slide image-animated">');
+                                                    pos--;
+
+                                                    $('#' + pos).css({
+                                                        'background': '#fff',
+                                                        'color': '#fff'
+                                                    }); //sets background-color of circle representing the current active image to black
+                                                    $('#' + (pos + 1)).css({
+                                                        'background': 'transparent',
+                                                        'color': 'transparent'
+                                                    }); //sets background-color of circle before active to white
+                                                    if (pos == arr.length - 1) {
+                                                        $('#0').css({
+                                                            'background': 'transparent',
+                                                            'color': 'transparent'
+                                                        });
+                                                    }
+                                                }
+                                                /* end of function previous */
+
+                                                /* onclick next */
+                                                $('button#next').on('click', function(e) {
+                                                    e.preventDefault();
+                                                    next(); //call function next
+                                                });
+                                                /* end of onclick next */
+
+                                                /* onclick previous */
+                                                $('button#prev').on('click', function(e) {
+                                                    e.preventDefault();
+                                                    previous(); //call function previous
+                                                });
+                                                /* end of onclick previous */
+
+                                            });
+
+                                            /* displays image represented by the small circle */
+                                            function circleClick(position) {
+                                                if (position != pos) {
+                                                    $('#slider').html('<span class="helper"></span><img src="' + arr[position] + '" class="img-slide image-animated">'); //show image
+
+                                                    $('#' + position).css({
+                                                        'background': '#fff',
+                                                        'color': '#fff'
+                                                    }); //sets background-color of circle representing the current active image to black
+                                                    $('#' + (pos)).css({
+                                                        'background': 'transparent',
+                                                        'color': 'transparent'
+                                                    }); //sets background-color of circle before active to white
+
+                                                    pos = position;
+                                                }
+                                                /* end of function circleClick */
+
+
+                                            }
+                                        </script>
+                                        <style>
+                                            #slider-main {
+                                                width: 100%;
+                                                height: 70vh;
+                                                max-height: 420px;
+                                                overflow: hidden;
+                                                position: relative;
+                                            }
+                                            
+                                            #slider {
+                                                width: 100%;
+                                                height: 100%;
+                                                position: relative;
+                                                /* text-align: center; */
+                                            }
+                                            /* .helper {
+                                                display: inline-block;
+                                                height: 100%;
+                                                vertical-align: middle;
+                                                white-space: nowrap;
+                                            } */
+                                            
+                                            .img-slide {
+                                                max-height: 100%;
+                                                max-width: 100%;
+                                                width: auto;
+                                                height: auto;
+                                                position: absolute;
+                                                top: 0;
+                                                bottom: 0;
+                                                left: 0;
+                                                right: 0;
+                                                margin: auto;
+                                                /* width: 100%;
+                                                height: auto; */
+                                                /* vertical-align: middle;
+                                                width: 80vh;
+                                                height: 100%;
+                                                max-width: 80vh;
+                                                z-index: 5; */
+                                                /* overflow-y: hidden; */
+                                            }
+                                            
+                                            #prev {
+                                                z-index: 10;
+                                                /* color: #000; */
+                                                color: #fff;
+                                                position: absolute;
+                                                background: transparent;
+                                                border: none;
+                                                /* margin-top: 40vh; */
+                                                /* margin-left: 3%; */
+                                                top: 48%;
+                                                left: 0;
+                                                font-size: 30px !important;
+                                            }
+                                            
+                                            #next {
+                                                z-index: 100;
+                                                /* color: #000; */
+                                                color: #fff;
+                                                position: absolute;
+                                                background: transparent;
+                                                border: none;
+                                                top: 48%;
+                                                right: 0;
+                                                font-size: 30px !important;
+                                            }
+                                            
+                                            .circle {
+                                                border: #ccc 2px solid;
+                                                width: 10px;
+                                                height: 10px;
+                                                border-radius: 10px;
+                                                background: transparent;
+                                                display: inline-block;
+                                                cursor: pointer;
+                                            }
+                                            
+                                            #circles {
+                                                z-index: 90;
+                                                /* margin-top: -15vh;
+                                                margin-left: 20%; */
+                                                width: 74px;
+                                                position: absolute;
+                                                bottom: 0px;
+                                                left: 50%;
+                                                transform: translate(-50%, 0);
+                                            }
+                                            
+                                            .image-animated {
+                                                animation: animateImage 7s ease-in-out;
+                                                /* change time according to interval set */
+                                            }
+                                            
+                                            @keyframes animateImage {
+                                                0% {
+                                                    opacity: .2;
+                                                    transform: scale(1.2, 1.2);
+                                                }
+                                                20% {
+                                                    opacity: 1;
+                                                    transform: scale(1, 1);
+                                                }
+                                                80% {
+                                                    opacity: 1;
+                                                    transform: scale(1, 1);
+                                                }
+                                                95% {
+                                                    opacity: .8;
+                                                    transform: scale(1.2, 1.2);
+                                                }
+                                                100% {
+                                                    opacity: .8;
+                                                    transform: scale(1.2, 1.2);
+                                                }
+                                            }
+                                            
+                                            @media (max-width: 767px) {
+                                                /* .img-slide {
+                                                    height: 40vh;
+                                                } */
+                                                /* #prev {
+                                                    font-size: 30px !important;
+                                                    margin-top: 12vh;
+                                                    margin-left: 0.5%;
+                                                }
+                                                #next {
+                                                    font-size: 30px !important;
+                                                    margin-top: -28vh;
+                                                    margin-left: 88%;
+                                                }
+                                                .circle {
+                                                    width: 15px;
+                                                    height: 15px;
+                                                    border-radius: 15px;
+                                                }
+                                                #circles {
+                                                    margin-top: -10vh;
+                                                    margin-left: 36%;
+                                                } */
+                                            }
+                                        </style>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="detail-br">
+                            <div class="detail-bl">
+                                <div class="detail-bm"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <h3 class="detail-compact ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" style="display:" id="invite_detail_title48175810" role="tab" aria-expanded="false" aria-selected="false" tabindex="2">
+
+                    <span class="ui-icon ui-icon-triangle-1-s"></span>
+                    <div name="button3" id="button3" class="button button_detail_id_48175810">
+                        <div class="button-tr">
+                            <div class="button-tl">
+                                <div class="button-tm"></div>
+                            </div>
+                        </div>
+                        <div class="button-mr">
+                            <div class="button-ml">
+                                <div class="button-mm">
+                                    <a href="javaScript:void(0);"><img class="iconimage" alt="1.png" src="./assets/images/icons/1.png" border="0" align="absmiddle">&nbsp;<span id="invite_detail_name48175810" class="button-title"><span class="fontcolor-button-title">Video</span></span>&nbsp;</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-br">
+                            <div class="button-bl">
+                                <div class="button-bm"></div>
+                            </div>
+                        </div>
+                    </div>
+                </h3>
+
+                <div class="accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" id="invite_detail_content48175810" role="tabpanel">
+                    <div name="detail2" id="detai2" class="detail">
+                        <div class="detail-tr">
+                            <div class="detail-tl">
+                                <div class="detail-tm"></div>
+                            </div>
+                        </div>
+                        <div class="detail-mr">
+                            <div class="detail-ml">
+                                <div class="detail-mm">
+                                    <div class="fontcolor-detail-mm">
+                                        <iframe width="264" height="315" src="https://www.youtube.com/embed/2XIMB2Iv0vI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="detail-br">
+                            <div class="detail-bl">
+                                <div class="detail-bm"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <h3 class="detail-compact ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" style="display:" id="invite_detail_title48175811" role="tab" aria-expanded="false" aria-selected="false" tabindex="-1">
+
+                    <span class="ui-icon ui-icon-triangle-1-e"></span>
+                    <div name="button4" id="button4" class="button button_detail_id_48175811">
+                        <div class="button-tr">
+                            <div class="button-tl">
+                                <div class="button-tm"></div>
+                            </div>
+                        </div>
+                        <div class="button-mr">
+                            <div class="button-ml">
+                                <div class="button-mm">
+                                    <a href="javaScript:void(0);"><img class="iconimage" alt="4.png" src="./assets/images/icons/4.png" border="0" align="absmiddle">&nbsp;<span id="invite_detail_name48175811" class="button-title"><span class="fontcolor-button-title">Directions</span></span>&nbsp;</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-br">
+                            <div class="button-bl">
+                                <div class="button-bm"></div>
+                            </div>
+                        </div>
+                    </div>
+                </h3>
+
+                <div class="accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="invite_detail_content48175811" role="tabpanel" style="display: none;">
+                    <div name="detail4" id="detail4" class="detail">
+                        <div class="detail-tr">
+                            <div class="detail-tl">
+                                <div class="detail-tm"></div>
+                            </div>
+                        </div>
+                        <div class="detail-mr">
+                            <div class="detail-ml">
+                                <div class="detail-mm">
+                                    <div class="fontcolor-detail-mm">
+                                        <input type="hidden" name="invite_detail_mapimgurl48175811" id="invite_detail_mapimgurl48175811" value="">
+                                        <img class="mapimg" id="invite_detail_mapimg48175811" style="width: 100%; border: thin solid rgb(153, 153, 153); display: none;" src="" width="100%">
+                                        <!-- <iframe id="map_canvas48175811" width="100%" height="300" frameborder="0" style="border: thin solid" src="https://maps.apple.com/?q=27.9010807,78.05313550000005&amp;center=27.9010807,78.05313550000005&amp;zoom=16"
+                                            allowfullscreen=""></iframe> -->
+
+                                        <div id="map_desc48175811" align="center">Vishal Vatika<br>Deenpur, Shyam Vihar-II<br>Najafgarh, Delhi<br>9971693899</div>
+                                        <div id="map_desc48175812" align="center" style="margin: 10px 0px; font-size: 12px;">Click on the image below to get directions to location</div>
+                                        <div id="map_direction48175811" style="width:100%" align="center">
+                                            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3526.0289331890867!2d78.05094681454271!3d27.901085423559056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3974a5cc32afd289%3A0x3f122c488298b9a5!2sOYO%2015383%20Hotel%20Grand%20Melrose!5e0!3m2!1sen!2sin!4v1577389424735!5m2!1sen!2sin"
+                                                width="264" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe> -->
+                                            <img src="./images/ankit/map.png" style="width:100%;" onclick="google_map_direction48175811();" />
+                                            <!-- <input id="map_direction_button48175811" name="map_direction_button48175811" onclick="google_map_direction48175811();" type="button" value=" Navigate "> -->
+                                            <script language="javascript">
+                                                function google_map_direction48175811() {
+                                                    url_buf = "https://maps.google.com/maps?q=" + map48175811_latmarker + "," + map48175811_lngmarker + "&z=" + map48175811_zoom;
+                                                    // url_buf = "https://maps.apple.com/?q=" + map48175811_latmarker + "," + map48175811_lngmarker + "&z=" + map48175811_zoom;
+
+                                                    $("#jquery_jplayer_1").jPlayer("pause");
+                                                    window.open(url_buf);
+                                                }
+                                            </script>
+                                        </div>
+
+                                        <script language="javascript">
+                                            $(document).ready(function() {
+                                                //init
+                                                if ($("#invite_detail_mapimgurl48175811").val() == '') {
+                                                    $("#invite_detail_mapimg48175811").hide();
+                                                    $("#map_canvas48175811").show();
+                                                    $("#map_direction48175811").show();
+                                                } else {
+                                                    $("#invite_detail_mapimg48175811").show();
+                                                    $("#map_canvas48175811").hide();
+                                                    $("#map_direction48175811").hide();
+                                                }
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="detail-br">
+                            <div class="detail-bl">
+                                <div class="detail-bm"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="accordion_bottom" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" role="tab" aria-expanded="false" aria-selected="false" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-e"></span></div>
+            </div>
+
+            <!--<div id="PhotoSwipeTarget"></div>-->
+
+            <div id="footer">
+                <div id="copyright">
+                    <div id="copyright-text">
+                        <div id="copyright-text-content">
+                            <div class="author-line">
+                                Made with<br>
+                                <div class="heart-shape"></div><br> by hackersoon.com
+                            </div>
+                            <!-- <div class="fontcolor-button-title">Powered by HackerSoon</div> -->
+
+                            <style>
+                                .author-line {
+                                    line-height: 22px;
+                                    /* padding-top: 8px; */
+                                }
+                                
+                                .heart-shape {
+                                    margin: 10px 0 5px;
+                                    display: inline-block;
+                                    position: relative;
+                                    width: 16px;
+                                    height: 16px;
+                                    -webkit-transform: rotate(45deg);
+                                    -moz-transform: rotate(45deg);
+                                    -ms-transform: rotate(45deg);
+                                    -o-transform: rotate(45deg);
+                                    transform: rotate(45deg);
+                                    background-color: rgba(255, 0, 0, 1);
+                                }
+                                
+                                .heart-shape:before,
+                                .heart-shape:after {
+                                    position: absolute;
+                                    width: 16px;
+                                    height: 16px;
+                                    content: '';
+                                    -webkit-border-radius: 50%;
+                                    -moz-border-radius: 50%;
+                                    -o-border-radius: 50%;
+                                    border-radius: 50%;
+                                    background-color: rgba(255, 0, 0, 1);
+                                }
+                                
+                                .heart-shape:before {
+                                    bottom: 0px;
+                                    left: -10px;
+                                }
+                                
+                                .heart-shape:after {
+                                    top: -10px;
+                                    right: 0px;
+                                }
+                            </style>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <a id="autoMobileVideo" href="  .asp?sn=M37F3Z&amp;autovideourl=&amp;ts=1575599902"></a> -->
+
+        </div>
+    </div>
+
+    <div id="jquery_jplayer_1" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata" src="https://en.youvivid.net/audios_system/musicnotfound.mp3"></audio></div>
+
+
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+            <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <!--  <button class="pswp__button pswp__button--share" title="Share"></button>-->
+                    <button class="pswp__button pswp__button--download" title="Download"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-2099323-9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-2099323-9');
+    </script> -->
+
+    <!-- Global site tag (gtag.js) - Google Ads: 994544354 -->
+    <!-- <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-994544354"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'AW-994544354');
+    </script> -->
+    <!-- <script src="https://cdn.youvivid.com/js/setcookie_timezone3.js" type="text/javascript"></script> -->
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCF5MS1Oeo_dPBEQu9hyzZc5WnBPJaBwkE&amp;callback=mapCallBackFunc"></script>
+</body>
+
+</html>
