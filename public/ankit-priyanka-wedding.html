@@ -568,7 +568,7 @@
         var bMute = 1;
         //var audioPlayer; //initialize in $(window).load(function()
         function setMusic(mp3Url) {
-            if (mp3Url.indexOf("musicnotfound.mp3") >= 0) {
+            if (mp3Url.indexOf("tera_ban_jaunga.mp3") >= 0) {
                 bMute = 1;
                 $("#jquery_jplayer_1").jPlayer("option", "loop", false);
             } else {
@@ -1173,7 +1173,8 @@
             $("#jquery_jplayer_1").jPlayer({
                 ready: function() {
                     $(this).jPlayer("setMedia", {
-                        mp3: "audios_system/musicnotfound.mp3"
+                        mp3: "assets/musics/tera_ban_jaunga.mp3"
+                            // mp3: "audios_system/musicnotfound.mp3"
                     }).jPlayer("play");
                     var click = document.ontouchstart === undefined ? 'click' : 'touchstart';
                     var kickoff = function() {
@@ -1218,7 +1219,7 @@
                         }
                     });
                 },
-                swfPath: "/js",
+                swfPath: "/assets/js",
                 loop: false
             });
         });
@@ -1319,15 +1320,15 @@
                                         </div>
                                         <div class="inner-main-mm">
                                             <div id="main_image_container">
-                                                <div class="invite_webimg_album auto" style="background: url('./images/ankit/main/ankit_gallery_01.jpg?x-img-process=fit-in/2000x2000/') 50% 50% / cover no-repeat; min-width: 100%; min-height: 100%; display: block;"></div>
+                                                <div class="invite_webimg_album auto" style="background: url('./images/ankit/main/main_01.jpg?x-img-process=fit-in/2000x2000/') center center / cover no-repeat; min-width: 100%; min-height: 100%; display: block;"></div>
 
-                                                <div class="invite_webimg_album" style="background: url('./images/ankit/main/ankit_gallery_02.jpg') 50% 50% / cover no-repeat; min-width: 100%; min-height: 100%; display: none;"></div>
+                                                <div class="invite_webimg_album" style="background: url('./images/ankit/main/main_02.jpg') 50% 50% / cover no-repeat; min-width: 100%; min-height: 100%; display: none;"></div>
 
-                                                <div class="invite_webimg_album" style="background: url('./images/ankit/main/ankit_main_3.jpg') 50.1747% 49.4382% / cover no-repeat; min-width: 100%; min-height: 100%; display: none;"></div>
+                                                <div class="invite_webimg_album" style="background: url('./images/ankit/main/main_03.jpg') 50.1747% 49.4382% / cover no-repeat; min-width: 100%; min-height: 100%; display: none;"></div>
 
-                                                <div class="invite_webimg_album" id="invite_webimg_album_mainimage" style="background: url('./images/ankit/main/ankit_main_4.jpg?x-img-process=fit-in/2000x2000/') center center / cover no-repeat; min-width: 100%; min-height: 100%; display: none;"></div>
+                                                <div class="invite_webimg_album" id="invite_webimg_album_mainimage" style="background: url('./images/ankit/main/main_04.jpg?x-img-process=fit-in/2000x2000/') center center / cover no-repeat; min-width: 100%; min-height: 100%; display: none;"></div>
 
-                                                <img id="invite_webimg" style=" display:block" src="./images/ankit/main/ankit_main_4.jpg?x-img-process=fit-in/2000x2000/" width="100%" alt="Mobile Wedding Invitations">
+                                                <img id="invite_webimg" style=" display:block" src="./images/ankit/main/main_04.jpg?x-img-process=fit-in/2000x2000/" width="100%" alt="Mobile Wedding Invitations">
                                             </div>
 
                                             <div id="img_videobutton_placeholder" style="position:relative;">
@@ -1597,15 +1598,20 @@
                                         <div class="invite_detail_editor" id="invite_detail_editor48175808">
                                             <p style="text-align: center;">
                                                 <span style="font-size:20px;">
-                                                    <span style="font-family:dancing script,cursive;">Your presence will only extend the joy<br> and the smiles on our face.<br> We can't afford to miss<br> the pleasure of your presence on<br><span style="font-size:21px; font-weight:bold;">Sunday, 9th February, 2020</span><br>at
-                                                the celebration of our marriage.</span>
+                                                    <span style="font-family:dancing script,cursive;">Because you have shared in our lives and supported our love, we<br><span style="font-size:28px;">Ankit</span><br>                                                and<br><span style="font-size:28px;">Priyanka</span><br> request the pleasure of your company<br> at the celebration of our marriage</span>
                                                 </span>
                                             </p>
                                             <!-- <p style="text-align: center;">
-                                                <span style="font-size:22px; font-weight:bold;">
-                                                    <span style="font-family:dancing script,cursive;">Sunday, February 09, 2020</span>
+                                                <span style="font-size:20px;">
+                                                    <span style="font-family:dancing script,cursive;">Your presence will only extend the joy<br> and the smiles on our face.<br> We can't afford to miss<br> the pleasure of your presence on<br><span style="font-size:21px; font-weight:bold;">Sunday, 9th February, 2020</span><br>at
+                                                the celebration of our marriage.</span>
                                                 </span>
                                             </p> -->
+                                            <p style="text-align: center;">
+                                                <span style="font-size:20px; font-weight:bold;">
+                                                    <span style="font-family:dancing script,cursive;">Sunday, February 09, 2020<br>at 8:00 PM</span>
+                                                </span>
+                                            </p>
                                             <br>
                                             <p style="text-align: center;">
                                                 <span style="font-size:20px;">
@@ -1755,14 +1761,14 @@
                                         <script type="text/javascript">
                                             // images goes here
                                             var arr = [
-                                                "images/ankit/gallery/ankit_gallery_01.jpg",
-                                                "images/ankit/gallery/ankit_gallery_02.jpg",
-                                                "images/ankit/gallery/ankit_gallery_03.jpg",
-                                                "images/ankit/gallery/ankit_gallery_04.jpg",
-                                                "images/ankit/gallery/ankit_gallery_05.jpg",
-                                                "images/ankit/gallery/ankit_gallery_06.jpg",
-                                                "images/ankit/gallery/ankit_gallery_07.jpg",
-                                                "images/ankit/gallery/ankit_gallery_08.jpg",
+                                                "images/ankit/gallery/gallery_01.jpg",
+                                                "images/ankit/gallery/gallery_02.jpg",
+                                                "images/ankit/gallery/gallery_03.jpg",
+                                                "images/ankit/gallery/gallery_04.jpg",
+                                                "images/ankit/gallery/gallery_05.jpg",
+                                                "images/ankit/gallery/gallery_06.jpg",
+                                                "images/ankit/gallery/gallery_07.jpg",
+                                                "images/ankit/gallery/gallery_08.jpg",
                                                 // "images/ankit/gallery/ankit_gallery_09.jpg",
                                                 // "images/ankit/gallery/ankit_gallery_10.jpg"
                                             ]; //an array of image sources
@@ -2269,7 +2275,9 @@
         </div>
     </div>
 
-    <div id="jquery_jplayer_1" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata" src="https://en.youvivid.net/audios_system/musicnotfound.mp3"></audio></div>
+    <!-- <div id="jquery_jplayer_1" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata" src="https://en.youvivid.net/audios_system/musicnotfound.mp3"></audio></div> -->
+    <div id="jquery_jplayer_1" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata" src="https://profiles.hackersoon.com/assets/musics/tera_ban_jaunga.mp3"></audio></div>
+    <!-- <div id="jquery_jplayer_1" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata" src="assets/musics/tera_ban_jaunga.mp3"></audio></div> -->
 
 
     <!-- Root element of PhotoSwipe. Must have class pswp. -->
