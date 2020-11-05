@@ -580,6 +580,10 @@
                 mp3: mp3Url
             }).jPlayer("play");
         }
+        function pause() {
+            $("#jquery_jplayer_1").jPlayer("pause");
+            $("#stopMusicBtn").hide();
+        }
         -->
     </script>
 
@@ -1259,6 +1263,9 @@
     <div id="MainBody">
         <div id="coverpage"></div>
         <div id="MainContent">
+            <button id="stopMusicBtn" onclick="pause()">
+                <i class="fa fa-stop"></i> Stop Music
+            </button>
 
             <div id="outter">
                 <div class="outter-main-tr">
@@ -1974,6 +1981,21 @@
                                                 z-index: 100;
                                                 right: 0;
                                             }
+
+                                            #stopMusicBtn {
+                                                position: fixed;
+                                                top: 10px;
+                                                right: 10px;
+                                                width: 80px;
+                                                height: 20px;
+                                                background-color: rgba(255, 255, 255, 0.5);
+                                                border: none;
+                                                border-radius: 4px;
+                                                color: #393939;
+                                                font-size: 10px !important;
+                                                z-index: 9999;
+                                                cursor: pointer;
+                                            }
                                             
                                             .circle {
                                                 border: #ccc 2px solid;
@@ -2263,7 +2285,7 @@
     </div>
 
     <!-- <div id="jquery_jplayer_1" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata" src="https://en.youvivid.net/audios_system/musicnotfound.mp3"></audio></div> -->
-    <div id="jquery_jplayer_1" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata" src="https://e-invitation.netlify.app/assets/musics/tera_ban_jaunga.mp3"></audio></div>
+    <div id="jquery_jplayer_1" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata" src="https://e-invitation.netlify.app/assets/musics/meri_rahe_tere_tak_hai.mp3"></audio></div>
     <!-- <div id="jquery_jplayer_1" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata" src="assets/musics/tera_ban_jaunga.mp3"></audio></div> -->
 
 
