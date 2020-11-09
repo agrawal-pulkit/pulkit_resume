@@ -568,7 +568,7 @@
         var bMute = 1;
         //var audioPlayer; //initialize in $(window).load(function()
         function setMusic(mp3Url) {
-            if (mp3Url.indexOf("meri_rahe_tere_tak_hai.mp3") >= 0) {
+            if (mp3Url.indexOf("music_1.mpeg") >= 0) {
                 bMute = 1;
                 $("#jquery_jplayer_1").jPlayer("option", "loop", false);
             } else {
@@ -855,8 +855,8 @@
     <style>
         #Loading {
             position: fixed;
-            top: 0;
-            left: 0;
+            top: 50%;
+            left: 50%;
             width: 337px;
             height: 495px;
             background: #CCCCCC;
@@ -866,12 +866,13 @@
             -moz-animation-duration: 2s;
             -ms-animation-duration: 2s;
             animation-duration: 2s;
+            transform: translate(-50%, -50%);
         }
         
         #loading_bg {
             width: 337px;
             height: 495px;
-            background: center center url('./images/sandeep/main/s19125QZqzOzzFUIaQx.jpg?x-img-process=fit-in/2000x2000/'), linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), center center url('./assets/images/user/s19125QZqzOzzFUIaQx.jpg?x-img-process=fit-in/2000x2000/');
+            background: center center url('./images/sandeep/loading_bg.jpeg?x-img-process=fit-in/2000x2000/'), linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), center center url('./images/sandeep/loading_bg.jpeg?x-img-process=fit-in/2000x2000/');
             background-repeat: no-repeat, no-repeat, repeat;
             background-size: contain, cover, contain;
             margin: auto;
@@ -1033,7 +1034,6 @@
     </style>
 
     <script language="javascript">
-        <!--
         $(document).ready(function() {
             /*	
                 if (window.self != window.top) {
@@ -1042,14 +1042,14 @@
             */
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
                 $('#Loading').on('touchstart', function(e) {
-                    // stopLoading();
+                    stopLoading();
                     if (bWinOnLoadFired == 0) {
                         winOnloadFunc();
                     }
                 });
             } else {
                 $('#Loading').on('click', function(e) {
-                    // stopLoading();
+                    stopLoading();
                     if (bWinOnLoadFired == 0) {
                         winOnloadFunc();
                     }
@@ -1094,7 +1094,7 @@
                         $('#click_open').removeClass('hide-div');
                         $('#click_open').addClass('animated pulse');
                     }
-                }, 2000);
+                }, 4000);
             });
         });
 
@@ -1133,11 +1133,10 @@
                 }
             }, 30000);
         });
-        -->
     </script>
 
     <!-- <div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"> -->
-    <div id="Loading" class="animated fadeOut hide-div hide-div-display">
+    <div id="Loading" class="">
         <div id="loading_bg" class="animated fadeIn">
             <div id="loading_bg2" class="animated fadeIn"></div>
         </div>
@@ -1177,7 +1176,7 @@
             $("#jquery_jplayer_1").jPlayer({
                 ready: function() {
                     $(this).jPlayer("setMedia", {
-                        mp3: "assets/musics/meri_rahe_tere_tak_hai.mp3"
+                        mp3: "assets/musics/music_1.mpeg"
                             // mp3: "audios_system/musicnotfound.mp3"
                     }).jPlayer("play");
                     var click = document.ontouchstart === undefined ? 'click' : 'touchstart';
@@ -1333,11 +1332,11 @@
 
                                                 <div class="invite_webimg_album" style="background: url('./images/sandeep/main/main_03.jpeg') 50.1747% 49.4382% / cover no-repeat; min-width: 100%; min-height: 100%; display: none;"></div>
 
-                                                <div class="invite_webimg_album" style="background: url('./images/sandeep/main/main_04.jpeg') 50% 50% / cover no-repeat; min-width: 100%; min-height: 100%; display: none;"></div>
+                                                <div class="invite_webimg_album" style="background: url('./images/sandeep/main/main_05.jpeg') 50% 50% / cover no-repeat; min-width: 100%; min-height: 100%; display: none;"></div>
 
-                                                <div class="invite_webimg_album" id="invite_webimg_album_mainimage" style="background: url('./images/sandeep/main/main_05.jpeg?x-img-process=fit-in/2000x2000/') center center / cover no-repeat; min-width: 100%; min-height: 100%; display: none;"></div>
+                                                <div class="invite_webimg_album" id="invite_webimg_album_mainimage" style="background: url('./images/sandeep/main/main_04.gif?x-img-process=fit-in/2000x2000/') center center / cover no-repeat; min-width: 100%; min-height: 100%; display: none;"></div>
 
-                                                <img id="invite_webimg" style=" display:block" src="./images/sandeep/main/main_05.jpeg?x-img-process=fit-in/2000x2000/" width="100%" alt="Mobile Wedding Invitations">
+                                                <img id="invite_webimg" style=" display:block" src="./images/sandeep/main/main_04.gif?x-img-process=fit-in/2000x2000/" width="100%" alt="Mobile Wedding Invitations">
                                             </div>
 
                                             <div id="img_videobutton_placeholder" style="position:relative;">
@@ -1855,15 +1854,15 @@
                                         <script type="text/javascript">
                                             // images goes here
                                             var arr = [
-                                                "images/sandeep/gallery/gallery_01.jpeg",
-                                                "images/sandeep/gallery/gallery_02.jpeg",
+                                                // "images/sandeep/gallery/gallery_01.jpeg",
                                                 "images/sandeep/gallery/gallery_03.jpeg",
-                                                "images/sandeep/gallery/gallery_04.jpeg",
+                                                "images/sandeep/gallery/gallery_02.jpeg",
                                                 "images/sandeep/gallery/gallery_05.jpeg",
-                                                "images/sandeep/gallery/gallery_06.jpeg",
+                                                // "images/sandeep/gallery/gallery_06.jpeg",
                                                 "images/sandeep/gallery/gallery_07.jpeg",
                                                 "images/sandeep/gallery/gallery_08.jpeg",
                                                 "images/sandeep/gallery/gallery_09.jpeg",
+                                                "images/sandeep/gallery/gallery_04.jpeg",
                                                 "images/sandeep/gallery/gallery_10.jpeg"
                                             ]; // an array of image sources
 
@@ -2100,7 +2099,7 @@
                                                 z-index: 90;
                                                 /* margin-top: -15vh;
                                                 margin-left: 20%; */
-                                                width: 94px;
+                                                width: 74px;
                                                 position: absolute;
                                                 bottom: 0px;
                                                 left: 50%;
@@ -2396,7 +2395,7 @@
     </div>
 
     <!-- <div id="jquery_jplayer_1" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata" src="https://en.youvivid.net/audios_system/musicnotfound.mp3"></audio></div> -->
-    <div id="jquery_jplayer_1" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata" src="https://e-invitation.netlify.app/assets/musics/meri_rahe_tere_tak_hai.mp3"></audio></div>
+    <div id="jquery_jplayer_1" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata" src="https://e-invitation.netlify.app/assets/musics/music_1.mpeg"></audio></div>
     <!-- <div id="jquery_jplayer_1" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata" src="assets/musics/tera_ban_jaunga.mp3"></audio></div> -->
 
 
