@@ -49,7 +49,7 @@
             }
         }
 
-        //?建求XMLHttpRequest?象
+        // XMLHttpRequest
         function createRequest() {
             try {
                 request = new XMLHttpRequest();
@@ -197,7 +197,7 @@
         var bPlayVideo = 1;
 
         function clickObj(o) {
-            //	bPlayVideo=0;
+            // bPlayVideo=0;
             var o = document.getElementById(o);
 
             if (document.all) {
@@ -222,7 +222,7 @@
 
     <script type="text/javascript">
         function parseYoutubeVID(url) {
-            //urlBuf = url.toLowerCase();
+            // urlBuf = url.toLowerCase();
             urlBuf = url;
             var youtubeVID = urlBuf.match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
             if (youtubeVID != null) {
@@ -319,7 +319,7 @@
         <!--
         function addRow(invite_detail_id, parent_node, maxid) {
             var obj = document.getElementById(parent_node);
-            //var sIndex=obj.getElementsByTagName('div').length+1;
+            // var sIndex=obj.getElementsByTagName('div').length+1;
             var sIndex = maxid;
 
             var div = document.createElement('div');
@@ -404,7 +404,7 @@
 
             if (option_title.split('{').length - 1 > 0) {
                 for (var n = 0; n < option_title.split('{').length - 1; n++) {
-                    //if (leftpos >= 0 && rightpos > 0){
+                    // if (leftpos >= 0 && rightpos > 0){
                     option_title_left = option_title_right;
                     leftstr = "";
                     rightstr = "";
@@ -422,11 +422,11 @@
                     } else if (midstr.toLowerCase().indexOf('br') > 0) {
                         inputstr += '&nbsp;<textarea style="display:inline-block;vertical-align:top;" name="n' + qid + '" cols="' + txtlength + '" rows="' + midstr.toLowerCase().split('br').length + '" onkeyup="setOptionValue( ' + invite_detail_id + ',' + qid + ', this.value, ' + replaceAll(option_title, "'", "\'") + ', ' + o + ')" onblur="setOptionValue( ' + invite_detail_id + ',' + qid + ', this.value, ' + replaceAll(option_title, "'", "\'") + ', ' + o + ')"></textarea>';
                     } else {
-                        //inputstr = '';
+                        // inputstr = '';
                         inputstr += '&nbsp;<select id="n' + qid + '" name="n' + qid + '" onchange="setOptionValue(' + invite_detail_id + ', ' + qid + ', this.value, ' + replaceAll(option_title, "'", "\'") + ', ' + o + ')">';
                         inputstr += '<option value="">Select</option>';
                         option_array = midstr.split('|');
-                        //alert(option_array.length);
+                        // alert(option_array.length);
                         cc = 1;
                         for (i = 0; i < option_array.length; i++) {
                             range_array = option_array[i].split('-');
@@ -490,7 +490,7 @@
             }
 
             var n = 0;
-            //console.log($("#rsvptable" + invite_detail_id + " tr[style*='display: block']"));
+            // console.log($("#rsvptable" + invite_detail_id + " tr[style*='display: block']"));
             $("#rsvptable" + invite_detail_id + " tr[style*='block']").each(function(n) {
                 n++;
                 $(this).find("span:eq(0)").html(n);
@@ -503,7 +503,7 @@
             var val;
             obj = eval('document.iform' + invite_detail_id + '.q' + id);
             obj3 = document.getElementsByName('n' + id + '_' + optionid);
-            //if (typeof(obj3.length) == 'undefined'){
+            // if (typeof(obj3.length) == 'undefined') {
             if (obj3.length == 1) {
                 obj.value = txt;
             } else {
@@ -568,7 +568,7 @@
         var bMute = 1;
         //var audioPlayer; //initialize in $(window).load(function()
         function setMusic(mp3Url) {
-            if (mp3Url.indexOf("musicnotfound.mp3") >= 0) {
+            if (mp3Url.indexOf("meri_rahe_tere_tak_hai.mp3") >= 0) {
                 bMute = 1;
                 $("#jquery_jplayer_1").jPlayer("option", "loop", false);
             } else {
@@ -616,7 +616,7 @@
         }
         
         .ui-widget {
-            /*font-family:Georgia, "Times New Roman", Times, serif;*/
+            /* font-family: Georgia, "Times New Roman", Times, serif; */
             font-family: 'Merienda One', cursive;
         }
         
@@ -635,7 +635,7 @@
             margin-bottom: 8px;
         }
         */
-        /*no use now */
+        /* no use now */
         
         .title {
             -webkit-border-radius: 6px;
@@ -664,9 +664,9 @@
             background: linear-gradient(top, #fcecfc 0%, #fba6e1 50%, #fd89d7 51%, #ff87c3 100%);
             /* W3C */
             filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fcecfc', endColorstr='#ff87c3', GradientType=0);
-            /*IE6-9 */
+            /* IE6-9 */
         }
-        /*jquery UI css overwrite*/
+        /* jquery UI css overwrite */
         
         .ui-accordion-content,
         .detail,
@@ -683,7 +683,7 @@
             filter: alpha(opacity=10);
             opacity:0.4;
         */
-        /*	background-image:url(https://cdn.youvivid.com/images/index_bg_02.jpg);
+        /*	background-image: url(https://cdn.youvivid.com/images/index_bg_02.jpg);
             background-repeat: repeat; 
             background-position: center center; 
         */
@@ -807,8 +807,8 @@
             var selectedEffect = "blind";
             // most effect types need no options passed by default
             var options = {};
-            //options = { percent: 0 };
-            //options = { to: { width: 100%, height: auto } };
+            // options = { percent: 0 };
+            // options = { to: { width: 100%, height: auto } };
             // run the effect
             $("#page-" + controlID + "-" + page).toggle(selectedEffect, options, 500);
             $("#more-" + controlID + "-" + (page - 1)).toggle("puff", options, 500);
@@ -851,8 +851,8 @@
     <style>
         #Loading {
             position: fixed;
-            top: 0;
-            left: 0;
+            top: 50%;
+            left: 50%;
             width: 337px;
             height: 495px;
             background: #CCCCCC;
@@ -862,6 +862,7 @@
             -moz-animation-duration: 2s;
             -ms-animation-duration: 2s;
             animation-duration: 2s;
+            transform: translate(-50%, -50%);
         }
         
         #loading_bg {
@@ -1019,7 +1020,7 @@
         }
         
         .hide-div {
-            /*display:none;*/
+            /* display:none; */
             visibility: hidden;
         }
         
@@ -1029,7 +1030,6 @@
     </style>
 
     <script language="javascript">
-        <!--
         $(document).ready(function() {
             /*	
                 if (window.self != window.top) {
@@ -1038,14 +1038,14 @@
             */
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
                 $('#Loading').on('touchstart', function(e) {
-                    //stopLoading();
+                    stopLoading();
                     if (bWinOnLoadFired == 0) {
                         winOnloadFunc();
                     }
                 });
             } else {
                 $('#Loading').on('click', function(e) {
-                    //stopLoading();
+                    stopLoading();
                     if (bWinOnLoadFired == 0) {
                         winOnloadFunc();
                     }
@@ -1086,7 +1086,7 @@
             $('#loading_circle_5').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
                 setTimeout(function() {
                     if (bWinOnLoadFired == 0) {
-                        //winOnloadFunc();		
+                        // winOnloadFunc();		
                         $('#click_open').removeClass('hide-div');
                         $('#click_open').addClass('animated pulse');
                     }
@@ -1104,7 +1104,7 @@
                     $('#Loading').addClass('hide-div-display');
                 });
             }
-            //audioPlayer = $("#xaudio")[0];
+            // audioPlayer = $("#xaudio")[0];
         }
 
         function winOnloadFunc() {
@@ -1129,11 +1129,10 @@
                 }
             }, 30000);
         });
-        -->
     </script>
 
-    <!-- <div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" > -->
-    <div id="Loading" class="animated fadeOut hide-div hide-div-display">
+    <!-- <div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"> -->
+    <div id="Loading" class="">
         <div id="loading_bg" class="animated fadeIn">
             <div id="loading_bg2" class="animated fadeIn"></div>
         </div>
@@ -1173,7 +1172,7 @@
             $("#jquery_jplayer_1").jPlayer({
                 ready: function() {
                     $(this).jPlayer("setMedia", {
-                        mp3: "audios_system/musicnotfound.mp3"
+                        mp3: "assets/musics/meri_rahe_tere_tak_hai.mp3"
                     }).jPlayer("play");
                     var click = document.ontouchstart === undefined ? 'click' : 'touchstart';
                     var kickoff = function() {
@@ -1218,7 +1217,7 @@
                         }
                     });
                 },
-                swfPath: "/js",
+                swfPath: "/assets/js",
                 loop: false
             });
         });
@@ -1350,7 +1349,10 @@
                                                     transform: scale(1.09, 1.09);
                                                     -webkit-transform: scale(1.09, 1.09);
                                                 }
-                                                /*.invite_webimg_album:last-child{display: block; -webkit-transform: scale(1.2,1.2);}*/
+                                                /* .invite_webimg_album:last-child {
+                                                    display: block;
+                                                    -webkit-transform: scale(1.2, 1.2);
+                                                } */
                                                 
                                                 .auto {
                                                     animation: imgScale 4s ease-out;
@@ -1394,7 +1396,7 @@
 
                                                 function setSlideshow() {
 
-                                                    //$("#main_image_container").width($('#invite_webimg').width()).height($('#invite_webimg').height());
+                                                    // $("#main_image_container").width($('#invite_webimg').width()).height($('#invite_webimg').height());
                                                     if (slideshowTimer) {
                                                         clearInterval(slideshowTimer);
                                                     }
@@ -1437,7 +1439,7 @@
                                                 }
 
                                                 function handleStart(event) {
-                                                    //event.preventDefault();
+                                                    // event.preventDefault();
                                                     var touch = event.touches[0];
                                                     startX = parseInt(touch.pageX);
                                                     startY = parseInt(touch.pageY);
@@ -1448,7 +1450,7 @@
                                                 }
 
                                                 function handleMove(event) {
-                                                    //event.preventDefault();
+                                                    // event.preventDefault();
                                                     var x, y;
                                                     var touch = event.touches[0];
                                                     x = parseInt(touch.pageX) - startX;
@@ -1480,11 +1482,11 @@
                                                 */
 
                                                 $(function() {
-                                                    //if (invite_mediatype == 1) {
-                                                    //	$( "#img_decoration1,#img_decoration2,#img_decoration3").css('cursor', 'pointer');	
-                                                    //} else {
-                                                    //	$( "#img_decoration1,#img_decoration2,#img_decoration3").css('cursor', 'default');	
-                                                    //}
+                                                    // if (invite_mediatype == 1) {
+                                                    // 	$( "#img_decoration1,#img_decoration2,#img_decoration3").css('cursor', 'pointer');	
+                                                    // } else {
+                                                    // 	$( "#img_decoration1,#img_decoration2,#img_decoration3").css('cursor', 'default');	
+                                                    // }
 
                                                     $("#img_videobutton").click(function() {
                                                         if (invite_mediatype == 1) {
@@ -1535,7 +1537,7 @@
                 </div>
             </div>
 
-            <!-- preload placeholder for custom.css assets-->
+            <!-- preload placeholder for custom.css assets -->
             <div id="preload-01"></div>
             <div id="preload-02"></div>
             <div id="preload-03"></div>
@@ -1633,7 +1635,7 @@
 
                                                 for (cc = 0; cc < webfontinfo_array.length; cc++) {
                                                     tmp_webfontname = webfontinfo_array[cc].split('|')[0];
-                                                    //	alert(tmp_webfontname);	
+                                                    // alert(tmp_webfontname);	
                                                     tmp_webfont = webfontinfo_array[cc].split('|')[1];
                                                     tmp_webfonturl = webfontinfo_array[cc].split('|')[2];
                                                     tmp_webfonttype = webfontinfo_array[cc].split('|')[3];
@@ -1662,7 +1664,7 @@
                                                             post_response = request.responseText;
 
                                                             // this is for testing 
-                                                            //$(document).find('head').append('<link class="fontcss_detail" id="' + tmp_webfont + '" rel="stylesheet" type="text/css" href="'+ tmp_webfonturl + "&text=" + encodeURIComponent(var_text) +'">');
+                                                            // $(document).find('head').append('<link class="fontcss_detail" id="' + tmp_webfont + '" rel="stylesheet" type="text/css" href="'+ tmp_webfonturl + "&text=" + encodeURIComponent(var_text) +'">');
                                                             $(document).find('head').append('<link class="fontcss_detail48175808" id="' + tmp_webfont + '" rel="stylesheet" type="text/css" href="' + post_response + '">');
                                                         }
                                                     } else {
@@ -1673,10 +1675,10 @@
                                                             $(document).find('head').append('<link class="fontcss_detail48175808" id="' + tmp_webfont + '" rel="stylesheet" type="text/css" href="">');
                                                         }
                                                     }
-                                                    //if (htmltext.toUpperCase().indexOf(tmp_webfont.toUpperCase()) >= 0) {
+                                                    // if (htmltext.toUpperCase().indexOf(tmp_webfont.toUpperCase()) >= 0) {
                                                 }
                                             }
-                                            //end of function reloadWebFont48175808(){
+                                            // end of function reloadWebFont48175808(){
 
                                             $(document).ready(function() {
                                                 try { // prevent from load alifont error cause rsvp submit stop
@@ -1766,7 +1768,7 @@
 
                                             var pos = 0; //initializes image position in the array
                                             $(document).ready(function() {
-                                                var interval = 7000; //interval for slide
+                                                var interval = 7000; // interval for slide
                                                 var loaderHtml = '';
                                                 arr.forEach(function(src) {
                                                     loaderHtml += '<img src="' + src + '">';
@@ -1775,22 +1777,20 @@
                                                 $('.load-images').html(loaderHtml);
 
                                                 var htm = '';
-                                                /* initializes the small circles html*/
+                                                // initializes the small circles html
                                                 for (var i = 0; i < arr.length; i++) {
                                                     htm += '<div id="' + i + '" class="circle" onclick="circleClick(' + i + ')"> </div> ';
                                                 }
 
-                                                $('#circles').html(htm); //show small circles
-                                                $('#slider').html('<img src="' + arr[0] + '" class="img-slide image-animated"">'); //show first image
+                                                $('#circles').html(htm); // show small circles
+                                                $('#slider').html('<img src="' + arr[0] + '" class="img-slide image-animated"">'); // show first image
                                                 $('#0').css({
                                                     'background': '#fff',
                                                     'color': '#fff'
-                                                }); //sets the background of the first small circle to black
-
+                                                }); // sets the background of the first small circle to black
 
                                                 /* Auto slides the images with the image sources array given as first argument and interval as second argument */
                                                 function autoSlide(arr, interval) {
-
                                                     setInterval(function() {
                                                         $('.img-slide').css({
                                                             'opacity': '.1 !important'
@@ -1800,44 +1800,43 @@
                                                             pos = 0;
                                                         }
 
-                                                        $('#slider').html('<span class="helper"></span><img src="' + arr[pos] + '" class="img-slide img' + pos + ' image-animated">'); //shows image
+                                                        $('#slider').html('<span class="helper"></span><img src="' + arr[pos] + '" class="img-slide img' + pos + ' image-animated">'); // shows image
                                                         $('#' + pos).css({
                                                             'background': '#fff',
                                                             'color': '#fff'
-                                                        }); //sets background-color of circle representing the current active image to black
+                                                        }); // sets background-color of circle representing the current active image to black
                                                         $('#' + (pos - 1)).css({
                                                             'background': 'transparent',
                                                             'color': 'transparent'
-                                                        }); //sets background-color of circle before active to white
+                                                        }); // sets background-color of circle before active to white
                                                         if (pos == 0) {
                                                             $('#' + (arr.length - 1)).css({
                                                                 'background': 'transparent',
                                                                 'color': 'transparent'
                                                             });
                                                         }
-
                                                     }, interval);
                                                 }
                                                 /* end of function autoSlide */
 
-                                                autoSlide(arr, interval); //calls function autoSlide
+                                                autoSlide(arr, interval); // calls function autoSlide
 
                                                 /* displays next image */
                                                 function next() {
                                                     if (pos > arr.length - 2) {
                                                         pos = -1;
                                                     }
-                                                    $('#slider').html('<span class="helper"></span><img src="' + arr[pos + 1] + '" class="img-slide image-animated">'); //show image
+                                                    $('#slider').html('<span class="helper"></span><img src="' + arr[pos + 1] + '" class="img-slide image-animated">'); // show image
                                                     pos++;
 
                                                     $('#' + pos).css({
                                                         'background': '#fff',
                                                         'color': '#fff'
-                                                    }); //sets background-color of circle representing the current active image to black
+                                                    }); // sets background-color of circle representing the current active image to black
                                                     $('#' + (pos - 1)).css({
                                                         'background': 'transparent',
                                                         'color': 'transparent'
-                                                    }); //sets background-color of circle before active to white
+                                                    }); // sets background-color of circle before active to white
                                                     if (pos == 0) {
                                                         $('#' + (arr.length - 1)).css({
                                                             'background': 'transparent',
@@ -1858,11 +1857,11 @@
                                                     $('#' + pos).css({
                                                         'background': '#fff',
                                                         'color': '#fff'
-                                                    }); //sets background-color of circle representing the current active image to black
+                                                    }); // sets background-color of circle representing the current active image to black
                                                     $('#' + (pos + 1)).css({
                                                         'background': 'transparent',
                                                         'color': 'transparent'
-                                                    }); //sets background-color of circle before active to white
+                                                    }); // sets background-color of circle before active to white
                                                     if (pos == arr.length - 1) {
                                                         $('#0').css({
                                                             'background': 'transparent',
@@ -1875,38 +1874,35 @@
                                                 /* onclick next */
                                                 $('button#next').on('click', function(e) {
                                                     e.preventDefault();
-                                                    next(); //call function next
+                                                    next(); // call function next
                                                 });
                                                 /* end of onclick next */
 
                                                 /* onclick previous */
                                                 $('button#prev').on('click', function(e) {
                                                     e.preventDefault();
-                                                    previous(); //call function previous
+                                                    previous(); // call function previous
                                                 });
                                                 /* end of onclick previous */
-
                                             });
 
-                                            /* displays image represented by the small circle */
+                                            // displays image represented by the small circle
                                             function circleClick(position) {
                                                 if (position != pos) {
-                                                    $('#slider').html('<span class="helper"></span><img src="' + arr[position] + '" class="img-slide image-animated">'); //show image
+                                                    $('#slider').html('<span class="helper"></span><img src="' + arr[position] + '" class="img-slide image-animated">'); // show image
 
                                                     $('#' + position).css({
                                                         'background': '#fff',
                                                         'color': '#fff'
-                                                    }); //sets background-color of circle representing the current active image to black
+                                                    }); // sets background-color of circle representing the current active image to black
                                                     $('#' + (pos)).css({
                                                         'background': 'transparent',
                                                         'color': 'transparent'
-                                                    }); //sets background-color of circle before active to white
+                                                    }); // sets background-color of circle before active to white
 
                                                     pos = position;
                                                 }
                                                 /* end of function circleClick */
-
-
                                             }
                                         </script>
                                         <style>
@@ -1943,13 +1939,13 @@
                                                 right: 0;
                                                 margin: auto;
                                                 /* width: 100%;
-                                                height: auto; */
-                                                /* vertical-align: middle;
+                                                height: auto;
+                                                vertical-align: middle;
                                                 width: 80vh;
                                                 height: 100%;
                                                 max-width: 80vh;
-                                                z-index: 5; */
-                                                /* overflow-y: hidden; */
+                                                z-index: 5;
+                                                overflow-y: hidden; */
                                             }
                                             
                                             #prev {
@@ -2065,7 +2061,6 @@
                 </div>
 
                 <h3 class="detail-compact ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" style="display:" id="invite_detail_title48175810" role="tab" aria-expanded="false" aria-selected="false" tabindex="2">
-
                     <span class="ui-icon ui-icon-triangle-1-s"></span>
                     <div name="button3" id="button3" class="button button_detail_id_48175810">
                         <div class="button-tr">
@@ -2173,7 +2168,7 @@
 
                                         <script language="javascript">
                                             $(document).ready(function() {
-                                                //init
+                                                // init
                                                 if ($("#invite_detail_mapimgurl48175811").val() == '') {
                                                     $("#invite_detail_mapimg48175811").hide();
                                                     $("#map_canvas48175811").show();
@@ -2283,20 +2278,19 @@
                     </style>
                 </div>
             </div>
-
             <!-- <a id="autoMobileVideo" href="  .asp?sn=M37F3Z&amp;autovideourl=&amp;ts=1575599902"></a> -->
 
         </div>
     </div>
 
-    <div id="jquery_jplayer_1" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata" src="https://en.youvivid.net/audios_system/musicnotfound.mp3"></audio></div>
+    <!-- <div id="jquery_jplayer_1" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata" src="https://en.youvivid.net/audios_system/musicnotfound.mp3"></audio></div> -->
+    <div id="jquery_jplayer_1" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata" src="https://e-invitation.netlify.app/assets/musics/meri_rahe_tere_tak_hai.mp3"></audio></div>
 
 
     <!-- Root element of PhotoSwipe. Must have class pswp. -->
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
-        <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
+        <!-- Background of PhotoSwipe. It's a separate element as animating opacity is faster than rgba(). -->
         <div class="pswp__bg"></div>
 
         <!-- Slides wrapper with overflow:hidden. -->
@@ -2313,10 +2307,10 @@
             <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
             <div class="pswp__ui pswp__ui--hidden">
                 <div class="pswp__top-bar">
-                    <!--  Controls are self-explanatory. Order can be changed. -->
+                    <!-- Controls are self-explanatory. Order can be changed. -->
                     <div class="pswp__counter"></div>
                     <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                    <!--  <button class="pswp__button pswp__button--share" title="Share"></button>-->
+                    <!-- <button class="pswp__button pswp__button--share" title="Share"></button>-->
                     <button class="pswp__button pswp__button--download" title="Download"></button>
                     <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
                     <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
