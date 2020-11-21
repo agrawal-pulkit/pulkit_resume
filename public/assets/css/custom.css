@@ -12,7 +12,6 @@
     margin-top: -8px;
 }
 
-
 /* reset */
 
 body,
@@ -64,7 +63,6 @@ a:focus {
     outline: 0;
 }
 
-
 /* reset */
 
 html {
@@ -72,14 +70,12 @@ html {
     overflow-y: auto;
 }
 
-
 /*Leo add*/
 
 body {
     /*font-family:Georgia, "Times New Roman", Times, serif;*/
     background: #000;
 }
-
 
 /* .ui-state-focus,
 .ui-widget-content .ui-state-focus,
@@ -91,13 +87,11 @@ body {
     background: url(../images/button_on.png) no-repeat -9999px -9999px;
 }
 
-
 /*
 #preload-01 { background: url(../images/bg_tl.gif) no-repeat -9999px -9999px; }
 #preload-02 { background: url(../images/bg_tm.gif) no-repeat -9999px -9999px; }
 #preload-03 { background: url(../images/bg_tr.gif) no-repeat -9999px -9999px; }
 */
-
 
 /*====Start====*/
 
@@ -105,7 +99,6 @@ body {
     max-width: 320px;
     margin: 0 auto;
 }
-
 
 /* #outter {} */
 
@@ -147,15 +140,7 @@ body {
     width: auto;
 }
 
-
 /* .outter-main-mm {} */
-
-
-/*====End====*/
-
-
-/*====Start====*/
-
 
 /* #inner {}
 
@@ -207,13 +192,9 @@ body {
     z-index: 102;
 }
 
-
 /* .inner-main-mm {
     padding: 10px 16px 6px 16px;
 } */
-
-
-/*====End====*/
 
 .inner-main-mm img {
     display: block;
@@ -233,12 +214,9 @@ body {
     cursor: pointer;
 }
 
-
 /*====End====*/
 
-
 /*====Main-title Start====*/
-
 
 /* #main-title {}
 
@@ -293,12 +271,9 @@ body {
     color: #d6bc50;
 }
 
-
 /*====main-title End====*/
 
-
 /*====Sub-title Start====*/
-
 
 /* #sub-title {
     -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
@@ -360,9 +335,7 @@ body {
     color: #563722;
 }
 
-
 /*====sub-title End====*/
-
 
 /*====Start====*/
 
@@ -370,11 +343,9 @@ body {
     background-size: 100%;
 }
 
-
 /* .button {
     background:url(../images/btn_bg2.png) left 0px no-repeat;
 } */
-
 
 /* .button-ml {}
 
@@ -413,7 +384,6 @@ body {
     color: #d6bc50;
 }
 
-
 /* .ui-state-hover .button-title,
 .ui-state-active .button-title {} */
 
@@ -423,7 +393,6 @@ body {
     vertical-align: middle;
     display: none;
 }
-
 
 /*
 .button-title{
@@ -439,12 +408,9 @@ body {
 }
 */
 
-
 /*====End====*/
 
-
 /*====Start====*/
-
 
 /* .detail {
     border:medium solid #F00;
@@ -496,7 +462,6 @@ body {
     /*background: center top url(../images/content_bg.png) repeat;*/
 }
 
-
 /* .detail-mm p {} */
 
 .detail-mm {
@@ -531,6 +496,5 @@ body {
     color: #d6bc50;
     text-align: center;
 }
-
 
 /*====End====*/
