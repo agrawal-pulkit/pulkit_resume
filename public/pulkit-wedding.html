@@ -141,8 +141,7 @@
 		var mapCallBackFunc = function () { };
 
 		var dragFlag48175811 = false;
-		var start48175811 = 0,
-			end48175811 = 0;
+		var start48175811 = 0, end48175811 = 0;
 
 		function thisTouchStart48175811(e) {
 			dragFlag48175811 = true;
@@ -1045,7 +1044,6 @@
 				$('#loading_circle_4').removeClass('hide-div');
 				$('#loading_circle_4').addClass('animated fadeInDown');
 			});
-
 			$('#loading_circle_2').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
 				$('#loading_circle_3').removeClass('hide-div');
 				$('#loading_circle_3').addClass('animated zoomIn');
@@ -1478,9 +1476,9 @@
 
 												$(function () {
 													// if (invite_mediatype == 1) {
-													// 	$( "#img_decoration1,#img_decoration2,#img_decoration3").css('cursor', 'pointer');	
+													// 	$("#img_decoration1,#img_decoration2,#img_decoration3").css('cursor', 'pointer');	
 													// } else {
-													// 	$( "#img_decoration1,#img_decoration2,#img_decoration3").css('cursor', 'default');	
+													// 	$("#img_decoration1,#img_decoration2,#img_decoration3").css('cursor', 'default');	
 													// }
 
 													$("#img_videobutton").click(function () {
@@ -1508,9 +1506,9 @@
 													<div class="sub-title-ml">
 														<div class="sub-title-mm">
 															<div id="subtitlehtml">
-																<span
-																	style="font-weight: normal; font-size: 22px;">January
-																	17th, 2020</span>
+																<span style="font-weight: normal; font-size: 22px;">
+																	January 17th, 2020
+																</span>
 															</div>
 														</div>
 													</div>
@@ -1571,10 +1569,12 @@
 						<div class="button-mr">
 							<div class="button-ml">
 								<div class="button-mm">
-									<a href="javaScript:void(0);"><img class="iconimage" alt="1.png"
-											src="./assets/images/icons/1.png" border="0" align="absmiddle">&nbsp;<span
-											id="invite_detail_name48175808" class="button-title"><span
-												class="fontcolor-button-title">Invitation</span></span>&nbsp;</a>
+									<a href="javaScript:void(0);">
+										<img class="iconimage" alt="1.png" src="./assets/images/icons/1.png" border="0"
+											align="absmiddle">&nbsp;<span id="invite_detail_name48175808"
+											class="button-title"><span
+												class="fontcolor-button-title">Invitation</span></span>&nbsp;
+									</a>
 								</div>
 							</div>
 						</div>
@@ -1625,8 +1625,9 @@
 
 											<p style="text-align: center;">
 												<span style="font-size:20px;">
-													<span style="font-family:dancing script,cursive;">Dinner and dancing
-														to follow</span>
+													<span style="font-family:dancing script,cursive;">
+														Dinner and dance to follow
+													</span>
 												</span>
 											</p>
 
@@ -1643,7 +1644,6 @@
 
 												for (cc = 0; cc < webfontinfo_array.length; cc++) {
 													tmp_webfontname = webfontinfo_array[cc].split('|')[0];
-													// alert(tmp_webfontname);	
 													tmp_webfont = webfontinfo_array[cc].split('|')[1];
 													tmp_webfonturl = webfontinfo_array[cc].split('|')[2];
 													tmp_webfonttype = webfontinfo_array[cc].split('|')[3];

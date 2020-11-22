@@ -1,24 +1,28 @@
 <html>
 
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=317, minimum-scale=0.5, maximum-scale=2.5, user-scalable=yes">
+	<title>Ruchi &amp; Pulkit's Wedding</title>
+	<meta name="description" content="2020/01/17 8:00 PM | Grand Melrose">
+
 	<meta property="og:image:width" content="500">
 	<meta property="og:image:height" content="500">
 	<meta property="og:image:type" content="image/jpeg">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<!--  Essential META Tags -->
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Ruchi &amp; Pulkit's Wedding">
+	<meta property="og:description" content="2020/01/17 8:00 AM Grand Melrose">
+	<meta property="og:url" content="https://www.profiles.hackersoon.com/imperial-blue-card">
 
 	<meta name="robots" content="noindex">
 	<meta name="HandheldFriendly" content="true">
 	<meta name="MobileOptimized" content="317">
-	<meta name="viewport" content="width=317, minimum-scale=0.5, maximum-scale=2.5, user-scalable=yes">
-	<title>Ruchi &amp; Pulkit's Wedding</title>
-	<meta name="description" content="2020/01/17 8:00 AM Grand Melrose">
-	<meta property="og:type" content="article">
-	<meta property="og:url" content="https://www.profiles.hackersoon.com/imperial-blue-card">
-	<meta property="og:title" content="Ruchi &amp; Pulkit's Wedding">
-	<meta property="og:description" content="2020/01/17 8:00 AM Grand Melrose">
 	<meta property="og:site_name" content="Hackersoon">
-	<meta property="fb:app_id" content="113568098684585">
-	<meta property="fb:admins" content="632874169">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+		integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
 	<script src="./assets/js/jquery-latest.js"></script>
 	<script type="text/javascript" src="./assets/js/jquery-ui-1.8.18.full.min.js"></script>
@@ -34,6 +38,7 @@
 			objImage.src = objImage.src.split('?')[0] + '?x=' + now.toUTCString();
 		}
 		var instanceClose;
+
 		function addWinOnloadEvent(func) {
 			var oldonload = window.onload;
 			if (typeof window.onload != 'function') {
@@ -47,7 +52,8 @@
 				}
 			}
 		}
-		//?建求XMLHttpRequest?象
+
+		// XMLHttpRequest
 		function createRequest() {
 			try {
 				request = new XMLHttpRequest();
@@ -90,7 +96,6 @@
 			} else {
 				txt_min = "";
 			}
-
 			return txt_min;
 		}
 	</script>
@@ -105,22 +110,18 @@
 		var invite_styletype = 0;
 
 		function processButtonBackground() {
-
 			if (invite_styletype == 1) {
 				$("h3:visible>.button").each(function (index) {
 					//$('#detail' + $(this).attr('id').split('button')[1]).attr('id', 'detail' + (index + 1) );			
 					$(this).attr('id', 'button' + (index + 1));
 				});
-
 				$("h3:visible+div>.detail").each(function (index) {
 					$(this).attr('id', 'detail' + (index + 1))
 				});
-
 			}
 		}
 
 		function initProcessButtonBackground() {
-
 			if (invite_styletype == 1) {
 				$("h3:visible>.button").each(function (index) {
 					$(this).attr('id', 'button' + (index + 1))
@@ -137,6 +138,7 @@
 				});
 			}
 		}
+
 		var oldFunc;
 		var mapCallBackFunc = function () { };
 
@@ -157,6 +159,7 @@
 			end48938941 = e.touches[0].pageY;
 			window.scrollBy(0, (start48938941 - end48938941));
 		}
+
 		var map48938941 = null;
 		var marker48938941;
 		var map48938941_zoom = 18;
@@ -164,47 +167,37 @@
 		var map48938941_lngcenter = 78.08825476800148;
 		var map48938941_latmarker = 27.897577876696346;
 		var map48938941_lngmarker = 78.08849663600294;
+
 		$(document).ready(function () {
 			$("#accordion").accordion({ autoHeight: false }, { collapsible: true, active: 0 });
-			//$("#accordion").accordion("activate",0);
-			//$("#accordion").accordion("activate","#accordion10");
+			// $("#accordion").accordion("activate",0);
+			// $("#accordion").accordion("activate","#accordion10");
 
 			$("#accordion").bind('accordionchange', function (event, ui) {
-				//   ui.newHeader // jQuery object, activated header
-				//   ui.oldHeader // jQuery object, previous header
-				//   ui.newContent // jQuery object, activated content
-				//   ui.oldContent // jQuery object, previous content
-				//console.log(ui);		
-				// console.log($("#accordion").accordion( "option", "active" ));    
 				if ($(ui.newHeader).offset() != null) {
 					$('html, body').animate({ scrollTop: $(ui.newHeader).offset().top });
 				}
 				bVideoPlaying = 0;
-
 			});
 		});
+
 		var bPlayVideo = 1;
 
 		function clickObj(o) {
-			//    alert('clicked');
-			//	bPlayVideo=0;
+			// bPlayVideo=0;
 			var o = document.getElementById(o);
 
 			if (document.all) {
 				o.click();
-				//o.fireEvent("onclick");  
-
 			} else {
-
 				var e = document.createEvent('MouseEvent');
 				e.initEvent('click', false, false);
 				o.dispatchEvent(e);
 			}
-
 		}
 	</script>
-	<script type="text/javascript">
 
+	<script type="text/javascript">
 		function loadScript() {
 			var script = document.createElement('script');
 			script.type = 'text/javascript';
@@ -212,35 +205,26 @@
 			document.body.appendChild(script);
 			setSlideshow();
 		}
-
-		/////addWinOnloadEvent(loadScript);
 	</script>
+
 	<script type="text/javascript">
-
 		function parseYoutubeVID(url) {
-			//urlBuf = url.toLowerCase();
+			// urlBuf = url.toLowerCase();
 			urlBuf = url;
-
 			var youtubeVID = urlBuf.match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
 			if (youtubeVID != null) {
 				return youtubeVID[1];
 			} else {
 				return "ERR";
 			}
-
 		}
 	</script>
 
 	<script language="javascript">
-    < !--
+		function init() { }
 
-			function init() {
-
-			}
 		function replaceAll(oldStr, findStr, repStr) {
-
 			var srchNdx = 0;
-
 			var newStr = "";
 			while (oldStr.indexOf(findStr, srchNdx) != -1) {
 				newStr += oldStr.substring(srchNdx, oldStr.indexOf(findStr, srchNdx));
@@ -248,7 +232,6 @@
 				srchNdx = (oldStr.indexOf(findStr, srchNdx) + findStr.length);
 			}
 			newStr += oldStr.substring(srchNdx, oldStr.length);
-
 			return newStr;
 		}
 
@@ -294,8 +277,8 @@
 				}
 			}
 			return inter_no;
-
 		}
+
 		function checkMobileNumber(mo) {
 			if (String(mo.slice(0, 1)) == "+") {
 				if (isNaN(mo.slice(1, mo.length))) {
@@ -312,79 +295,61 @@
 					return false;
 				}
 			}
-			return true
+			return true;
 		}
-
-		-->
 	</script>
+
 	<script language="javascript">
-	< !--
-			function addRow(invite_detail_id, parent_node, maxid) {
-				//取得屬於要應用新增列的區塊
-				var obj = document.getElementById(parent_node);
-				//取得目前有多少欄位
-				//var sIndex=obj.getElementsByTagName('div').length+1;
-				var sIndex = maxid;
+		function addRow(invite_detail_id, parent_node, maxid) {
+			var obj = document.getElementById(parent_node);
+			// var sIndex=obj.getElementsByTagName('div').length+1;
+			var sIndex = maxid;
 
-				//依照原表單格式,先建一個div
-				var div = document.createElement('div');
-				div.id = 's' + sIndex;
+			var div = document.createElement('div');
+			div.id = 's' + sIndex;
 
-				//再建立文字欄位,並指定相關屬性
-				var input = document.createElement('input');
-				input.type = 'radio';
-				input.name = 't' + parent_node.replace('q', '');
-				var txt = document.createElement('span');
-				txt.id = 'o' + maxid;
-				txt.innerHTML = ' new option';
-				div.appendChild(input);
-				div.appendChild(txt);
+			var input = document.createElement('input');
+			input.type = 'radio';
+			input.name = 't' + parent_node.replace('q', '');
 
-				obj.appendChild(div);
-				var obj2 = eval('document.iform' + invite_detail_id + '.t' + parent_node.replace('q', ''));
-				if (typeof (obj2.length) == 'undefined') {
+			var txt = document.createElement('span');
+			txt.id = 'o' + maxid;
+			txt.innerHTML = ' new option';
 
-					obj2.style.display = 'none';
+			div.appendChild(input);
+			div.appendChild(txt);
+			obj.appendChild(div);
 
-				} else {
-
-					for (var i = 0; i < obj2.length; i++) {
-
-						obj2[i].style.display = '';
-					}
-				}
-
-			}
-
-		function delRow(invite_detail_id, q, t) {
-
-			d = document.getElementById(t);
-
-			d.parentNode.removeChild(d);
-			var obj2 = eval('document.iform' + invite_detail_id + '.t' + q.replace('q', ''));
+			var obj2 = eval('document.iform' + invite_detail_id + '.t' + parent_node.replace('q', ''));
 			if (typeof (obj2.length) == 'undefined') {
-
 				obj2.style.display = 'none';
-
 			} else {
-
 				for (var i = 0; i < obj2.length; i++) {
-
 					obj2[i].style.display = '';
 				}
 			}
-
 		}
+
+		function delRow(invite_detail_id, q, t) {
+			d = document.getElementById(t);
+			d.parentNode.removeChild(d);
+
+			var obj2 = eval('document.iform' + invite_detail_id + '.t' + q.replace('q', ''));
+			if (typeof (obj2.length) == 'undefined') {
+				obj2.style.display = 'none';
+			} else {
+				for (var i = 0; i < obj2.length; i++) {
+					obj2[i].style.display = '';
+				}
+			}
+		}
+
 		function setQuestionTitle(qq, txt) {
-
 			document.getElementById('qq' + qq).innerHTML = txt;
-
 		}
 
 		function showCheckin(invite_detail_id, bcheckin) {
-
 			var obj = eval('document.iform' + invite_detail_id);
-
 			if (bcheckin == true) {
 				$("#qrcode_FD062D03097DDCFE75048938944").css({ "display": "" });
 				obj.bcheckin.value = "1";
@@ -392,10 +357,9 @@
 				$("#qrcode_FD062D03097DDCFE75048938944").css({ "display": "none" });
 				obj.bcheckin.value = "0";
 			}
-
 		}
-		function setOptionTitle(invite_detail_id, o, txt) {
 
+		function setOptionTitle(invite_detail_id, o, txt) {
 			var range_array, inputstr, qid;
 			var leftstr, rightstr, midstr, leftpos, rightpos;
 			var txtlength;
@@ -407,7 +371,6 @@
 			leftstr = '';
 			rightstr = '';
 			midstr = '';
-
 			inputstr = '';
 
 			qid = document.getElementById('o' + o).parentNode.parentNode.id.replace('q', '');
@@ -419,12 +382,8 @@
 			}
 
 			if (option_title.split('{').length - 1 > 0) {
-
 				for (var n = 0; n < option_title.split('{').length - 1; n++) {
-					//if (leftpos >= 0 && rightpos > 0){
-
-					//是,{1-10}人 {} 
-
+					// if (leftpos >= 0 && rightpos > 0){
 					option_title_left = option_title_right;
 					leftstr = "";
 					rightstr = "";
@@ -433,23 +392,19 @@
 					rightpos = parseInt(option_title_left.indexOf('}'));
 
 					leftstr = option_title_left.substring(0, leftpos);
-
 					midstr = option_title_left.substring(leftpos + 1, rightpos);
 
 					inputstr += leftstr;
 
 					if (midstr == '') {
-
 						inputstr += '&nbsp;<input type="text" id="n' + qid + '" name="n' + qid + '" value="" size="' + txtlength + '" onkeyup="setOptionValue(' + invite_detail_id + ', ' + qid + ', this.value, ' + replaceAll(option_title, "'", "\'") + ', ' + o + ')" onblur="setOptionValue(' + invite_detail_id + ', ' + qid + ', this.value, ' + replaceAll(option_title, "'", "\'") + ', ' + o + ')">&nbsp;';
 					} else if (midstr.toLowerCase().indexOf('br') > 0) {
 						inputstr += '&nbsp;<textarea style="display:inline-block;vertical-align:top;" name="n' + qid + '" cols="' + txtlength + '" rows="' + midstr.toLowerCase().split('br').length + '" onkeyup="setOptionValue( ' + invite_detail_id + ',' + qid + ', this.value, ' + replaceAll(option_title, "'", "\'") + ', ' + o + ')" onblur="setOptionValue( ' + invite_detail_id + ',' + qid + ', this.value, ' + replaceAll(option_title, "'", "\'") + ', ' + o + ')"></textarea>';
-
 					} else {
-						//inputstr = '';
+						// inputstr = '';
 						inputstr += '&nbsp;<select id="n' + qid + '" name="n' + qid + '" onchange="setOptionValue(' + invite_detail_id + ', ' + qid + ', this.value, ' + replaceAll(option_title, "'", "\'") + ', ' + o + ')">';
 						inputstr += '<option value="">Select</option>';
 						option_array = midstr.split('|');
-						//alert(option_array.length);
 						cc = 1;
 						for (i = 0; i < option_array.length; i++) {
 							range_array = option_array[i].split('-');
@@ -461,15 +416,10 @@
 							} else {
 								inputstr += '<option value="' + option_array[i] + '">' + option_array[i] + '</option>';
 							}
-
 							cc = cc + 1;
-
 						}
 						inputstr += '</select>&nbsp;';
-
 					}
-
-					//alert(leftstr + inputstr + rightstr);
 					// inputstr += leftstr;
 
 					leftpos = parseInt(option_title_left.indexOf('{'));
@@ -477,115 +427,76 @@
 					option_title_right = option_title_left.substring(rightpos + 1, txt.length);
 				}
 				inputstr += option_title_right;
-
 				document.getElementById('o' + o).innerHTML = inputstr;
-
 			} else {
-
 				document.getElementById('o' + o).innerHTML = ' ' + txt;
 			}
 		}
 
 		function updateSelect(parent_node, str) {
 			var s = document.getElementById(parent_node.replace('q', 't'));
-
 			var arr = new Array();
 			arr = parent.document.getElementById(parent_node).getElementsByTagName('input');
-			s.options.length = 0;
 
+			s.options.length = 0;
 			s.options[0] = new Option('Select', 0);
 			for (var i = 0; i < arr.length; i++) {
-
 				if (arr[i].value.Trim().length != 0) {
-
 					s.options[i + 1] = new Option(arr[i].value, arr[i].value);
-
 					if (arr[i].value == str) s.options[i + 1].selected = true;
-
 				}
 			}
-
 		}
 
 		function showMust(invite_detail_id, parent_node, check) {
-
 			var iform = eval('document.iform' + invite_detail_id + '.' + parent_node);
 			if (check) {
-
 				iform.value = '1';
-
 				document.getElementById(parent_node.replace('b', 'nn')).innerHTML = '(Required)';
-
 			} else {
-
 				iform.value = '0';
-
 				document.getElementById(parent_node.replace('b', 'nn')).innerHTML = '';
 			}
 		}
 
 		function showQuestion(invite_detail_id, parent_node, check) {
 			if (check) {
-
 				document.getElementById(parent_node.replace('q', 'ta')).style.display = 'block';
 			} else {
-
 				document.getElementById(parent_node.replace('q', 'ta')).style.display = 'none';
-
 				document.getElementById(parent_node.replace('q', 'nn')).innerHTML = '';
-
 			}
 
 			var n = 0;
-
-			//console.log($("#rsvptable" + invite_detail_id + " tr[style*='display: block']"));
 			$("#rsvptable" + invite_detail_id + " tr[style*='block']").each(function (n) {
 				n++;
-
 				$(this).find("span:eq(0)").html(n);
 			});
-
 		}
+
 		function setOptionValue(invite_detail_id, id, txt, order, optionid) {
 			var obj, obj2, obj3;
 			var val;
-
 			obj = eval('document.iform' + invite_detail_id + '.q' + id);
-
 			obj3 = document.getElementsByName('n' + id + '_' + optionid);
-
-			//if (typeof(obj3.length) == 'undefined'){
+			// if (typeof(obj3.length) == 'undefined') {
 			if (obj3.length == 1) {
 				obj.value = txt;
-
 			} else {
-
 				val = '';
-
 				for (var i = 0; i < obj3.length; i++) {
-
 					val += '^' + obj3[i].value + '^';
-
 				}
-
 				val = replaceAll(val, '^^', '|');
 				val = replaceAll(val, '^', '');
-
 				obj.value = val;
-
 			}
 			obj2 = eval('document.iform' + invite_detail_id + '.t' + id);
-
 			if (typeof (obj2.length) == 'undefined') {
-
 				obj2.checked = true;
-
 			} else {
-
 				for (var i = 0; i < obj2.length; i++) {
-
 					if (obj2[i].value == order) {
-
 						obj2[i].checked = true;
 					}
 				}
@@ -595,63 +506,44 @@
 		function setOptionValue_noValue(invite_detail_id, id, txt, order, optionid) {
 			var obj, obj2, obj3;
 			var val;
-
 			var obj4;
-
 			obj = eval('document.iform' + invite_detail_id + '.q' + id);
-
-			//obj3 = eval('document.iform' + invite_detail_id + '.n' + id + '_' + optionid);
+			// obj3 = eval('document.iform' + invite_detail_id + '.n' + id + '_' + optionid);
 			obj3 = document.getElementsByName('n' + id + '_' + optionid);
-
-			//if (typeof(obj3.length) == 'undefined'){
-
+			// if (typeof(obj3.length) == 'undefined'){
 			obj4 = eval('document.iform' + invite_detail_id + '.' + txt);
 			if (obj3.length == 1) {
 				obj.value = obj4.value;
-
 			} else {
-
 				val = '';
-
 				for (var i = 0; i < obj3.length; i++) {
-
 					val += '^' + obj3[i].value + '^';
-
 				}
-
 				val = replaceAll(val, '^^', '|');
 				val = replaceAll(val, '^', '');
-
 				obj.value = val;
-
 			}
+
 			obj2 = eval('document.iform' + invite_detail_id + '.t' + id);
-
 			if (typeof (obj2.length) == 'undefined') {
-
 				obj2.checked = true;
-
 			} else {
-
 				for (var i = 0; i < obj2.length; i++) {
-
 					if (obj2[i].value == order) {
-
 						obj2[i].checked = true;
 					}
 				}
 			}
 		}
+
 		String.prototype.Trim = function () {
-
 			return this.replace(/(^\s*)|(\s*$)/g, "");
-
 		}
 
 		var bVideoPlaying = 0;
-
 		var bMute = 0;
-		//var audioPlayer; //initialize in $(window).load(function()
+		// var audioPlayer; //initialize in $(window).load(function()
+
 		function setMusic(mp3Url) {
 			if (mp3Url.indexOf("musicnotfound.mp3") >= 0) {
 				bMute = 1;
@@ -660,15 +552,11 @@
 				bMute = 0;
 				$("#jquery_jplayer_1").jPlayer("option", "loop", true);
 			}
-			//alert(mp3Url);
-
 			$("#jquery_jplayer_1").jPlayer("pause");
-
 			$("#jquery_jplayer_1").jPlayer("setMedia", {
 				mp3: mp3Url
 			}).jPlayer("play");
 		}
-		-->
 	</script>
 
 	<style type="text/css">
@@ -681,19 +569,19 @@
 		}
 
 		/*
-    html,body {
-        font-family:Georgia, serif;
-        font-size:90%;
-        width: 100%;
-        height: 100%;
-        margin: 0px;
-        padding: 0px;
-        overflow-x: hidden;
-    }
-	*/
+		html,body {
+			font-family:Georgia, serif;
+			font-size:90%;
+			width: 100%;
+			height: 100%;
+			margin: 0px;
+			padding: 0px;
+			overflow-x: hidden;
+		}
+		*/
+
 		body {
 			background-color: #00877b;
-
 		}
 
 		.fontcolor-button-title {
@@ -705,29 +593,28 @@
 		}
 
 		.ui-widget {
-			/*font-family:Georgia, "Times New Roman", Times, serif;*/
+			/* font-family:Georgia, "Times New Roman", Times, serif; */
 			font-family: Georgia, serif;
 		}
 
 		.play_video_button {
 			border: solid 1px #CCC;
-			/* 邊框樣式 */
 			-moz-box-shadow: 1px 1px 5px #999;
 			/* Firefox */
 			-webkit-box-shadow: 1px 1px 5px #999;
-			/* Safari 和 Chrome */
+			/* Safari, Chrome */
 			box-shadow: 1px 1px 5px #999;
 			/* Opera 10.5 + */
 		}
 
 		/*
-    .header_style {
-        -webkit-box-shadow: rgba(0,0,0,.3) 1px 1px 2px;
-        margin-bottom: 8px;
-    }
-    */
-
+		.header_style {
+			-webkit-box-shadow: rgba(0,0,0,.3) 1px 1px 2px;
+			margin-bottom: 8px;
+		}
+		*/
 		/*no use now */
+
 		.title {
 			-webkit-border-radius: 6px;
 			-moz-border-radius: 6px;
@@ -754,23 +641,15 @@
 			/* IE10+ */
 			background: linear-gradient(top, #fcecfc 0%, #fba6e1 50%, #fd89d7 51%, #ff87c3 100%);
 			/* W3C */
-			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcecfc', endColorstr='#ff87c3', GradientType=0);
-			/*IE6-9 */
+			filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#fcecfc', endColorstr='#ff87c3', GradientType=0);
+			/* IE6-9 */
 		}
 
-		/*jquery UI css overwrite*/
+		/* jquery UI css overwrite */
+
 		.ui-accordion-content,
 		.detail,
 		.pswp__caption {
-			/*
-        filter: alpha(opacity=10);
-        opacity:0.4;
-    */
-			/*	background-image:url(./assets/images/index_bg_02.jpg);
-        background-repeat: repeat; 
-        background-position: center center; 
-	*/
-
 			input {
 				height: 20px;
 				font-size: 14px;
@@ -780,9 +659,9 @@
 				font-size: 14px;
 			}
 	</style>
+
 	<link class="customcss" href="./assets/css/bean_blue/custom4.css" rel="stylesheet" type="text/css">
 	<link class="themecss" href="./assets/css/common_invite.css" rel="stylesheet" type="text/css">
-
 	<link class="fontcss" href="" rel="stylesheet" type="text/css">
 
 	<style>
@@ -808,58 +687,58 @@
 	<script src="./assets/js/alertify_2/alertify.min.js"></script>
 
 	<script type="text/javascript">
-			// custom OK and Cancel label
-			// default: OK, Cancel
+		// custom OK and Cancel label
+		// default: OK, Cancel
 
-			alertify.defaults = {
+		alertify.defaults = {
 			// dialogs defaults
 			autoReset: true,
-				basic: false,
-					closable: false,
-						closableByDimmer: true,
-							frameless: false,
-								maintainFocus: false, // <== global default not per instance, applies to all dialogs
-									maximizable: true,
-										modal: true,
-											movable: true,
-												moveBounded: false,
-													overflow: true,
-														padding: true,
-															pinnable: true,
-																pinned: true,
-																	preventBodyShift: false, // <== global default not per instance, applies to all dialogs
-																		resizable: true,
-																			startMaximized: false,
-																				transition: 'slide',
+			basic: false,
+			closable: false,
+			closableByDimmer: true,
+			frameless: false,
+			maintainFocus: false, // <== global default not per instance, applies to all dialogs
+			maximizable: true,
+			modal: true,
+			movable: true,
+			moveBounded: false,
+			overflow: true,
+			padding: true,
+			pinnable: true,
+			pinned: true,
+			preventBodyShift: false, // <== global default not per instance, applies to all dialogs
+			resizable: true,
+			startMaximized: false,
+			transition: 'slide',
 
-																					// notifier defaults
-																					notifier: {
+			// notifier defaults
+			notifier: {
 				// auto-dismiss wait time (in seconds)  
 				delay: 5,
-					// default position
-					position: 'bottom-right',
-						// adds a close button to notifier messages
-						closeButton: false
+				// default position
+				position: 'bottom-right',
+				// adds a close button to notifier messages
+				closeButton: false
 			},
 
 			// language resources 
 			glossary: {
 				// dialogs default title
 				title: '',
-					// ok button text
-					ok: 'OK',
-						// cancel button text
-						cancel: 'Cancel'
+				// ok button text
+				ok: 'OK',
+				// cancel button text
+				cancel: 'Cancel'
 			},
 
 			// theme settings
 			theme: {
 				// class name attached to prompt dialog input textbox.
 				input: 'form-control',
-					// class name attached to ok button
-					ok: 'btn btn-primary',
-						// class name attached to cancel button 
-						cancel: 'btn btn-danger'
+				// class name attached to ok button
+				ok: 'btn btn-primary',
+				// class name attached to cancel button 
+				cancel: 'btn btn-danger'
 			}
 		};
 		/*
@@ -877,18 +756,16 @@
 	<script type="text/javascript" src="./assets/plu231/js/plupload.full.min.js"></script>
 	<!-- activate language -->
 	<script type="text/javascript" src="./assets/plu231/js/i18n/en_US.js"></script>
-	<script>
 
+	<script>
 		// run the currently selected effect
 		function runEffect(controlID, page) {
 			// get effect type from
 			var selectedEffect = "blind";
-
 			// most effect types need no options passed by default
 			var options = {};
-			//options = { percent: 0 };
-
-			//options = { to: { width: 100%, height: auto } };
+			// options = { percent: 0 };
+			// options = { to: { width: 100%, height: auto } };
 			// run the effect
 			$("#page-" + controlID + "-" + page).toggle(selectedEffect, options, 500);
 			$("#more-" + controlID + "-" + (page - 1)).toggle("puff", options, 500);
@@ -897,741 +774,6 @@
 
 	<link rel="stylesheet" href="./assets/css/invite_my_button.css">
 
-	<style type="text/css">
-		.a2a_menu,
-		.a2a_menu * {
-			-moz-box-sizing: content-box;
-			-webkit-box-sizing: content-box;
-			box-sizing: content-box;
-			float: none;
-			margin: 0;
-			padding: 0;
-			position: static;
-			height: auto;
-			width: auto
-		}
-
-		.a2a_menu {
-			border-radius: 6px;
-			display: none;
-			direction: ltr;
-			background: #FFF;
-			font: 16px sans-serif-light, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Arial, Helvetica, "Liberation Sans", sans-serif;
-			color: #000;
-			line-height: 12px;
-			border: 1px solid #CCC;
-			vertical-align: baseline;
-			overflow: hidden
-		}
-
-		.a2a_mini {
-			min-width: 200px;
-			position: absolute;
-			width: 300px;
-			z-index: 9999997
-		}
-
-		.a2a_overlay {
-			display: none;
-			background: #616c7d;
-			_height: expression(((e=document.documentElement.clientHeight)?e:document.body.clientHeight)+"px");
-			_width: expression(((e=document.documentElement.clientWidth)?e:document.body.clientWidth)+"px");
-			filter: alpha(opacity=90);
-			opacity: .92;
-			backdrop-filter: blur(8px);
-			position: fixed;
-			_position: absolute;
-			top: 0;
-			right: 0;
-			left: 0;
-			bottom: 0;
-			z-index: 9999998;
-			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-			transition: opacity .14s, backdrop-filter .14s
-		}
-
-		.a2a_full {
-			background: #FFF;
-			border: 1px solid #FFF;
-			height: auto;
-			height: calc(320px);
-			top: 15%;
-			_top: expression(40+((e=document.documentElement.scrollTop)?e:document.body.scrollTop)+"px");
-			left: 50%;
-			margin-left: -320px;
-			position: fixed;
-			_position: absolute;
-			text-align: center;
-			width: 640px;
-			z-index: 9999999;
-			transition: transform .14s, opacity .14s
-		}
-
-		.a2a_full_footer,
-		.a2a_full_header,
-		.a2a_full_services {
-			border: 0;
-			margin: 0;
-			padding: 12px;
-			box-sizing: border-box
-		}
-
-		.a2a_full_header {
-			padding-bottom: 8px
-		}
-
-		.a2a_full_services {
-			height: 280px;
-			overflow-y: scroll;
-			padding: 0 12px;
-			-webkit-overflow-scrolling: touch
-		}
-
-		.a2a_full_services .a2a_i {
-			display: inline-block;
-			float: none;
-			width: 181px;
-			width: calc(33.334% - 18px)
-		}
-
-		div.a2a_full_footer {
-			font-size: 12px;
-			text-align: center;
-			padding: 8px 14px
-		}
-
-		div.a2a_full_footer a,
-		div.a2a_full_footer a:visited {
-			display: inline;
-			font-size: 12px;
-			line-height: 14px;
-			padding: 8px 14px
-		}
-
-		div.a2a_full_footer a:focus,
-		div.a2a_full_footer a:hover {
-			background: 0 0;
-			border: 0;
-			color: #0166FF
-		}
-
-		div.a2a_full_footer a span.a2a_s_a2a,
-		div.a2a_full_footer a span.a2a_w_a2a {
-			background-size: 14px;
-			border-radius: 3px;
-			display: inline-block;
-			height: 14px;
-			line-height: 14px;
-			margin: 0 3px 0 0;
-			vertical-align: top;
-			*vertical-align: middle;
-			width: 14px
-		}
-
-		.a2a_modal {
-			height: 0;
-			left: 50%;
-			margin-left: -320px;
-			position: fixed;
-			_position: absolute;
-			text-align: center;
-			top: 15%;
-			_top: expression(40+((e=document.documentElement.scrollTop)?e:document.body.scrollTop)+"px");
-			width: 640px;
-			z-index: 9999999;
-			transition: transform .14s, opacity .14s;
-			-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
-		}
-
-		.a2a_modal_body {
-			background: 0 0;
-			border: 0;
-			font: 24px sans-serif-light, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Arial, Helvetica, "Liberation Sans", sans-serif;
-			position: relative;
-			height: auto;
-			width: auto
-		}
-
-		.a2a_thanks {
-			color: #fff;
-			height: auto;
-			margin-top: 20px;
-			width: auto
-		}
-
-		.a2a_thanks>div:first-child {
-			margin: 0 0 40px 0
-		}
-
-		.a2a_thanks div * {
-			height: inherit
-		}
-
-		#a2a_copy_link {
-			background: #FFF;
-			border: 1px solid #FFF;
-			margin-top: 15%
-		}
-
-		span.a2a_s_link#a2a_copy_link_icon,
-		span.a2a_w_link#a2a_copy_link_icon {
-			background-size: 48px;
-			border-radius: 0;
-			display: inline-block;
-			height: 48px;
-			left: 0;
-			line-height: 48px;
-			margin: 0 3px 0 0;
-			position: absolute;
-			vertical-align: top;
-			*vertical-align: middle;
-			width: 48px
-		}
-
-		#a2a_modal input#a2a_copy_link_text {
-			background-color: transparent;
-			_background-color: #FFF;
-			border: 0;
-			color: #2A2A2A;
-			font: inherit;
-			height: 48px;
-			left: 62px;
-			max-width: initial;
-			padding: 0;
-			position: relative;
-			width: 564px;
-			width: calc(100% - 76px)
-		}
-
-		#a2a_copy_link_copied {
-			background-color: #0166ff;
-			color: #fff;
-			display: none;
-			font: inherit;
-			font-size: 16px;
-			margin-top: 1px;
-			padding: 3px 8px
-		}
-
-		@media (prefers-color-scheme:dark) {
-
-			.a2a_menu a,
-			.a2a_menu a.a2a_i,
-			.a2a_menu a.a2a_i:visited,
-			.a2a_menu a.a2a_more,
-			i.a2a_i {
-				border-color: #2a2a2a !important;
-				color: #fff !important
-			}
-
-			.a2a_menu a.a2a_i:active,
-			.a2a_menu a.a2a_i:focus,
-			.a2a_menu a.a2a_i:hover,
-			.a2a_menu a.a2a_more:active,
-			.a2a_menu a.a2a_more:focus,
-			.a2a_menu a.a2a_more:hover,
-			.a2a_menu_find_container {
-				border-color: #444 !important;
-				background-color: #444 !important
-			}
-
-			.a2a_menu {
-				background-color: #2a2a2a;
-				border-color: #2a2a2a
-			}
-
-			.a2a_menu_find {
-				color: #fff !important
-			}
-
-			.a2a_menu span.a2a_s_find svg {
-				background-color: transparent !important
-			}
-
-			.a2a_menu span.a2a_s_find svg path {
-				fill: #fff !important
-			}
-		}
-
-		@media print {
-
-			.a2a_floating_style,
-			.a2a_menu,
-			.a2a_overlay {
-				visibility: hidden
-			}
-		}
-
-		@keyframes a2aFadeIn {
-			from {
-				opacity: 0
-			}
-
-			to {
-				opacity: 1
-			}
-		}
-
-		.a2a_starting {
-			opacity: 0
-		}
-
-		.a2a_starting.a2a_full,
-		.a2a_starting.a2a_modal {
-			transform: scale(.8)
-		}
-
-		@media (max-width:639px) {
-			.a2a_full {
-				border-radius: 0;
-				top: 15%;
-				left: 0;
-				margin-left: auto;
-				width: 100%
-			}
-
-			.a2a_modal {
-				left: 0;
-				margin-left: 10px;
-				width: calc(100% - 20px)
-			}
-		}
-
-		@media (min-width:318px) and (max-width:437px) {
-			.a2a_full .a2a_full_services .a2a_i {
-				width: calc(50% - 18px)
-			}
-		}
-
-		@media (max-width:317px) {
-			.a2a_full .a2a_full_services .a2a_i {
-				width: calc(100% - 18px)
-			}
-		}
-
-		@media (max-height:436px) {
-			.a2a_full {
-				bottom: 40px;
-				height: auto;
-				top: 40px
-			}
-		}
-
-		@media (max-height:550px) {
-			.a2a_modal {
-				top: 30px
-			}
-		}
-
-		@media (max-height:360px) {
-			.a2a_modal {
-				top: 20px
-			}
-
-			.a2a_thanks>div:first-child {
-				margin-bottom: 20px
-			}
-		}
-
-		.a2a_menu a {
-			color: #0166FF;
-			text-decoration: none;
-			font: 16px sans-serif-light, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Arial, Helvetica, "Liberation Sans", sans-serif;
-			line-height: 14px;
-			height: auto;
-			width: auto;
-			outline: 0
-		}
-
-		.a2a_menu a.a2a_i:visited,
-		.a2a_menu a.a2a_more {
-			color: #0166FF
-		}
-
-		.a2a_menu a.a2a_i:active,
-		.a2a_menu a.a2a_i:focus,
-		.a2a_menu a.a2a_i:hover,
-		.a2a_menu a.a2a_more:active,
-		.a2a_menu a.a2a_more:focus,
-		.a2a_menu a.a2a_more:hover {
-			color: #2A2A2A;
-			border-color: #EEE;
-			border-style: solid;
-			background-color: #EEE;
-			text-decoration: none
-		}
-
-		.a2a_menu span.a2a_s_find {
-			background-size: 24px;
-			height: 24px;
-			left: 8px;
-			position: absolute;
-			top: 7px;
-			width: 24px
-		}
-
-		.a2a_menu span.a2a_s_find svg {
-			background-color: #FFF
-		}
-
-		.a2a_menu span.a2a_s_find svg path {
-			fill: #CCC
-		}
-
-		#a2a_menu_container {
-			display: inline-block
-		}
-
-		#a2a_menu_container {
-			_display: inline
-		}
-
-		.a2a_menu_find_container {
-			border: 1px solid #CCC;
-			border-radius: 6px;
-			padding: 2px 24px 2px 0;
-			position: relative;
-			text-align: left
-		}
-
-		.a2a_cols_container .a2a_col1 {
-			overflow-x: hidden;
-			overflow-y: auto;
-			-webkit-overflow-scrolling: touch
-		}
-
-		#a2a_modal input,
-		#a2a_modal input[type=text],
-		.a2a_menu input,
-		.a2a_menu input[type=text] {
-			display: block;
-			background-image: none;
-			box-shadow: none;
-			line-height: 100%;
-			margin: 0;
-			outline: 0;
-			overflow: hidden;
-			padding: 0;
-			-moz-box-shadow: none;
-			-webkit-box-shadow: none;
-			-webkit-appearance: none
-		}
-
-		#a2apage_find_container input,
-		#a2apage_find_container input[type=text] {
-			background-color: transparent;
-			_background-color: #FFF;
-			border: 0;
-			box-sizing: content-box;
-			color: #2A2A2A;
-			font: inherit;
-			font-size: 16px;
-			height: 28px;
-			line-height: 20px;
-			left: 38px;
-			outline: 0;
-			margin: 0;
-			max-width: initial;
-			padding: 2px 0;
-			position: relative;
-			width: 99%
-		}
-
-		.a2a_clear {
-			clear: both
-		}
-
-		.a2a_svg {
-			background-repeat: no-repeat;
-			display: block;
-			overflow: hidden;
-			height: 32px;
-			line-height: 32px;
-			padding: 0;
-			width: 32px
-		}
-
-		.a2a_svg svg {
-			background-repeat: no-repeat;
-			background-position: 50% 50%;
-			border: none;
-			display: block;
-			left: 0;
-			margin: 0 auto;
-			overflow: hidden;
-			padding: 0;
-			position: relative;
-			top: 0;
-			width: auto;
-			height: auto
-		}
-
-		a.a2a_i,
-		i.a2a_i {
-			display: block;
-			float: left;
-			border: 1px solid #FFF;
-			line-height: 24px;
-			padding: 6px 8px;
-			text-align: left;
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			width: 132px
-		}
-
-		a.a2a_i span,
-		a.a2a_more span {
-			display: inline-block;
-			overflow: hidden;
-			vertical-align: top;
-			*vertical-align: middle
-		}
-
-		a.a2a_i .a2a_svg {
-			margin: 0 6px 0 0
-		}
-
-		a.a2a_i .a2a_svg,
-		a.a2a_more .a2a_svg {
-			background-size: 24px;
-			height: 24px;
-			line-height: 24px;
-			width: 24px
-		}
-
-		a.a2a_sss:hover {
-			border-left: 1px solid #CCC
-		}
-
-		a.a2a_menu_show_more_less {
-			border-bottom: 1px solid #FFF;
-			border-left: 0;
-			border-right: 0;
-			line-height: 24px;
-			margin: 6px 0 0;
-			padding: 6px;
-			-webkit-touch-callout: none
-		}
-
-		a.a2a_menu_show_more_less span {
-			display: inline-block;
-			height: 24px;
-			margin: 0 6px 0 0
-		}
-
-		.a2a_kit .a2a_svg {
-			background-repeat: repeat
-		}
-
-		.a2a_default_style a {
-			float: left;
-			line-height: 16px;
-			padding: 0 2px
-		}
-
-		.a2a_default_style a:hover .a2a_svg,
-		.a2a_floating_style a:hover .a2a_svg,
-		.a2a_overlay_style a:hover .a2a_svg svg {
-			opacity: .7
-		}
-
-		.a2a_overlay_style.a2a_default_style a:hover .a2a_svg {
-			opacity: 1
-		}
-
-		.a2a_default_style .a2a_count,
-		.a2a_default_style .a2a_svg,
-		.a2a_floating_style .a2a_svg,
-		.a2a_menu .a2a_svg,
-		.a2a_vertical_style .a2a_count,
-		.a2a_vertical_style .a2a_svg {
-			border-radius: 4px
-		}
-
-		.a2a_default_style .a2a_counter img,
-		.a2a_default_style .a2a_dd,
-		.a2a_default_style .a2a_svg {
-			float: left
-		}
-
-		.a2a_default_style .a2a_img_text {
-			margin-right: 4px
-		}
-
-		.a2a_default_style .a2a_divider {
-			border-left: 1px solid #000;
-			display: inline;
-			float: left;
-			height: 16px;
-			line-height: 16px;
-			margin: 0 5px
-		}
-
-		.a2a_kit a {
-			cursor: pointer
-		}
-
-		.a2a_floating_style {
-			background-color: #fff;
-			border-radius: 6px;
-			position: fixed;
-			z-index: 9999995
-		}
-
-		.a2a_overlay_style {
-			z-index: 2147483647
-		}
-
-		.a2a_floating_style,
-		.a2a_overlay_style {
-			animation: a2aFadeIn .2s ease-in;
-			padding: 4px
-		}
-
-		.a2a_vertical_style a {
-			clear: left;
-			display: block;
-			overflow: hidden;
-			padding: 4px;
-			text-decoration: none
-		}
-
-		.a2a_floating_style.a2a_default_style {
-			bottom: 0
-		}
-
-		.a2a_floating_style.a2a_default_style a,
-		.a2a_overlay_style.a2a_default_style a {
-			padding: 4px
-		}
-
-		.a2a_count {
-			background-color: #fff;
-			border: 1px solid #ccc;
-			box-sizing: border-box;
-			color: #2a2a2a;
-			display: block;
-			float: left;
-			font: 12px Arial, Helvetica, sans-serif;
-			height: 16px;
-			margin-left: 4px;
-			position: relative;
-			text-align: center;
-			width: 50px
-		}
-
-		.a2a_count:after,
-		.a2a_count:before {
-			border: solid transparent;
-			border-width: 4px 4px 4px 0;
-			content: "";
-			height: 0;
-			left: 0;
-			line-height: 0;
-			margin: -4px 0 0 -4px;
-			position: absolute;
-			top: 50%;
-			width: 0
-		}
-
-		.a2a_count:before {
-			border-right-color: #ccc
-		}
-
-		.a2a_count:after {
-			border-right-color: #fff;
-			margin-left: -3px
-		}
-
-		.a2a_count span {
-			animation: a2aFadeIn .14s ease-in
-		}
-
-		.a2a_vertical_style .a2a_counter img {
-			display: block
-		}
-
-		.a2a_vertical_style .a2a_count {
-			float: none;
-			margin-left: 0;
-			margin-top: 6px
-		}
-
-		.a2a_vertical_style .a2a_count:after,
-		.a2a_vertical_style .a2a_count:before {
-			border: solid transparent;
-			border-width: 0 4px 4px 4px;
-			content: "";
-			height: 0;
-			left: 50%;
-			line-height: 0;
-			margin: -4px 0 0 -4px;
-			position: absolute;
-			top: 0;
-			width: 0
-		}
-
-		.a2a_vertical_style .a2a_count:before {
-			border-bottom-color: #ccc
-		}
-
-		.a2a_vertical_style .a2a_count:after {
-			border-bottom-color: #fff;
-			margin-top: -3px
-		}
-
-		.a2a_nowrap {
-			white-space: nowrap
-		}
-
-		.a2a_note {
-			margin: 0 auto;
-			padding: 9px;
-			font-size: 12px;
-			text-align: center
-		}
-
-		.a2a_note .a2a_note_note {
-			margin: 0;
-			color: #2A2A2A
-		}
-
-		.a2a_wide a {
-			display: block;
-			margin-top: 3px;
-			border-top: 1px solid #EEE;
-			text-align: center
-		}
-
-		.a2a_label {
-			position: absolute !important;
-			clip: rect(1px 1px 1px 1px);
-			clip: rect(1px, 1px, 1px, 1px);
-			clip-path: polygon(0 0, 0 0, 0 0);
-			-webkit-clip-path: polygon(0 0, 0 0, 0 0);
-			overflow: hidden;
-			height: 1px;
-			width: 1px
-		}
-
-		.a2a_kit,
-		.a2a_menu,
-		.a2a_modal,
-		.a2a_overlay {
-			-ms-touch-action: manipulation;
-			touch-action: manipulation;
-			outline: 0
-		}
-
-		.a2a_dd img {
-			border: 0
-		}
-
-		.a2a_button_facebook_like iframe {
-			max-width: none
-		}
-	</style>
 	<link class="fontcss_detail48938938" id="Martel" rel="stylesheet" type="text/css" href="">
 	<link class="fontcss_detail48938938" id="Caudex" rel="stylesheet" type="text/css" href="">
 	<link class="fontcss_detail48938938" id="Lora" rel="stylesheet" type="text/css" href="">
@@ -1666,16 +808,13 @@
 </head>
 
 <body marginwidth="0">
-
 	<style>
 		#Loading {
 			position: fixed;
-			top: 0;
-			left: 0;
-
+			top: 50%;
+			left: 50%;
 			width: 337px;
 			height: 495px;
-
 			background: #CCCCCC;
 			margin: 0px 0px 0px 0px;
 			z-index: 1001;
@@ -1683,16 +822,15 @@
 			-moz-animation-duration: 2s;
 			-ms-animation-duration: 2s;
 			animation-duration: 2s;
+			transform: translate(-50%, -50%);
 		}
 
 		#loading_bg {
 			width: 337px;
 			height: 495px;
-
 			background: center center url('./assets/images/f180629DqZyWmYCqMS87.jpg'), linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), center center url('./assets/images/f180629DqZyWmYCqMS87.jpg');
 			background-repeat: no-repeat, no-repeat, repeat;
 			background-size: contain, cover, contain;
-
 			margin: auto;
 			z-index: 300;
 			-webkit-animation-duration: 1.6s;
@@ -1730,7 +868,6 @@
 		#loading_circle {
 			display: table-cell;
 			vertical-align: middle;
-
 		}
 
 		#loading_circle_1 {
@@ -1749,17 +886,14 @@
 			background-size: 255px 15px;
 			height: 15px;
 			width: 100%;
-
 			-webkit-animation-duration: 0.5s;
 			-moz-animation-duration: 0.5s;
 			-ms-animation-duration: 0.5s;
 			animation-duration: 0.5s;
-
 		}
 
 		#loading_circle_3 {
 			text-align: center;
-
 			color: #FFF;
 			font-size: 22px;
 			line-height: 1.1;
@@ -1846,7 +980,7 @@
 		}
 
 		.hide-div {
-			/*display:none;*/
+			/* display:none; */
 			visibility: hidden;
 		}
 
@@ -1856,95 +990,89 @@
 	</style>
 
 	<script language="javascript">
-        < !--
-			$(document).ready(function () {
-				/*	
-					if (window.self != window.top) {
-						$(document.body).addClass("in-iframe");
-					}
-				*/
-
-				if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-					$('#Loading').on('touchstart', function (e) {
-						//stopLoading();
-						if (bWinOnLoadFired == 0) {
-							winOnloadFunc();
-						}
-					});
-				} else {
-					$('#Loading').on('click', function (e) {
-						//stopLoading();
-						if (bWinOnLoadFired == 0) {
-							winOnloadFunc();
-						}
-					});
-
+		$(document).ready(function () {
+			/*	
+				if (window.self != window.top) {
+					$(document.body).addClass("in-iframe");
 				}
-
-				$('#loading_bg').removeClass('hide-div');
-				$('#loading_bg').addClass('animated fadeIn');
-
-				$('#loading_bg2').removeClass('hide-div');
-				$('#loading_bg2').addClass('animated fadeIn');
-
-				$('#loading_bg2').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-					$('#loading_circle_2').removeClass('hide-div');
-					$('#loading_circle_2').addClass('animated fadeInUp');
-					$('#loading_circle_4').removeClass('hide-div');
-					$('#loading_circle_4').addClass('animated fadeInDown');
+			*/
+			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+				$('#Loading').on('touchstart', function (e) {
+					// stopLoading();
+					if (bWinOnLoadFired == 0) {
+						winOnloadFunc();
+					}
 				});
-				$('#loading_circle_2').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-					$('#loading_circle_3').removeClass('hide-div');
-					$('#loading_circle_3').addClass('animated zoomIn');
-					$('#loading_circle_1').removeClass('hide-div');
-					$('#loading_circle_1').addClass('animated bounceInDown');
-					$('#loading_circle_6').removeClass('hide-div');
-					$('#loading_circle_6').addClass('animated bounceInUp');
-					$('#loading_circle_7').removeClass('hide-div');
-					$('#loading_circle_7').addClass('animated bounceInUp');
-					$('#loading_circle_8').removeClass('hide-div');
-					$('#loading_circle_8').addClass('animated bounceInUp');
+			} else {
+				$('#Loading').on('click', function (e) {
+					// stopLoading();
+					if (bWinOnLoadFired == 0) {
+						winOnloadFunc();
+					}
 				});
+			}
 
-				$('#loading_circle_1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-					$('#loading_circle_5').removeClass('hide-div');
-					$('#loading_circle_5').addClass('animated lightSpeedIn');
-				});
+			$('#loading_bg').removeClass('hide-div');
+			$('#loading_bg').addClass('animated fadeIn');
 
-				$('#loading_circle_5').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-					setTimeout(function () {
-						//alert("bWinOnLoadFired");
-						if (bWinOnLoadFired == 0) {
-							//winOnloadFunc();		
-							$('#click_open').removeClass('hide-div');
-							$('#click_open').addClass('animated pulse');
+			$('#loading_bg2').removeClass('hide-div');
+			$('#loading_bg2').addClass('animated fadeIn');
 
-						}
-						// Do something after 20 seconds
-					}, 2000);
-
-				});
+			$('#loading_bg2').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+				$('#loading_circle_2').removeClass('hide-div');
+				$('#loading_circle_2').addClass('animated fadeInUp');
+				$('#loading_circle_4').removeClass('hide-div');
+				$('#loading_circle_4').addClass('animated fadeInDown');
 			});
+			$('#loading_circle_2').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+				$('#loading_circle_3').removeClass('hide-div');
+				$('#loading_circle_3').addClass('animated zoomIn');
+				$('#loading_circle_1').removeClass('hide-div');
+				$('#loading_circle_1').addClass('animated bounceInDown');
+				$('#loading_circle_6').removeClass('hide-div');
+				$('#loading_circle_6').addClass('animated bounceInUp');
+				$('#loading_circle_7').removeClass('hide-div');
+				$('#loading_circle_7').addClass('animated bounceInUp');
+				$('#loading_circle_8').removeClass('hide-div');
+				$('#loading_circle_8').addClass('animated bounceInUp');
+			});
+
+			$('#loading_circle_1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+				$('#loading_circle_5').removeClass('hide-div');
+				$('#loading_circle_5').addClass('animated lightSpeedIn');
+			});
+
+			$('#loading_circle_5').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+				setTimeout(function () {
+					if (bWinOnLoadFired == 0) {
+						// winOnloadFunc();		
+						$('#click_open').removeClass('hide-div');
+						$('#click_open').addClass('animated pulse');
+					}
+					// Do something after 20 seconds
+				}, 2000);
+			});
+		});
 
 		function stopLoading() {
 			if ($.browser.msie && parseInt($.browser.version, 10) <= 9) {
 				$("#Loading").fadeOut();
 			} else {
-
 				$("#Loading").addClass('animated fadeOut');
-
 				$('#Loading').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
 					$('#Loading').addClass('hide-div');
 					$('#Loading').addClass('hide-div-display');
 				});
 			}
-			//audioPlayer = $("#xaudio")[0];
+			// audioPlayer = $("#xaudio")[0];
 		}
+
 		function winOnloadFunc() {
 			bWinOnLoadFired = 1;
 			stopLoading();
 			loadScript();
 		}
+
 		var bWinOnLoadFired = 0;
 
 		$(window).load(function () {
@@ -1957,20 +1085,18 @@
 
 		$(function () {
 			setTimeout(function () {
-				//alert("bWinOnLoadFired");
 				if (bWinOnLoadFired == 0) {
 					winOnloadFunc();
 				}
 				// Do something after 20 seconds
 			}, 30000);
 		});
-		-->
 	</script>
-	<!-- <div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" > -->
-	<div id="Loading" class="animated fadeOut hide-div hide-div-display">
+
+	<!-- <div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"> -->
+	<div id="Loading" class="">
 		<div id="loading_bg" class="animated fadeIn">
-			<div id="loading_bg2" class="animated fadeIn">
-			</div>
+			<div id="loading_bg2" class="animated fadeIn"></div>
 		</div>
 
 		<div id="loading_circle_outer">
@@ -1983,92 +1109,82 @@
 				<div id="loading_circle_6" class="animated bounceInUp"></div>
 				<div id="loading_circle_7" class="animated bounceInUp">January 17th, 2020</div>
 				<div id="loading_circle_8" class="animated bounceInUp"></div>
-
 			</div>
 		</div>
 		<div id="click_open" class="hide-div">Tap screen to open</div>
 	</div>
 
 	<script language="javascript" type="text/javascript">
-
-			$(document).ready(function () {
-				/*	
-					if (window.self != window.top) {
-						$(document.body).addClass("in-iframe");
-					}
-				*/
-
-				if (bMute == 0) $("#mbut").addClass('mof');
-				function mon() {
-					$("#jquery_jplayer_1").jPlayer("play");
-					//alert('func mon');
+		$(document).ready(function () {
+			/*	
+				if (window.self != window.top) {
+					$(document.body).addClass("in-iframe");
 				}
+			*/
+			if (bMute == 0) $("#mbut").addClass('mof');
 
-				function mof() {
-					$("#jquery_jplayer_1").jPlayer("pause");
-					//alert('func mof');
-				}
-				$("#jquery_jplayer_1").jPlayer({
-					ready: function () {
-						$(this).jPlayer("setMedia", {
-							mp3: "audios_system/m120920505afc2d6204c.mp3"
-						}).jPlayer("play");
-						var click = document.ontouchstart === undefined ? 'click' : 'touchstart';
-						var kickoff = function () {
-							if (bVideoPlaying == 1) {
-								$("#jquery_jplayer_1").jPlayer("pause");
-							} else {
-								$("#jquery_jplayer_1").jPlayer("play");
-								//alert('play');
-							}
-							//alert('kickoff');
+			function mon() {
+				$("#jquery_jplayer_1").jPlayer("play");
+			}
 
-							//$("#MainBody,#Loading").off( "click", kickoff );
-						};
+			function mof() {
+				$("#jquery_jplayer_1").jPlayer("pause");
+			}
 
-						$("#MainBody,#Loading,#mbut").on("click", kickoff);
-						$("#jquery_jplayer_1").bind($.jPlayer.event.play, function (event) {
-							if (bMute == 0) {
-								$("#mbut").removeClass('mof');
-								$("#mbut").removeClass('mon');
-								$("#mbut").addClass('mon');
-								$("#mbut").off("click", mof);
-								$("#mbut").off("click", mon);
-								$("#mbut").on("click", mof);
-							} else {
-								$("#mbut").removeClass('mof');
-								$("#mbut").removeClass('mon');
-								$("#mbut").off("click", mof);
-								$("#mbut").off("click", mon);
-							}
-							$("#MainBody,#Loading,#mbut").off("click", kickoff);
-							//alert('event play, bmute = ' + bMute);
+			$("#jquery_jplayer_1").jPlayer({
+				ready: function () {
+					$(this).jPlayer("setMedia", {
+						mp3: "assets/musics/meri_rahe_tere_tak_hai.mp3"
+					}).jPlayer("play");
+					var click = document.ontouchstart === undefined ? 'click' : 'touchstart';
+					var kickoff = function () {
+						if (bVideoPlaying == 1) {
+							$("#jquery_jplayer_1").jPlayer("pause");
+						} else {
+							$("#jquery_jplayer_1").jPlayer("play");
+						}
+					};
 
-						});
-						$("#jquery_jplayer_1").bind($.jPlayer.event.pause, function (event) {
-							if (bMute == 0) {
-								$("#mbut").removeClass('mof');
-								$("#mbut").removeClass('mon');
-								$("#mbut").addClass('mof');
-								$("#mbut").off("click", mof);
-								$("#mbut").off("click", mon);
-								$("#mbut").on("click", mon);
-							} else {
-								$("#mbut").removeClass('mof');
-								$("#mbut").removeClass('mon');
-								$("#mbut").off("click", mof);
-								$("#mbut").off("click", mon);
-							}
-							//alert('event pause');
+					$("#MainBody,#Loading,#mbut").on("click", kickoff);
 
-						});
-					},
-					swfPath: "/js",
-					loop: true
-				});
+					$("#jquery_jplayer_1").bind($.jPlayer.event.play, function (event) {
+						if (bMute == 0) {
+							$("#mbut").removeClass('mof');
+							$("#mbut").removeClass('mon');
+							$("#mbut").addClass('mon');
+							$("#mbut").off("click", mof);
+							$("#mbut").off("click", mon);
+							$("#mbut").on("click", mof);
+						} else {
+							$("#mbut").removeClass('mof');
+							$("#mbut").removeClass('mon');
+							$("#mbut").off("click", mof);
+							$("#mbut").off("click", mon);
+						}
+						$("#MainBody,#Loading,#mbut").off("click", kickoff);
+					});
+					$("#jquery_jplayer_1").bind($.jPlayer.event.pause, function (event) {
+						if (bMute == 0) {
+							$("#mbut").removeClass('mof');
+							$("#mbut").removeClass('mon');
+							$("#mbut").addClass('mof');
+							$("#mbut").off("click", mof);
+							$("#mbut").off("click", mon);
+							$("#mbut").on("click", mon);
+						} else {
+							$("#mbut").removeClass('mof');
+							$("#mbut").removeClass('mon');
+							$("#mbut").off("click", mof);
+							$("#mbut").off("click", mon);
+						}
+					});
+				},
+				swfPath: "/assets/js",
+				loop: true
 			});
-
+		});
 	</script>
+
 	<style>
 		.mon {
 			position: fixed;
@@ -2104,6 +1220,7 @@
 	<div id="MainBody">
 		<div id="coverpage"></div>
 		<div id="MainContent">
+
 			<div id="outter">
 				<div class="outter-main-tr">
 					<div class="outter-main-tl">
@@ -2112,7 +1229,6 @@
 				</div>
 				<div class="outter-main-mr">
 					<div class="outter-main-ml">
-
 						<div class="ui-widget-header ui-corner-all">
 							<div id="inner">
 								<div class="inner-main-tr">
@@ -2127,21 +1243,17 @@
 												</div>
 												<div class="main-title-mr">
 													<div class="main-title-ml">
-
 														<div class="main-title-mm">
 															<div id="maintitlehtml"><span
 																	style="text-decoration: none; font-style: normal; font-size: 18px; font-weight: normal;">Ruchi
 																	&amp; Pulkit's Wedding</span></div>
 															<div id="maintitle_decoration1"></div>
-
 														</div>
-
 													</div>
 												</div>
 												<div class="main-title-br">
 													<div class="main-title-bl">
-														<div class="main-title-bm">
-														</div>
+														<div class="main-title-bm"></div>
 													</div>
 												</div>
 											</div>
@@ -2186,7 +1298,7 @@
 													style="background: url(./assets/images/f180629DqZyWmYCqMS87.jpg) center center / cover no-repeat; min-width: 100%; min-height: 100%; display: block;">
 												</div>
 
-												<img id="invite_webimg" style=" display:block"
+												<img id="invite_webimg" style="display:block"
 													src="./assets/images/f180629DqZyWmYCqMS87.jpg" width="100%"
 													alt="Mobile Wedding Invitations">
 											</div>
@@ -2212,7 +1324,10 @@
 													-webkit-transform: scale(1.09, 1.09);
 												}
 
-												/*.invite_webimg_album:last-child{display: block; -webkit-transform: scale(1.2,1.2);}*/
+												/* .invite_webimg_album:last-child {
+													display: block;
+													-webkit-transform: scale(1.2, 1.2);
+												} */
 
 												.auto {
 													animation: imgScale 4s ease-out;
@@ -2241,7 +1356,6 @@
 											</style>
 
 											<script type="text/javascript">
-
 												$(function () {
 													/*	
 														$('#invite_webimg').on('load', function () {
@@ -2249,26 +1363,20 @@
 															//alert('#invite_webimg onload, w=' + $(this).width() + ', h=' + $(this).height() );
 														}).each(function() {
 															if(this.complete) $(this).load();
-														});	
-													    
-													    
+														});
 													*/
-
 												});
+
 												var now_img = 0, img_count = 0;
 												var slideshowTimer
 
 												function setSlideshow() {
-													//alert('setSlideshow');
-													//alert('#invite_webimg , w=' + $('#invite_webimg').width() + ', h=' + $('#invite_webimg').height() );
-
-													//$("#main_image_container").width($('#invite_webimg').width()).height($('#invite_webimg').height());
+													// $("#main_image_container").width($('#invite_webimg').width()).height($('#invite_webimg').height());
 													if (slideshowTimer) {
 														clearInterval(slideshowTimer);
 													}
 													img_count = $('.invite_webimg_album').length;
 													if (img_count > 1) {
-
 														now_img = img_count - 1;
 														slideshowTimer = setInterval(function () {
 															if (now_img == 0) {
@@ -2278,32 +1386,26 @@
 															}
 															$(".invite_webimg_album").eq(next_img).fadeIn(1000).addClass('auto');
 															$(".invite_webimg_album").eq(now_img).fadeOut(2000).removeClass('auto');
-
 															now_img = next_img;
 														}, 4000);
 													} else {
 
 													}
-
 												}
+
 												function addSlideshowItem(fileurl) {
 													$("#main_image_container").prepend("<div class='invite_webimg_album' style='background:url(\"" + fileurl + "\") no-repeat center center; background-size: cover; min-width:100%; min-height:100%' ></div>");
-
 												}
 
 												function addSlideshowItem_pos(fileurl, pos) {
-
 													if (pos.length == 0)
 														pos = "50% 50%";
 													$("#main_image_container").prepend("<div class='invite_webimg_album' style='background:url(\"" + fileurl + "\") no-repeat; background-position: " + pos + "; background-size: cover; min-width:100%; min-height:100%' ></div>");
-
 												}
-
 											</script>
+
 											<script>
-
-												var startX, startY
-
+												var startX, startY;
 												// detect if touch event supported or not
 												if ('ontouchstart' in document.documentElement) {
 													document.getElementById("invite_webimg").addEventListener("touchmove", handleMove, false);
@@ -2312,71 +1414,60 @@
 												}
 
 												function handleStart(event) {
-													//event.preventDefault();
+													// event.preventDefault();
 													var touch = event.touches[0];
 													startX = parseInt(touch.pageX);
 													startY = parseInt(touch.pageY);
-
-													//alert(startX + ' ' + startY);
 												}
 
-												function handleEnd(event) {
-
-												}
+												function handleEnd(event) { }
 
 												function handleMove(event) {
-
-													//event.preventDefault();          
+													// event.preventDefault();          
 													var x, y;
 													var touch = event.touches[0];
 													x = parseInt(touch.pageX) - startX;
 													y = parseInt(touch.pageY) - startY;
 
 													if ($("#Gallery0 li").size() > 0) {
-
 														if ((Math.abs(x) > Math.abs(y)) && (Math.abs(x) > 150)) {
-
 															instance0.show(0);
 														}
 													}
-
 												}
 
 												// default mv parameter 
 												var invite_mediatype = 0;
 												var invite_preview_objurl;
 												var invite_preview_usrdata;
+
 												/*	
 													$(document).ready(function() {
-															//init
-															if (invite_mediatype == 1) {
-																$( "#img_videobutton").show();
-																$( "#img_videobutton_placeholder").show();
-															} else {
-																$( "#img_videobutton").hide();
-																$( "#img_videobutton_placeholder").hide();
-															}
-											    
+														//init
+														if (invite_mediatype == 1) {
+															$( "#img_videobutton").show();
+															$( "#img_videobutton_placeholder").show();
+														} else {
+															$( "#img_videobutton").hide();
+															$( "#img_videobutton_placeholder").hide();
+														}
 													});
 												*/
+
 												$(function () {
-													//if (invite_mediatype == 1) {
-													//	$( "#img_decoration1,#img_decoration2,#img_decoration3").css('cursor', 'pointer');	
-													//} else {
-													//	$( "#img_decoration1,#img_decoration2,#img_decoration3").css('cursor', 'default');	
-													//}
+													// if (invite_mediatype == 1) {
+													// 	$("#img_decoration1,#img_decoration2,#img_decoration3").css('cursor', 'pointer');
+													// } else {
+													// 	$("#img_decoration1,#img_decoration2,#img_decoration3").css('cursor', 'default');
+													// }
+
 													$("#img_videobutton").click(function () {
-														//alert("playVideo");
-
 														if (invite_mediatype == 1) {
-
 															self.parent.switchSrc_variable4(invite_preview_objurl, invite_preview_usrdata);
-
 														}
 														return false;
 													});
 												});
-
 											</script>
 										</div>
 									</div>
@@ -2385,30 +1476,26 @@
 									<div id="img_decoration3"></div>
 									<div class="inner-main-bl">
 										<div class="inner-main-bm">
-
 											<div id="sub-title">
 												<div class="sub-title-tr">
 													<div class="sub-title-tl">
-														<div class="sub-title-tm">
-														</div>
+														<div class="sub-title-tm"></div>
 													</div>
 												</div>
 												<div class="sub-title-mr">
 													<div class="sub-title-ml">
-
 														<div class="sub-title-mm">
-															<div id="subtitlehtml"><span
-																	style="font-weight: normal; font-size: 16px;">January
-																	17th, 2020</span></div>
-
+															<div id="subtitlehtml">
+																<span style="font-weight: normal; font-size: 16px;">
+																	January 17th, 2020
+																</span>
+															</div>
 														</div>
-
 													</div>
 												</div>
 												<div class="sub-title-br">
 													<div class="sub-title-bl">
-														<div class="sub-title-bm">
-														</div>
+														<div class="sub-title-bm"></div>
 													</div>
 												</div>
 											</div>
@@ -2416,9 +1503,7 @@
 									</div>
 								</div>
 							</div>
-
 						</div>
-
 					</div>
 				</div>
 				<div class="outter-main-br">
@@ -2428,7 +1513,7 @@
 				</div>
 			</div>
 
-			<!-- preload placeholder for custom.css assets-->
+			<!-- preload placeholder for custom.css assets -->
 			<div id="preload-01"></div>
 			<div id="preload-02"></div>
 			<div id="preload-03"></div>
@@ -2449,14 +1534,13 @@
 			<div id="preload-18"></div>
 			<div id="preload-19"></div>
 			<div id="preload-20"></div>
+
 			<div id="accordion" class="ui-accordion ui-widget ui-helper-reset ui-accordion-icons" role="tablist">
-
-				<h3 class="detail-compact ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"
+				<h3 class="detail-compact ui-accordion-header ui-helper-reset ui-state-active ui-state-default ui-corner-all"
 					style="display:" id="invite_detail_title48938938" role="tab" aria-expanded="false"
-					aria-selected="false" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-e"></span>
-
+					aria-selected="false" tabindex="-1">
+					<span class="ui-icon ui-icon-triangle-1-e"></span>
 					<div name="button1" id="button1" class="button button_detail_id_48938938">
-
 						<div class="button-tr">
 							<div class="button-tl">
 								<div class="button-tm"></div>
@@ -2465,11 +1549,13 @@
 						<div class="button-mr">
 							<div class="button-ml">
 								<div class="button-mm">
-									<a href="javaScript:void(0);"><img class="iconimage" alt="1.png"
+									<a href="javaScript:void(0);">
+										<img class="iconimage" alt="1.png"
 											src="./assets/css/bean_blue/images/icons/1.png" border="0"
 											align="absmiddle">&nbsp;<span id="invite_detail_name48938938"
 											class="button-title"><span
-												class="fontcolor-button-title">Invitation</span></span>&nbsp;</a>
+												class="fontcolor-button-title">Invitation</span></span>&nbsp;
+									</a>
 								</div>
 							</div>
 						</div>
@@ -2478,13 +1564,11 @@
 								<div class="button-bm"></div>
 							</div>
 						</div>
-
 					</div>
 				</h3>
 
-				<div class="accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"
-					id="invite_detail_content48938938" role="tabpanel" style="display: none;">
-
+				<div class="accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active"
+					id="invite_detail_content48938938" role="tabpanel">
 					<div name="detail1" id="detail1" class="detail">
 						<div class="detail-tr">
 							<div class="detail-tl">
@@ -2496,76 +1580,97 @@
 								<div class="detail-mm">
 									<div class="fontcolor-detail-mm">
 										<div class="invite_detail_editor" id="invite_detail_editor48938938">
-											<div style="text-align: center; "><span style="font-size:16px;"><span
-														style="font-family: handlee,cursive;"><strong>Ruchi and
-															Pulkit</strong></span></span></div>
-
-											<div style="text-align: center; "><span style="font-size:16px;"><span
-														style="font-family: handlee,cursive;">would love to celebrate
-														their wedding with you.</span></span></div>
-
-											<div style="text-align: center; ">&nbsp;</div>
-
-											<div style="text-align: center; "><span style="font-size:16px;"><span
-														style="font-family: handlee,cursive;"><strong>When:</strong></span></span>
+											<div style="text-align: center;">
+												<span style="font-size:16px;">
+													<span style="font-family: handlee,cursive;">
+														<strong>Ruchi and Pulkit</strong>
+													</span>
+												</span>
 											</div>
 
-											<p style="text-align: center;"><span style="font-size:16px;"><span
-														style="font-family: handlee,cursive;">Friday, January 17,
-														2020</span></span></p>
-
-											<div style="text-align: center; "><span style="font-size:16px;"><span
-														style="font-family: handlee,cursive;">at 8:00 AM</span></span>
+											<div style="text-align: center;">
+												<span style="font-size:16px;">
+													<span style="font-family: handlee,cursive;">
+														would love to celebrate their wedding with you.
+													</span>
+												</span>
 											</div>
 
-											<div style="text-align: center; ">&nbsp;</div>
+											<div style="text-align: center;">&nbsp;</div>
 
-											<div style="text-align: center; "><span style="font-size:16px;"><span
-														style="font-family: handlee,cursive;"><strong>Where:</strong></span></span>
+											<div style="text-align: center;">
+												<span style="font-size:16px;">
+													<span style="font-family: handlee,cursive;">
+														<strong>When:</strong>
+													</span>
+												</span>
 											</div>
 
-											<div style="text-align: center; ">
+											<p style="text-align: center;">
+												<span style="font-size:16px;">
+													<span style="font-family: handlee,cursive;">
+														Friday, January 17, 2020
+													</span>
+												</span>
+											</p>
+
+											<div style="text-align: center;">
+												<span style="font-size:16px;">
+													<span style="font-family: handlee,cursive;">at 8:00 AM</span>
+												</span>
+											</div>
+
+											<div style="text-align: center;">&nbsp;</div>
+
+											<div style="text-align: center;">
+												<span style="font-size:16px;">
+													<span style="font-family: handlee,cursive;">
+														<strong>Where:</strong>
+													</span>
+												</span>
+											</div>
+
+											<div style="text-align: center;">
 												<font face="handlee, cursive">Grand Melrose</font>
 											</div>
 
-											<div style="text-align: center; ">
-												<font face="handlee, cursive">Aaligarh</font>
+											<div style="text-align: center;">
+												<font face="handlee, cursive">Aligarh</font>
 											</div>
 
-											<div style="text-align: center; ">&nbsp;</div>
+											<div style="text-align: center;">&nbsp;</div>
 
-											<div style="text-align: center; ">
+											<div style="text-align: center;">
 												<p>&nbsp;</p>
 
-												<div style="text-align: center; "><span
-														style="font-size:16px;"><strong><span
-																style="font-family: handlee,cursive;">Contacts:</span></strong></span>
+												<div style="text-align: center;">
+													<span style="font-size:16px;">
+														<strong>
+															<span style="font-family: handlee,cursive;">Contacts:</span>
+														</strong>
+													</span>
 												</div>
 
-												<div style="text-align: center; "><span style="font-size:16px;">
-														<font face="handlee, cursive">0000000000</font>
-													</span></div>
+												<div style="text-align: center;">
+													<span style="font-size:16px;">
+														<font face="handlee, cursive">9876543210</font>
+													</span>
+												</div>
 											</div>
 
 										</div>
 										<script type="text/javascript">
-
 											function reloadWebFont48938938() {
 												$("link.fontcss_detail48938938").remove();
-
 												var webfontinfo_array = ['Martel|Martel|//fonts.googleapis.com/css?family=Martel|3', 'Caudex|Caudex|//fonts.googleapis.com/css?family=Caudex|3', 'Lora|Lora|//fonts.googleapis.com/css?family=Lora|3', 'Bree Serif|Bree Serif|//fonts.googleapis.com/css?family=Bree+Serif|3', 'Raleway|Raleway|//fonts.googleapis.com/css?family=Raleway|3', 'Allerta|Allerta|//fonts.googleapis.com/css?family=Allerta|3', 'Roboto|Roboto|//fonts.googleapis.com/css?family=Roboto|3', 'Ubuntu|Ubuntu|//fonts.googleapis.com/css?family=Ubuntu|3', 'Rubik One|Rubik One|//fonts.googleapis.com/css?family=Rubik+One|3', 'Lobster Two|Lobster Two|//fonts.googleapis.com/css?family=Lobster+Two|3', 'Oleo Script|Oleo Script|//fonts.googleapis.com/css?family=Oleo+Script|3', 'Abril Fatface|Abril Fatface|//fonts.googleapis.com/css?family=Abril+Fatface|3', 'Poiret One|Poiret One|//fonts.googleapis.com/css?family=Poiret+One|3', 'Mystery Quest|Mystery Quest|//fonts.googleapis.com/css?family=Mystery+Quest|3', 'Leckerli One|Leckerli One|//fonts.googleapis.com/css?family=Leckerli+One|3', 'Parisienne|Parisienne|//fonts.googleapis.com/css?family=Parisienne|3', 'Alex Brush|Alex Brush|//fonts.googleapis.com/css?family=Alex+Brush&subset=latin,latin-ext|3', 'Arizonia|Arizonia|//fonts.googleapis.com/css?family=Arizonia|3', 'Handlee|Handlee|//fonts.googleapis.com/css?family=Handlee|3', 'Dancing Script|Dancing Script|//fonts.googleapis.com/css?family=Dancing+Script:400,700|3', 'Merienda One|Merienda One|//fonts.googleapis.com/css?family=Merienda+One|3', 'Inconsolata|Inconsolata|//fonts.googleapis.com/css?family=Inconsolata:700|3', 'Cousine|Cousine|//fonts.googleapis.com/css?family=Cousine|3', 'PT Mono|PT Mono|//fonts.googleapis.com/css?family=PT+Mono|3', 'Nova Mono|Nova Mono|//fonts.googleapis.com/css?family=Nova+Mono|3'];
 												var htmltext = $("#invite_detail_editor48938938").html();
 												plaintext = htmltext.replace(/(<[^<|>]+?>|\r\n|\n|\r|^\s*|\s*$|\s+|&nbsp;)/gim, '');
 
 												plaintext_min = getMinTextInOrder(plaintext)
-
 												contentcss_list = "";
-												//alert(webfontinfo_array);	
 
 												for (cc = 0; cc < webfontinfo_array.length; cc++) {
-
 													tmp_webfontname = webfontinfo_array[cc].split('|')[0];
-													//	alert(tmp_webfontname);	
 													tmp_webfont = webfontinfo_array[cc].split('|')[1];
 													tmp_webfonturl = webfontinfo_array[cc].split('|')[2];
 													tmp_webfonttype = webfontinfo_array[cc].split('|')[3];
@@ -2580,29 +1685,21 @@
 															post_url = tmp_webfonturl.split('?')[0];
 															post_vars = tmp_webfonturl.split('?')[1] + "&text=" + encodeURIComponent(var_text);
 															createRequest();
-															//post_url = "http://cn.youvivid.com/test_test.asp";
-															//alert(parseInt($.browser.version, 10));
 
 															if ($.browser.msie && parseInt($.browser.version, 10) <= 7) {
 																post_url = "https://en.youvivid.net/mobile_invite_getcontentcssurl.asp";
 															} else {
-
 																serverUrl = 'https://en.youvivid.net/';
 																post_url = "https://awsfont.youvivid.net/Fonts/csslink";
 															}
-															//alert(post_url);
 															request.open("POST", post_url, false);
-
 															request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-															//alert(post_url+"," + post_vars);
 															request.send(post_vars);
-															post_response = request.responseText; //?取服?器返回的JSON字串
+															post_response = request.responseText;
 
-															//	alert("post_response=" + post_response);
 															// this is for testing 
-															//$(document).find('head').append('<link class="fontcss_detail" id="' + tmp_webfont + '" rel="stylesheet" type="text/css" href="'+ tmp_webfonturl + "&text=" + encodeURIComponent(var_text) +'">');
+															// $(document).find('head').append('<link class="fontcss_detail" id="' + tmp_webfont + '" rel="stylesheet" type="text/css" href="'+ tmp_webfonturl + "&text=" + encodeURIComponent(var_text) +'">');
 															$(document).find('head').append('<link class="fontcss_detail48938938" id="' + tmp_webfont + '" rel="stylesheet" type="text/css" href="' + post_response + '">');
-
 														}
 													} else {
 														var_text = tmp_webfontname;
@@ -2612,24 +1709,21 @@
 															$(document).find('head').append('<link class="fontcss_detail48938938" id="' + tmp_webfont + '" rel="stylesheet" type="text/css" href="">');
 
 														}
-													}//if (  htmltext.toUpperCase().indexOf(tmp_webfont.toUpperCase()) >= 0 ) {
+													}
+													// if (htmltext.toUpperCase().indexOf(tmp_webfont.toUpperCase()) >= 0) {
 												}
-											} //end	function reloadWebFont48938938(){
-											$(document).ready(function () {
+											}
+											// end of function reloadWebFont48938938(){
 
+											$(document).ready(function () {
 												try { // prevent from load alifont error cause rsvp submit stop
 													reloadWebFont48938938();
-												}
-												catch (err) {
-												}
-
+												} catch (err) { }
 												bReloadWebFontOnce48938938 = 0;
 											});
 										</script>
-
 									</div>
 								</div>
-
 							</div>
 						</div>
 						<div class="detail-br">
@@ -2639,12 +1733,12 @@
 						</div>
 					</div>
 				</div>
+
 				<h3 class="detail-compact ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"
 					style="display:" id="invite_detail_title48938941" role="tab" aria-expanded="false"
-					aria-selected="false" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-e"></span>
-
+					aria-selected="false" tabindex="-1">
+					<span class="ui-icon ui-icon-triangle-1-e"></span>
 					<div name="button4" id="button4" class="button button_detail_id_48938941">
-
 						<div class="button-tr">
 							<div class="button-tl">
 								<div class="button-tm"></div>
@@ -2657,7 +1751,8 @@
 											src="./assets/css/bean_blue/images/icons/4.png" border="0"
 											align="absmiddle">&nbsp;<span id="invite_detail_name48938941"
 											class="button-title"><span
-												class="fontcolor-button-title">Directions</span></span>&nbsp;</a>
+												class="fontcolor-button-title">Directions</span></span>&nbsp;
+									</a>
 								</div>
 							</div>
 						</div>
@@ -2666,13 +1761,11 @@
 								<div class="button-bm"></div>
 							</div>
 						</div>
-
 					</div>
 				</h3>
 
 				<div class="accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"
 					id="invite_detail_content48938941" role="tabpanel" style="display: none;">
-
 					<div name="detail4" id="detail4" class="detail">
 						<div class="detail-tr">
 							<div class="detail-tl">
@@ -2713,10 +1806,10 @@
 												}
 											</script>
 										</div>
-										<div id="map_desc48938941">Grand Melrose<br>Aaligarh<br>0000000000</div>
+										<div id="map_desc48938941">Grand Melrose<br>Aligarh<br>9876543210</div>
 										<script language="javascript">
 											$(document).ready(function () {
-												//init
+												// init
 												if ($("#invite_detail_mapimgurl48938941").val() == '') {
 													$("#invite_detail_mapimg48938941").hide();
 													$("#map_canvas48938941").show();
@@ -2740,6 +1833,7 @@
 						</div>
 					</div>
 				</div>
+
 				<h3 class="detail-compact ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"
 					style="display:" id="invite_detail_title48938942" role="tab" aria-expanded="false"
 					aria-selected="false" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-e"></span>
@@ -3792,67 +2886,41 @@
 																</div>
 															</td>
 														</tr>
-
-														<!-- captcha 安全碼 -->
-														<!--
-         <tr><td width="100%" height="30" align="center" valign="middle">
-    
-      
-    <br>
-            <img src="/captcha/captcha.asp" align="absmiddle" id="imgCaptcha" />&nbsp;
-            <a href="javascript:void(0);" onClick="RefreshImage('imgCaptcha');">Refresh</a><br />
-              Write Safe Code <input type="text" name="txtCaptcha" id="txtCaptcha" value="" size="6"/>   
-         
-     
-         </td></tr>
-    -->
 														<tr>
 															<td width="100%" height="25" align="center" valign="middle">
 																<input type="hidden" name="bshowbless" value="">
-																<!--<br><input type="checkbox" name="bshowbless" value="1" style="vertical-align:middle">&nbsp;Private Reply-->
-
 															</td>
 														</tr>
 														<tr>
 															<td width="100%" height="30" align="center" valign="middle">
-																<!--<input type="submit" value=" Submit 2">-->
-																<!--onclick="isIns(); return false;"-->
-
 																<input id="rsvp_btn48938942" type="button"
 																	value=" Submit ">
 																<br><br>
 																<div id="qrcode_FD062D03097DDCFE75048938942"
 																	style="display: none;">
-
 																</div>
 															</td>
 														</tr>
 													</tbody>
 												</table>
-
 											</form>
 
 											<style style="display: none;">
 												/* Gradient transparent - color - transparent */
-
 												hr.style-two {
-
 													clear: left;
 													border: 0;
 													height: 1px;
-
 													/***
-        background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
-        background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
-        background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
-        background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
-    ***/
-
+													background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+													background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+													background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+													background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+													***/
 													border: 0;
 													height: 0;
 													border-top: 1px solid rgba(0, 0, 0, 0.1);
 													border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-
 												}
 
 												span.two {
@@ -3919,12 +2987,11 @@
 						</div>
 					</div>
 				</div>
-				<h3 class="detail-compact ui-accordion-header ui-helper-reset ui-state-active ui-corner-top"
-					style="display:" id="invite_detail_title48938944" role="tab" aria-expanded="true"
-					aria-selected="true" tabindex="0"><span class="ui-icon ui-icon-triangle-1-s"></span>
 
+				<h3 class="detail-compact ui-accordion-header ui-helper-reset ui-corner-top" style="display:"
+					id="invite_detail_title48938944" role="tab" aria-expanded="true" aria-selected="true" tabindex="0">
+					<span class="ui-icon ui-icon-triangle-1-s"></span>
 					<div name="button5" id="button5" class="button button_detail_id_48938944">
-
 						<div class="button-tr">
 							<div class="button-tl">
 								<div class="button-tm"></div>
@@ -3933,11 +3000,13 @@
 						<div class="button-mr">
 							<div class="button-ml">
 								<div class="button-mm">
-									<a href="javaScript:void(0);"><img class="iconimage" alt="5.png"
+									<a href="javaScript:void(0);">
+										<img class="iconimage" alt="5.png"
 											src="./assets/css/bean_blue/images/icons/5.png" border="0"
 											align="absmiddle">&nbsp;<span id="invite_detail_name48938944"
 											class="button-title"><span
-												class="fontcolor-button-title">Share</span></span>&nbsp;</a>
+												class="fontcolor-button-title">Share</span></span>&nbsp;
+									</a>
 								</div>
 							</div>
 						</div>
@@ -3950,7 +3019,7 @@
 					</div>
 				</h3>
 
-				<div class="accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active"
+				<div class="accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"
 					id="invite_detail_content48938944" role="tabpanel"
 					style="display: block; overflow: visible; padding-top: 0px; padding-bottom: 0px;">
 
@@ -3966,9 +3035,9 @@
 									<div class="fontcolor-detail-mm">
 										<div style="font-size:14px; margin-bottom:15px; -webkit-user-select: none;">
 											Share URL:</div>
-										<div style="width:100%; margin-bottom:15px;" align="center">
+										<div style="width:100%; padding-bottom:15px;" align="center">
 											<div
-												style="width:100%; padding-top:4px;padding-bottom:4px; border-radius:4px; border:1px solid #777; background-color:#FFF; font-size:14px; letter-spacing:-1px; color:#777; font-family:verdana, tahoma, arial, serif">
+												style="padding:4px; border-radius:4px; border:1px solid #777; background-color:#FFF; font-size:14px; letter-spacing:-1px; color:#777; font-family:verdana, tahoma, arial, serif; word-break: break-word; overflow-wrap: break-word;">
 												https://www.profiles.hackersoon.com/imperial-blue-card
 											</div>
 										</div>
@@ -3984,6 +3053,7 @@
 						</div>
 					</div>
 				</div>
+
 				<div id="accordion_bottom" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"
 					role="tab" aria-expanded="false" aria-selected="false" tabindex="-1"><span
 						class="ui-icon ui-icon-triangle-1-e"></span></div>
@@ -3991,15 +3061,99 @@
 
 			<!--<div id="PhotoSwipeTarget"></div>-->
 
-			<div id="footer">
-				<div id="copyright">
-					<div id="copyright-text">
-						<div id="copyright-text-content">
-							<span class="fontcolor-button-title">
-								Powered by YouVivid.net
-							</span>
+			<div class="footer-main">
+				<div id="footer">
+					<div id="copyright">
+						<div id="copyright-text">
+							<div id="copyright-text-content">
+								<div class="author-line">
+									<span>Made with</span>
+									<div class="heart-shape"></div>
+									<span>by <a class="brand-name"
+											href="https://www.instagram.com/cardwale.in">cardwale.in</a></span>
+								</div>
+								<!-- <div class="fontcolor-button-title">Powered by HackerSoon</div> -->
+
+								<style>
+									.author-line {
+										/* line-height: 40px;
+										padding-top: 8px;
+										font-weight: bold; */
+										display: flex;
+										justify-content: center;
+									}
+
+									.heart-shape {
+										margin: 0 10px;
+										display: inline-block;
+										position: relative;
+										width: 16px;
+										height: 16px;
+										-webkit-transform: rotate(45deg);
+										-moz-transform: rotate(45deg);
+										-ms-transform: rotate(45deg);
+										-o-transform: rotate(45deg);
+										transform: rotate(45deg);
+										background-color: rgba(255, 0, 0, 1);
+									}
+
+									.heart-shape:before,
+									.heart-shape:after {
+										position: absolute;
+										width: 16px;
+										height: 16px;
+										content: '';
+										-webkit-border-radius: 50%;
+										-moz-border-radius: 50%;
+										-o-border-radius: 50%;
+										border-radius: 50%;
+										background-color: rgba(255, 0, 0, 1);
+									}
+
+									.heart-shape:before {
+										bottom: 0px;
+										left: -10px;
+									}
+
+									.heart-shape:after {
+										top: -10px;
+										right: 0px;
+									}
+
+									.brand-name {
+										color: inherit;
+									}
+								</style>
+							</div>
 						</div>
 					</div>
+				</div>
+
+				<div class="contact-us">
+					<span>Contact us</span>
+					<a href="whatsapp://send?phone=+919206255513">
+						<img src="./assets/images/icons/logo-whatsapp.svg" width="24" height="24" alt="Whatsapp" />
+					</a>
+					<a href="https://www.instagram.com/cardwale.in">
+						<img src="./assets/images/icons/logo-instagram.svg" width="24" height="24" alt="Instagram" />
+					</a>
+					<style>
+						.contact-us {
+							padding: 0px 10px 5px 10px;
+							/* background: #2d2722; */
+							color: #F6CB73;
+							/* font-weight: bold; */
+							display: flex;
+							vertical-align: middle;
+							justify-content: center;
+						}
+
+						.contact-us span,
+						.contact-us a {
+							padding: 0px 2px;
+							line-height: 28px;
+						}
+					</style>
 				</div>
 			</div>
 
@@ -4013,8 +3167,7 @@
 	<!-- Root element of PhotoSwipe. Must have class pswp. -->
 	<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
-		<!-- Background of PhotoSwipe. 
-             It's a separate element as animating opacity is faster than rgba(). -->
+		<!-- Background of PhotoSwipe. It's a separate element as animating opacity is faster than rgba(). -->
 		<div class="pswp__bg"></div>
 
 		<!-- Slides wrapper with overflow:hidden. -->
