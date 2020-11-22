@@ -291,9 +291,7 @@ height:40px;
 
 #maintitlehtml {
 	/*text-shadow:0px 0px 0 rgb(108,108,108), 1px 1px 0 rgb(22,22,22),2px 2px 1px rgba(0,0,0,0.05),2px 2px 1px rgba(0,0,0,0.5),0px 0px 1px rgba(0,0,0,.2); 
-	
    -webkit-text-stroke: 1px black;
-	
 	*/
 	/***display: inline-block;***/
 	padding: 10px 10px 10px 10px;
@@ -431,52 +429,72 @@ height:40px;
 /***
 #button1 .button-mr{
 	width:auto;
-	background-image:url(images/bg_buttons.png); background-position:right 0px; background-repeat: no-repeat;
+	background-image:url(images/bg_buttons.png);
+	background-position:right 0px;
+	background-repeat: no-repeat;
 	background-size: 100% 921px;
 }
 #button2 .button-mr{
 	width:auto;
-	background-image:url(images/bg_buttons.png); background-position:right -92px; background-repeat: no-repeat; 	
+	background-image:url(images/bg_buttons.png);
+	background-position:right -92px;
+	background-repeat: no-repeat; 	
 	background-size: 100% 921px;
 }
 #button3 .button-mr{
 	width:auto;
-	background-image:url(images/bg_buttons.png); background-position:right -184px; background-repeat: no-repeat; 	
+	background-image:url(images/bg_buttons.png);
+	background-position:right -184px;
+	background-repeat: no-repeat; 	
 	background-size: 100% 921px;
 }
 #button4 .button-mr{
 	width:auto;
-	background-image:url(images/bg_buttons.png); background-position:right -277px; background-repeat: no-repeat; 	
+	background-image:url(images/bg_buttons.png);
+	background-position:right -277px;
+	background-repeat: no-repeat; 	
 	background-size: 100% 921px;
 }
 #button5 .button-mr{
 	width:auto;
-	background-image:url(images/bg_buttons.png); background-position:right -369px; background-repeat: no-repeat; 	
+	background-image:url(images/bg_buttons.png);
+	background-position:right -369px;
+	background-repeat: no-repeat; 	
 	background-size: 100% 921px;
 }
 #button6 .button-mr{
 	width:auto;
-	background-image:url(images/bg_buttons.png); background-position:right -461px; background-repeat: no-repeat; 	
+	background-image:url(images/bg_buttons.png);
+	background-position:right -461px;
+	background-repeat: no-repeat; 	
 	background-size: 100% 921px;
 }
 #button7 .button-mr{
 	width:auto;
-	background-image:url(images/bg_buttons.png); background-position:right -553px; background-repeat: no-repeat; 	
+	background-image:url(images/bg_buttons.png);
+	background-position:right -553px;
+	background-repeat: no-repeat; 	
 	background-size: 100% 921px;
 }
 #button8 .button-mr{
 	width:auto;
-	background-image:url(images/bg_buttons.png); background-position:right -645px; background-repeat: no-repeat; 	
+	background-image:url(images/bg_buttons.png);
+	background-position:right -645px;
+	background-repeat: no-repeat; 	
 	background-size: 100% 921px;
 }
 #button9 .button-mr{
 	width:auto;
-	background-image:url(images/bg_buttons.png); background-position:right -737px; background-repeat: no-repeat; 	
+	background-image:url(images/bg_buttons.png);
+	background-position:right -737px;
+	background-repeat: no-repeat; 	
 	background-size: 100% 921px;
 }
 #button10 .button-mr{
 	width:auto;
-	background-image:url(images/bg_buttons.png); background-position:right -829px; background-repeat: no-repeat; 	
+	background-image:url(images/bg_buttons.png);
+	background-position:right -829px;
+	background-repeat: no-repeat; 	
 	background-size: 100% 921px;
 }
 

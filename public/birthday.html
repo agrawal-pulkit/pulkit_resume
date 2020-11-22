@@ -558,7 +558,7 @@
 		// var audioPlayer; //initialize in $(window).load(function()
 
 		function setMusic(mp3Url) {
-			if (mp3Url.indexOf("birthday_spaceman.mp3") >= 0) {
+			if (mp3Url.indexOf("happy_birthday_tune.mpeg") >= 0) {
 				bMute = 1;
 				$("#jquery_jplayer_1").jPlayer("option", "loop", false);
 			} else {
@@ -1966,7 +1966,7 @@
 			$("#jquery_jplayer_1").jPlayer({
 				ready: function () {
 					$(this).jPlayer("setMedia", {
-						mp3: "./assets/musics/birthday_spaceman.mp3"
+						mp3: "./assets/musics/happy_birthday_tune.mpeg"
 					}).jPlayer("play");
 					var click = document.ontouchstart === undefined ? 'click' : 'touchstart';
 					var kickoff = function () {
@@ -3898,7 +3898,7 @@
 
 	<div id="jquery_jplayer_1" style="width: 0px; height: 0px;"><img id="jp_poster_0"
 			style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata"
-			src="./assets/musics/birthday_spaceman.mp3"></audio></div>
+			src="./assets/musics/happy_birthday_tune.mpeg"></audio></div>
 
 
 	<!-- Root element of PhotoSwipe. Must have class pswp. -->
