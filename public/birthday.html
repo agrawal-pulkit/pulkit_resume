@@ -27,6 +27,9 @@
 	<meta property="og:site_name" content="HackerSoon">
 	<meta name="twitter:image:alt" content="Ayan's 1st Birthday Party Invitation">
 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+		integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
 	<script type="text/javascript" src="./assets/js/jquery-latest.js"></script>
 	<script type="text/javascript" src="./assets/js/jquery-ui-1.8.18.full.min.js"></script>
 	<script type="text/javascript" src="./assets/js/jquery.jplayer.min.js"></script>
@@ -1808,6 +1811,373 @@
 				</div>
 
 				<h3 class="detail-compact ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"
+					style="display:" id="invite_detail_title48936886" role="tab" aria-expanded="false"
+					aria-selected="false" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-e"></span>
+					<div name="button3" id="button3" class="button button_detail_id_48936886">
+						<div class="button-tr">
+							<div class="button-tl">
+								<div class="button-tm"></div>
+							</div>
+						</div>
+						<div class="button-mr">
+							<div class="button-ml">
+								<div class="button-mm">
+									<a href="javaScript:void(0);">
+										<img class="iconimage" alt="3.png"
+											src="./assets/css/cynthia_spaceman/images/icons/3.png" border="0"
+											align="absmiddle" />
+										&nbsp;
+										<span id="invite_detail_name48936886" class="button-title">
+											<span class="fontcolor-button-title">Gallery</span>
+										</span>
+										&nbsp;
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="button-br">
+							<div class="button-bl">
+								<div class="button-bm"></div>
+							</div>
+						</div>
+					</div>
+				</h3>
+
+				<div class="accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"
+					id="invite_detail_content48936886" role="tabpanel" style="display: none;">
+					<div name="detail3" id="detail3" class="detail">
+						<div class="detail-tr">
+							<div class="detail-tl">
+								<div class="detail-tm"></div>
+							</div>
+						</div>
+						<div class="detail-mr">
+							<div class="detail-ml">
+								<div class="detail-mm">
+									<div class="fontcolor-detail-mm">
+
+										<div class="invite_detail_editor" id="invite_detail_editor48936886">
+											<!-- main image slider container -->
+											<div id="slider-main">
+												<!-- previous button -->
+												<button id="prev"><i class="fa fa-angle-double-left"></i></button>
+												<!-- image container -->
+												<div id="slider"></div>
+												<!-- next button -->
+												<button id="next"><i class="fa fa-angle-double-right"></i></button>
+												<!-- small circles container -->
+												<div id="circles"></div>
+											</div>
+											<!-- end of main image slider container -->
+										</div>
+										<script type="text/javascript">
+											// images goes here
+											var arr = [
+												"images/ayan/main/01.jpeg",
+												"images/ayan/main/02.jpeg",
+												"images/ayan/main/03.jpeg",
+												"images/ayan/main/04.jpeg",
+												"images/ayan/main/05.jpeg",
+												"images/ayan/main/06.jpeg",
+												"images/ayan/main/07.jpeg"
+											]; //an array of image sources
+
+											var pos = 0; //initializes image position in the array
+											$(document).ready(function () {
+												var interval = 7000; // interval for slide
+												var loaderHtml = '';
+												arr.forEach(function (src) {
+													loaderHtml += '<img src="' + src + '">';
+												});
+
+												$('.load-images').html(loaderHtml);
+
+												var htm = '';
+												// initializes the small circles html
+												for (var i = 0; i < arr.length; i++) {
+													htm += '<div id="' + i + '" class="circle" onclick="circleClick(' + i + ')"> </div> ';
+												}
+
+												$('#circles').html(htm); // show small circles
+												$('#slider').html('<img src="' + arr[0] + '" class="img-slide image-animated"">'); // show first image
+												$('#0').css({
+													'background': '#fff',
+													'color': '#fff'
+												}); // sets the background of the first small circle to black
+
+												/* Auto slides the images with the image sources array given as first argument and interval as second argument */
+												function autoSlide(arr, interval) {
+													setInterval(function () {
+														$('.img-slide').css({
+															'opacity': '.1 !important'
+														});
+														pos++;
+														if (pos > arr.length - 1) {
+															pos = 0;
+														}
+
+														$('#slider').html('<span class="helper"></span><img src="' + arr[pos] + '" class="img-slide img' + pos + ' image-animated">'); // shows image
+														$('#' + pos).css({
+															'background': '#fff',
+															'color': '#fff'
+														}); // sets background-color of circle representing the current active image to black
+														$('#' + (pos - 1)).css({
+															'background': 'transparent',
+															'color': 'transparent'
+														}); // sets background-color of circle before active to white
+														if (pos == 0) {
+															$('#' + (arr.length - 1)).css({
+																'background': 'transparent',
+																'color': 'transparent'
+															});
+														}
+													}, interval);
+												}
+												/* end of function autoSlide */
+
+												autoSlide(arr, interval); // calls function autoSlide
+
+												/* displays next image */
+												function next() {
+													if (pos > arr.length - 2) {
+														pos = -1;
+													}
+													$('#slider').html('<span class="helper"></span><img src="' + arr[pos + 1] + '" class="img-slide image-animated">'); // show image
+													pos++;
+
+													$('#' + pos).css({
+														'background': '#fff',
+														'color': '#fff'
+													}); // sets background-color of circle representing the current active image to black
+													$('#' + (pos - 1)).css({
+														'background': 'transparent',
+														'color': 'transparent'
+													}); // sets background-color of circle before active to white
+													if (pos == 0) {
+														$('#' + (arr.length - 1)).css({
+															'background': 'transparent',
+															'color': 'transparent'
+														});
+													}
+												}
+												/* end of function next  */
+
+												/* displays previous image */
+												function previous() {
+													if (pos < 1) {
+														pos = arr.length;
+													}
+													$('#slider').html('<span class="helper"></span><img src="' + arr[pos - 1] + '" class="img-slide image-animated">');
+													pos--;
+
+													$('#' + pos).css({
+														'background': '#fff',
+														'color': '#fff'
+													}); // sets background-color of circle representing the current active image to black
+													$('#' + (pos + 1)).css({
+														'background': 'transparent',
+														'color': 'transparent'
+													}); // sets background-color of circle before active to white
+													if (pos == arr.length - 1) {
+														$('#0').css({
+															'background': 'transparent',
+															'color': 'transparent'
+														});
+													}
+												}
+												/* end of function previous */
+
+												/* onclick next */
+												$('button#next').on('click', function (e) {
+													e.preventDefault();
+													next(); // call function next
+												});
+												/* end of onclick next */
+
+												/* onclick previous */
+												$('button#prev').on('click', function (e) {
+													e.preventDefault();
+													previous(); // call function previous
+												});
+												/* end of onclick previous */
+											});
+
+											// displays image represented by the small circle
+											function circleClick(position) {
+												if (position != pos) {
+													$('#slider').html('<span class="helper"></span><img src="' + arr[position] + '" class="img-slide image-animated">'); // show image
+
+													$('#' + position).css({
+														'background': '#fff',
+														'color': '#fff'
+													}); // sets background-color of circle representing the current active image to black
+													$('#' + (pos)).css({
+														'background': 'transparent',
+														'color': 'transparent'
+													}); // sets background-color of circle before active to white
+
+													pos = position;
+												}
+												/* end of function circleClick */
+											}
+										</script>
+										<style>
+											#slider-main {
+												width: 100%;
+												height: 70vh;
+												max-height: 420px;
+												overflow: hidden;
+												position: relative;
+											}
+
+											#slider {
+												width: 100%;
+												height: 100%;
+												position: relative;
+												/* text-align: center; */
+											}
+
+											/* .helper {
+                                                display: inline-block;
+                                                height: 100%;
+                                                vertical-align: middle;
+                                                white-space: nowrap;
+                                            } */
+
+											.img-slide {
+												max-height: 100%;
+												max-width: 100%;
+												width: auto;
+												height: auto;
+												position: absolute;
+												top: 0;
+												bottom: 0;
+												left: 0;
+												right: 0;
+												margin: auto;
+												/* width: 100%;
+                                                height: auto;
+                                                vertical-align: middle;
+                                                width: 80vh;
+                                                height: 100%;
+                                                max-width: 80vh;
+                                                z-index: 5;
+                                                overflow-y: hidden; */
+											}
+
+											
+
+											#prev,
+											#next {
+												z-index: 10;
+												color: #fff;
+												position: absolute;
+												background: transparent;
+												border: none;
+												top: 48%;
+												font-size: 25px !important;
+											}
+
+											#prev {
+												left: 0;
+											}
+
+											#next {
+												right: 0;
+											}
+
+											.circle {
+												border: #ccc 2px solid;
+												width: 10px;
+												height: 10px;
+												border-radius: 10px;
+												background: transparent;
+												display: inline-block;
+												cursor: pointer;
+											}
+
+											#circles {
+												z-index: 90;
+												/* margin-top: -15vh;
+                                                margin-left: 20%; */
+												width: 124px;
+												position: absolute;
+												bottom: 0px;
+												left: 50%;
+												transform: translate(-50%, 0);
+											}
+
+											.image-animated {
+												animation: animateImage 7s ease-in-out;
+												/* change time according to interval set */
+											}
+
+											@keyframes animateImage {
+												0% {
+													opacity: .2;
+													transform: scale(1.2, 1.2);
+												}
+
+												20% {
+													opacity: 1;
+													transform: scale(1, 1);
+												}
+
+												80% {
+													opacity: 1;
+													transform: scale(1, 1);
+												}
+
+												95% {
+													opacity: .8;
+													transform: scale(1.2, 1.2);
+												}
+
+												100% {
+													opacity: .8;
+													transform: scale(1.2, 1.2);
+												}
+											}
+
+											/* @media (max-width: 767px) {
+                                                .img-slide {
+                                                    height: 40vh;
+                                                }
+                                                #prev {
+                                                    font-size: 30px !important;
+                                                    margin-top: 12vh;
+                                                    margin-left: 0.5%;
+                                                }
+                                                #next {
+                                                    font-size: 30px !important;
+                                                    margin-top: -28vh;
+                                                    margin-left: 88%;
+                                                }
+                                                .circle {
+                                                    width: 15px;
+                                                    height: 15px;
+                                                    border-radius: 15px;
+                                                }
+                                                #circles {
+                                                    margin-top: -10vh;
+                                                    margin-left: 36%;
+                                                }
+                                            } */
+										</style>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="detail-br">
+							<div class="detail-bl">
+								<div class="detail-bm"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<h3 class="detail-compact ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"
 					style="display:" id="invite_detail_title48936885" role="tab" aria-expanded="false"
 					aria-selected="false" tabindex="-1">
 					<span class="ui-icon ui-icon-triangle-1-e"></span>
@@ -1885,1018 +2255,7 @@
 						</div>
 					</div>
 				</div>
-
-				<!-- <h3 class="detail-compact ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"
-					style="display:" id="invite_detail_title48936886" role="tab" aria-expanded="false"
-					aria-selected="false" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-e"></span>
-					<div name="button3" id="button3" class="button button_detail_id_48936886">
-						<div class="button-tr">
-							<div class="button-tl">
-								<div class="button-tm"></div>
-							</div>
-						</div>
-						<div class="button-mr">
-							<div class="button-ml">
-								<div class="button-mm">
-									<a href="javaScript:void(0);">
-										<img class="iconimage" alt="3.png"
-											src="./assets/css/cynthia_spaceman/images/icons/3.png" border="0"
-											align="absmiddle" />
-										&nbsp;
-										<span id="invite_detail_name48936886" class="button-title">
-											<span class="fontcolor-button-title">R.S.V.P</span>
-										</span>
-										&nbsp;
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="button-br">
-							<div class="button-bl">
-								<div class="button-bm"></div>
-							</div>
-						</div>
-					</div>
-				</h3>
-
-				<div class="accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"
-					id="invite_detail_content48936886" role="tabpanel" style="display: none;">
-					<div name="detail3" id="detail3" class="detail">
-						<div class="detail-tr">
-							<div class="detail-tl">
-								<div class="detail-tm"></div>
-							</div>
-						</div>
-						<div class="detail-mr">
-							<div class="detail-ml">
-								<div class="detail-mm">
-									<div class="fontcolor-detail-mm">
-										<script>
-											$(document).ready(function () {
-												$("#rsvp_btn48936886").on('click', function () {
-													var btn = '';
-													var confirmMsg = '';
-
-													if (document.iform48936886.sum.value == '0') {
-														btn = ' Submit ';
-														confirmMsg = 'Are you sure to submit?';
-													} else {
-														btn = ' Update ';
-														confirmMsg = 'Are you sure to modify?';
-													}
-													alertify.confirm(confirmMsg, function () {
-														var postData = $("#iform48936886").serialize();
-														var formURL = $("#iform48936886").attr("action");
-
-														$.ajax({
-															url: formURL,
-															type: "POST",
-															data: postData,
-															success: function (data, textStatus, jqXHR) {
-																$("#rsvptable48936886 tr").removeClass('taborder');
-																if (jqXHR.responseText == 'CAPTCHA') {
-																	alertify.alert('Sent fail. Please write correct safe code!');
-																} else if (jqXHR.responseText == 'OK') {
-																	alertify.alert('Received with thanks');
-																	if ($("form[name='iform48936886'] input[name='bcheckin']").val() == "1") {
-																		$("#qrcode_" + $("form[name='iform48936886'] input[name='invite_usrcookies']").val() + "48936886").css({ "display": "" });
-																	} else {
-																		$("#qrcode_" + $("form[name='iform48936886'] input[name='invite_usrcookies']").val() + "48936886").css({ "display": "none" });
-																	}
-																	$("#rsvp_btn48936886").val(" Update ");
-																} else {
-																	var rtn = jqXHR.responseText.split('|');
-																	alertify.alert(rtn[1]);
-																	var bquestionid = rtn[0].split(',');
-																	var color = $(".detail-mm").css('color')
-																	for (var i = 0; i < bquestionid.length; i++) {
-																		$("#ta" + bquestionid[i]).addClass('taborder');
-																		$("#ta" + bquestionid[i]).css('border-color', color);
-																	}
-																}
-															},
-															error: function (jqXHR, textStatus, errorThrown) {
-																alertify.alert('Submit fail.\n\n' + jqXHR.status + ' ' + jqXHR.responseText);
-															}
-														});
-													});
-												});
-											});
-										</script>
-
-										<style>
-											.taborder {
-												border: 1px dashed #000000;
-												-webkit-animation: blink-answer-required 1s infinite;
-												-moz-animation: blink-answer-required 1s infinite;
-												-o-animation: blink-answer-required 1s infinite;
-												animation: blink-answer-required 1s infinite;
-											}
-										</style>
-
-										<style type="text/css">
-											@-webkit-keyframes blink-answer-required {
-												0%,
-												49% {
-													border-color: #FCF;
-												}
-												50%,
-												100% {
-													border-color: inherit;
-												}
-											}
-										</style>
-
-										<div id="rsvpdiv">
-											<form id="iform48936886" name="iform48936886" action="mobile_invite_act.asp"
-												method="post" style="display:block;">
-												<input type="hidden" name="bcheckin" value="0">
-												<input type="hidden" name="invite_usrcookies"
-													value="185A8B6EE5E1686424">
-												<input type="hidden" name="invite_covertitle" value="">
-												<input type="hidden" name="sum" value="0">
-												<input type="hidden" name="bsubmit" value="1">
-												<input type="hidden" name="rsvp_invite_detail_id" value="V3GNSCQ">
-
-												<div id="qaprompt48936886">
-													<span>We look forward to your attending. Please kindly reply
-														here.</span>
-												</div>
-
-												<table id="rsvptable48936886" width="100%" cellpadding="3"
-													cellspacing="1" border="0" class="n4" style="line-height: 20px;">
-													<tbody>
-														<tr id="ta42781655"
-															style=" padding: 3px; margin-top:10px; display: block">
-															<td width="100%" height="50" align="left">
-																<input type="hidden" name="questionid" value="42781655">
-																<input type="hidden" name="answertype" value="1">
-																<input type="hidden" name="q42781655" value="">
-																<input type="hidden" name="b42781655" value="1">
-																<span class="seq">1</span>.<span id="qq42781655">Your
-																	name?&nbsp;<span
-																		id="nn42781655">(Required)</span></span>&nbsp;<br>
-
-																<div style="margin-left:10px">
-																	<div id="q42781655">
-																		<div id="s78517022" style="padding: 3px;">
-																			<input type="radio" name="t42781655"
-																				style="display: none;" value="{}"
-																				onclick="setOptionValue_noValue('48936886', '42781655', 'n42781655_78517022', '{}', '78517022');">
-
-																			<span id="o78517022">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781655', 'n42781655_78517022', '{}', '78517022');"></span>
-																				<input type="text"
-																					name="n42781655_78517022" value=""
-																					size="20"
-																					onkeyup="setOptionValue('48936886', '42781655', this.value, '{}', '78517022');"
-																					onblur="setOptionValue('48936886', '42781655', this.value, '{}', '78517022');">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781655', 'n42781655_78517022', '{}', '78517022');"></span>
-																			</span>
-																		</div>
-																	</div>
-																</div>
-															</td>
-														</tr>
-
-														<tr id="ta42781656"
-															style=" padding: 3px; margin-top:10px; display: block">
-															<td width="100%" height="50" align="left">
-																<input type="hidden" name="questionid" value="42781656">
-																<input type="hidden" name="answertype" value="1">
-																<input type="hidden" name="q42781656" value="">
-																<input type="hidden" name="b42781656" value="1">
-																<span class="seq">2</span>.<span id="qq42781656">Will
-																	you attend this event?&nbsp;<span
-																		id="nn42781656">(Required)</span></span>&nbsp;<br>
-
-																<div style="margin-left:10px">
-																	<div id="q42781656">
-																		<div id="s78517023" style="padding: 3px;">
-																			<input type="radio" name="t42781656"
-																				style="display:inline-block; vertical-align:top;"
-																				value="{1-10} people will attend."
-																				onclick="setOptionValue_noValue('48936886', '42781656', 'n42781656_78517023', '{1-10} people will attend.', '78517023');">
-
-																			<span id="o78517023">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781656', 'n42781656_78517023', '{1-10} people will attend.', '78517023');"></span>
-
-																				<select name="n42781656_78517023"
-																					onchange="setOptionValue('48936886', '42781656', this.value, '{1-10} people will attend.', '78517023');">
-																					<option value="">Select</option>
-																					<option value="1">1</option>
-																					<option value="2">2</option>
-																					<option value="3">3</option>
-																					<option value="4">4</option>
-																					<option value="5">5</option>
-																					<option value="6">6</option>
-																					<option value="7">7</option>
-																					<option value="8">8</option>
-																					<option value="9">9</option>
-																					<option value="10">10</option>
-																				</select>
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781656', 'n42781656_78517023', '{1-10} people will attend.', '78517023');">people
-																					will attend.</span>
-																			</span>
-																		</div>
-
-																		<div id="s78517024" style="padding: 3px;">
-																			<input type="radio" name="t42781656"
-																				style="display:inline-block; vertical-align:top;"
-																				value="Decline with regrets."
-																				onclick="setOptionValue_noValue('48936886', '42781656', 'n42781656_78517024', 'Decline with regrets.', '78517024');">
-
-																			<span id="o78517024">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781656', 'n42781656_78517024', 'Decline with regrets.', '78517024');">Decline
-																					with regrets.</span>
-																			</span>
-																		</div>
-
-																		<div id="s78517025" style="padding: 3px;">
-																			<input type="radio" name="t42781656"
-																				style="display:inline-block; vertical-align:top;"
-																				value="Else {}"
-																				onclick="setOptionValue_noValue('48936886', '42781656', 'n42781656_78517025', 'Else {}', '78517025');">
-
-																			<span id="o78517025">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781656', 'n42781656_78517025', 'Else {}', '78517025');">Else
-																				</span>
-																				<input type="text"
-																					name="n42781656_78517025" value=""
-																					size="20"
-																					onkeyup="setOptionValue('48936886', '42781656', this.value, 'Else {}', '78517025');"
-																					onblur="setOptionValue('48936886', '42781656', this.value, 'Else {}', '78517025');">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781656', 'n42781656_78517025', 'Else {}', '78517025');"></span>
-																			</span>
-																		</div>
-																	</div>
-																</div>
-															</td>
-														</tr>
-
-														<tr id="ta42781657"
-															style=" padding: 3px; margin-top:10px; display: none">
-															<td width="100%" height="50" align="left">
-																<input type="hidden" name="questionid" value="42781657">
-																<input type="hidden" name="answertype" value="1">
-																<input type="hidden" name="q42781657" value="">
-																<input type="hidden" name="b42781657" value="0">
-
-																<span class="seq">2</span>.<span id="qq42781657">Will
-																	you attend this event?&nbsp;<span
-																		id="nn42781657"></span></span>&nbsp;<br>
-																<div style="margin-left:10px">
-																	<div id="q42781657">
-																		<div id="s78517026" style="padding: 3px;">
-																			<input type="radio" name="t42781657"
-																				style="display:inline-block; vertical-align:top;"
-																				value="{1-10} adults and {1-10} kids will attend."
-																				onclick="setOptionValue_noValue('48936886', '42781657', 'n42781657_78517026', '{1-10} adults and {1-10} kids will attend.', '78517026');">
-
-																			<span id="o78517026">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781657', 'n42781657_78517026', '{1-10} adults and {1-10} kids will attend.', '78517026');"></span>
-
-																				<select name="n42781657_78517026"
-																					onchange="setOptionValue('48936886', '42781657', this.value, '{1-10} adults and {1-10} kids will attend.', '78517026');">
-																					<option value="">Select</option>
-																					<option value="1">1</option>
-																					<option value="2">2</option>
-																					<option value="3">3</option>
-																					<option value="4">4</option>
-																					<option value="5">5</option>
-																					<option value="6">6</option>
-																					<option value="7">7</option>
-																					<option value="8">8</option>
-																					<option value="9">9</option>
-																					<option value="10">10</option>
-																				</select>
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781657', 'n42781657_78517026', '{1-10} adults and {1-10} kids will attend.', '78517026');">adults
-																					and </span>
-
-																				<select name="n42781657_78517026"
-																					onchange="setOptionValue('48936886', '42781657', this.value, '{1-10} adults and {1-10} kids will attend.', '78517026');">
-																					<option value="">Select</option>
-																					<option value="1">1</option>
-																					<option value="2">2</option>
-																					<option value="3">3</option>
-																					<option value="4">4</option>
-																					<option value="5">5</option>
-																					<option value="6">6</option>
-																					<option value="7">7</option>
-																					<option value="8">8</option>
-																					<option value="9">9</option>
-																					<option value="10">10</option>
-																				</select>
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781657', 'n42781657_78517026', '{1-10} adults and {1-10} kids will attend.', '78517026');">kids
-																					will attend.</span>
-																			</span>
-																		</div>
-
-																		<div id="s78517027" style="padding: 3px;">
-																			<input type="radio" name="t42781657"
-																				style="display:inline-block; vertical-align:top;"
-																				value="Decline with regrets."
-																				onclick="setOptionValue_noValue('48936886', '42781657', 'n42781657_78517027', 'Decline with regrets.', '78517027');">
-
-																			<span id="o78517027">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781657', 'n42781657_78517027', 'Decline with regrets.', '78517027');">Decline
-																					with regrets.</span>
-																			</span>
-																		</div>
-
-																		<div id="s78517028" style="padding: 3px;">
-																			<input type="radio" name="t42781657"
-																				style="display:inline-block; vertical-align:top;"
-																				value="Else {}"
-																				onclick="setOptionValue_noValue('48936886', '42781657', 'n42781657_78517028', 'Else {}', '78517028');">
-
-																			<span id="o78517028">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781657', 'n42781657_78517028', 'Else {}', '78517028');">Else
-																				</span>
-																				<input type="text"
-																					name="n42781657_78517028" value=""
-																					size="20"
-																					onkeyup="setOptionValue('48936886', '42781657', this.value, 'Else {}', '78517028');"
-																					onblur="setOptionValue('48936886', '42781657', this.value, 'Else {}', '78517028');">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781657', 'n42781657_78517028', 'Else {}', '78517028');"></span>
-																			</span>
-																		</div>
-																	</div>
-																</div>
-															</td>
-														</tr>
-
-														<tr id="ta42781658"
-															style=" padding: 3px; margin-top:10px; display: none">
-															<td width="100%" height="50" align="left">
-																<input type="hidden" name="questionid" value="42781658">
-																<input type="hidden" name="answertype" value="3">
-																<input type="hidden" name="q42781658" value="">
-																<input type="hidden" name="b42781658" value="0">
-																<span class="seq">2</span>.<span
-																	id="qq42781658">Attendee guest names(one name per
-																	line):&nbsp;<span
-																		id="nn42781658"></span></span>&nbsp;<br>
-																<div style="margin-left:10px">
-																	<textarea name="t42781658" cols="25"
-																		rows="5"></textarea>
-																</div>
-															</td>
-														</tr>
-														<tr id="ta42781659"
-															style=" padding: 3px; margin-top:10px; display: none">
-															<td width="100%" height="50" align="left">
-																<input type="hidden" name="questionid" value="42781659">
-																<input type="hidden" name="answertype" value="1">
-																<input type="hidden" name="q42781659" value="">
-																<input type="hidden" name="b42781659" value="0">
-
-																<span class="seq">2</span>.<span id="qq42781659">Please
-																	indicate guest number for meal choice:&nbsp;<span
-																		id="nn42781659"></span></span>&nbsp;<br>
-
-																<div style="margin-left:10px">
-																	<div id="q42781659">
-																		<div id="s78517029" style="padding: 3px;">
-																			<input type="radio" name="t42781659"
-																				style="display: none;"
-																				value="{0-10}pork<BR>{0-10}chicken<BR>{0-10}fish<BR>{0-10}vegetarian"
-																				onclick="setOptionValue_noValue('48936886', '42781659', 'n42781659_78517029', '{0-10}pork<BR>{0-10}chicken<BR>{0-10}fish<BR>{0-10}vegetarian', '78517029');">
-
-																			<span id="o78517029">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781659', 'n42781659_78517029', '{0-10}pork<BR>{0-10}chicken<BR>{0-10}fish<BR>{0-10}vegetarian', '78517029');"></span>
-
-																				<select name="n42781659_78517029"
-																					onchange="setOptionValue('48936886', '42781659', this.value, '{0-10}pork<BR>{0-10}chicken<BR>{0-10}fish<BR>{0-10}vegetarian', '78517029');">
-																					<option value="">Select</option>
-																					<option value="0">0</option>
-																					<option value="1">1</option>
-																					<option value="2">2</option>
-																					<option value="3">3</option>
-																					<option value="4">4</option>
-																					<option value="5">5</option>
-																					<option value="6">6</option>
-																					<option value="7">7</option>
-																					<option value="8">8</option>
-																					<option value="9">9</option>
-																					<option value="10">10</option>
-																				</select>
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781659', 'n42781659_78517029', '{0-10}pork<BR>{0-10}chicken<BR>{0-10}fish<BR>{0-10}vegetarian', '78517029');">pork<br></span>
-
-																				<select name="n42781659_78517029"
-																					onchange="setOptionValue('48936886', '42781659', this.value, '{0-10}pork<BR>{0-10}chicken<BR>{0-10}fish<BR>{0-10}vegetarian', '78517029');">
-																					<option value="">Select</option>
-																					<option value="0">0</option>
-																					<option value="1">1</option>
-																					<option value="2">2</option>
-																					<option value="3">3</option>
-																					<option value="4">4</option>
-																					<option value="5">5</option>
-																					<option value="6">6</option>
-																					<option value="7">7</option>
-																					<option value="8">8</option>
-																					<option value="9">9</option>
-																					<option value="10">10</option>
-																				</select>
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781659', 'n42781659_78517029', '{0-10}pork<BR>{0-10}chicken<BR>{0-10}fish<BR>{0-10}vegetarian', '78517029');">chicken<br></span>
-
-																				<select name="n42781659_78517029"
-																					onchange="setOptionValue('48936886', '42781659', this.value, '{0-10}pork<BR>{0-10}chicken<BR>{0-10}fish<BR>{0-10}vegetarian', '78517029');">
-																					<option value="">Select</option>
-																					<option value="0">0</option>
-																					<option value="1">1</option>
-																					<option value="2">2</option>
-																					<option value="3">3</option>
-																					<option value="4">4</option>
-																					<option value="5">5</option>
-																					<option value="6">6</option>
-																					<option value="7">7</option>
-																					<option value="8">8</option>
-																					<option value="9">9</option>
-																					<option value="10">10</option>
-																				</select>
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781659', 'n42781659_78517029', '{0-10}pork<BR>{0-10}chicken<BR>{0-10}fish<BR>{0-10}vegetarian', '78517029');">fish<br></span>
-
-																				<select name="n42781659_78517029"
-																					onchange="setOptionValue('48936886', '42781659', this.value, '{0-10}pork<BR>{0-10}chicken<BR>{0-10}fish<BR>{0-10}vegetarian', '78517029');">
-																					<option value="">Select</option>
-																					<option value="0">0</option>
-																					<option value="1">1</option>
-																					<option value="2">2</option>
-																					<option value="3">3</option>
-																					<option value="4">4</option>
-																					<option value="5">5</option>
-																					<option value="6">6</option>
-																					<option value="7">7</option>
-																					<option value="8">8</option>
-																					<option value="9">9</option>
-																					<option value="10">10</option>
-																				</select>
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781659', 'n42781659_78517029', '{0-10}pork<BR>{0-10}chicken<BR>{0-10}fish<BR>{0-10}vegetarian', '78517029');">vegetarian</span>
-																			</span>
-																		</div>
-																	</div>
-																</div>
-															</td>
-														</tr>
-
-														<tr id="ta42781660"
-															style=" padding: 3px; margin-top:10px; display: none">
-															<td width="100%" height="50" align="left">
-																<input type="hidden" name="questionid" value="42781660">
-																<input type="hidden" name="answertype" value="1">
-																<input type="hidden" name="q42781660" value="">
-																<input type="hidden" name="b42781660" value="0">
-
-																<span class="seq">2</span>.<span id="qq42781660">What
-																	activity you prefer?&nbsp;<span
-																		id="nn42781660"></span></span>&nbsp;<br>
-
-																<div style="margin-left:10px">
-																	<div id="q42781660">
-																		<div id="s78517030" style="padding: 3px;">
-																			<input type="radio" name="t42781660"
-																				style="display:inline-block; vertical-align:top;"
-																				value="Poker game"
-																				onclick="setOptionValue_noValue('48936886', '42781660', 'n42781660_78517030', 'Poker game', '78517030');">
-
-																			<span id="o78517030">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781660', 'n42781660_78517030', 'Poker game', '78517030');">Poker
-																					game</span>
-																			</span>
-																		</div>
-
-																		<div id="s78517031" style="padding: 3px;">
-																			<input type="radio" name="t42781660"
-																				style="display:inline-block; vertical-align:top;"
-																				value="Movie"
-																				onclick="setOptionValue_noValue('48936886', '42781660', 'n42781660_78517031', 'Movie', '78517031');">
-
-																			<span id="o78517031">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781660', 'n42781660_78517031', 'Movie', '78517031');">Movie</span>
-																			</span>
-																		</div>
-
-																		<div id="s78517032" style="padding: 3px;">
-																			<input type="radio" name="t42781660"
-																				style="display:inline-block; vertical-align:top;"
-																				value="Dancing"
-																				onclick="setOptionValue_noValue('48936886', '42781660', 'n42781660_78517032', 'Dancing', '78517032');">
-
-																			<span id="o78517032">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781660', 'n42781660_78517032', 'Dancing', '78517032');">Dancing</span>
-																			</span>
-																		</div>
-
-																		<div id="s78517033" style="padding: 3px;">
-																			<input type="radio" name="t42781660"
-																				style="display:inline-block; vertical-align:top;"
-																				value="Else {}"
-																				onclick="setOptionValue_noValue('48936886', '42781660', 'n42781660_78517033', 'Else {}', '78517033');">
-
-																			<span id="o78517033">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781660', 'n42781660_78517033', 'Else {}', '78517033');">Else
-																				</span>
-																				<input type="text"
-																					name="n42781660_78517033" value=""
-																					size="20"
-																					onkeyup="setOptionValue('48936886', '42781660', this.value, 'Else {}', '78517033');"
-																					onblur="setOptionValue('48936886', '42781660', this.value, 'Else {}', '78517033');">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781660', 'n42781660_78517033', 'Else {}', '78517033');"></span>
-																			</span>
-																		</div>
-																	</div>
-																</div>
-															</td>
-														</tr>
-
-														<tr id="ta42781661"
-															style=" padding: 3px; margin-top:10px; display: none">
-															<td width="100%" height="50" align="left">
-																<input type="hidden" name="questionid" value="42781661">
-																<input type="hidden" name="answertype" value="1">
-																<input type="hidden" name="q42781661" value="">
-																<input type="hidden" name="b42781661" value="0">
-
-																<span class="seq">2</span>.<span id="qq42781661">Wanna
-																	receive a postal invitation?&nbsp;<span
-																		id="nn42781661"></span></span>&nbsp;<br>
-
-																<div style="margin-left:10px">
-																	<div id="q42781661">
-																		<div id="s78517034" style="padding: 3px;">
-																			<input type="radio" name="t42781661"
-																				style="display:inline-block; vertical-align:top;"
-																				value="Yes, mail to:{}"
-																				onclick="setOptionValue_noValue('48936886', '42781661', 'n42781661_78517034', 'Yes, mail to:{}', '78517034');">
-
-																			<span id="o78517034">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781661', 'n42781661_78517034', 'Yes, mail to:{}', '78517034');">Yes,
-																					mail to:</span>
-																				<input type="text"
-																					name="n42781661_78517034" value=""
-																					size="20"
-																					onkeyup="setOptionValue('48936886', '42781661', this.value, 'Yes, mail to:{}', '78517034');"
-																					onblur="setOptionValue('48936886', '42781661', this.value, 'Yes, mail to:{}', '78517034');">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781661', 'n42781661_78517034', 'Yes, mail to:{}', '78517034');"></span>
-																			</span>
-																		</div>
-
-																		<div id="s78517035" style="padding: 3px;">
-																			<input type="radio" name="t42781661"
-																				style="display:inline-block; vertical-align:top;"
-																				value="No, for the sake of saving trees."
-																				onclick="setOptionValue_noValue('48936886', '42781661', 'n42781661_78517035', 'No, for the sake of saving trees.', '78517035');">
-
-																			<span id="o78517035">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781661', 'n42781661_78517035', 'No, for the sake of saving trees.', '78517035');">No,
-																					for the sake of saving trees.</span>
-																			</span>
-																		</div>
-																	</div>
-																</div>
-															</td>
-														</tr>
-
-														<tr id="ta42781662"
-															style=" padding: 3px; margin-top:10px; display: none">
-															<td width="100%" height="50" align="left">
-																<input type="hidden" name="questionid" value="42781662">
-																<input type="hidden" name="answertype" value="1">
-																<input type="hidden" name="q42781662" value="">
-																<input type="hidden" name="b42781662" value="0">
-
-																<span class="seq">2</span>.<span id="qq42781662">Your
-																	contact phone please?&nbsp;<span
-																		id="nn42781662"></span></span>&nbsp;<br>
-
-																<div style="margin-left:10px">
-																	<div id="q42781662">
-																		<div id="s78517036" style="padding: 3px;">
-																			<input type="radio" name="t42781662"
-																				style="display: none;" value="{}"
-																				onclick="setOptionValue_noValue('48936886', '42781662', 'n42781662_78517036', '{}', '78517036');">
-
-																			<span id="o78517036">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781662', 'n42781662_78517036', '{}', '78517036');"></span>
-																				<input type="text"
-																					name="n42781662_78517036" value=""
-																					size="20"
-																					onkeyup="setOptionValue('48936886', '42781662', this.value, '{}', '78517036');"
-																					onblur="setOptionValue('48936886', '42781662', this.value, '{}', '78517036');">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781662', 'n42781662_78517036', '{}', '78517036');"></span>
-																			</span>
-																		</div>
-																	</div>
-																</div>
-															</td>
-														</tr>
-
-														<tr id="ta42781663"
-															style=" padding: 3px; margin-top:10px; display: none">
-															<td width="100%" height="50" align="left">
-																<input type="hidden" name="questionid" value="42781663">
-																<input type="hidden" name="answertype" value="1">
-																<input type="hidden" name="q42781663" value="">
-																<input type="hidden" name="b42781663" value="0">
-
-																<span class="seq">2</span>.<span id="qq42781663">Your
-																	email please?&nbsp;<span
-																		id="nn42781663"></span></span>&nbsp;<br>
-
-																<div style="margin-left:10px">
-																	<div id="q42781663">
-																		<div id="s78517037" style="padding: 3px;">
-																			<input type="radio" name="t42781663"
-																				style="display: none;" value="{}"
-																				onclick="setOptionValue_noValue('48936886', '42781663', 'n42781663_78517037', '{}', '78517037');">
-
-																			<span id="o78517037">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781663', 'n42781663_78517037', '{}', '78517037');"></span>
-																				<input type="text"
-																					name="n42781663_78517037" value=""
-																					size="20"
-																					onkeyup="setOptionValue('48936886', '42781663', this.value, '{}', '78517037');"
-																					onblur="setOptionValue('48936886', '42781663', this.value, '{}', '78517037');">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781663', 'n42781663_78517037', '{}', '78517037');"></span>
-																			</span>
-																		</div>
-																	</div>
-																</div>
-															</td>
-														</tr>
-
-														<tr id="ta42781664"
-															style=" padding: 3px; margin-top:10px; display: none">
-															<td width="100%" height="50" align="left">
-																<input type="hidden" name="questionid" value="42781664">
-																<input type="hidden" name="answertype" value="1">
-																<input type="hidden" name="q42781664" value="">
-																<input type="hidden" name="b42781664" value="0">
-
-																<span class="seq">2</span>.<span id="qq42781664">Please
-																	provide guest name initials for each entree
-																	choice:&nbsp;<span
-																		id="nn42781664"></span></span>&nbsp;<br>
-
-																<div style="margin-left:10px">
-																	<div id="q42781664">
-																		<div id="s78517038" style="padding: 3px;">
-																			<input type="radio" name="t42781664"
-																				style="display: none;"
-																				value="Pork for{}<BR>Chicken for{}<BR>Fish for{}<BR>Vegetarian for{}"
-																				onclick="setOptionValue_noValue('48936886', '42781664', 'n42781664_78517038', 'Pork for{}<BR>Chicken for{}<BR>Fish for{}<BR>Vegetarian for{}', '78517038');">
-
-																			<span id="o78517038">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781664', 'n42781664_78517038', 'Pork for{}<BR>Chicken for{}<BR>Fish for{}<BR>Vegetarian for{}', '78517038');">Pork
-																					for</span>
-																				<input type="text"
-																					name="n42781664_78517038" value=""
-																					size="20"
-																					onkeyup="setOptionValue('48936886', '42781664', this.value, 'Pork for{}<BR>Chicken for{}<BR>Fish for{}<BR>Vegetarian for{}', '78517038');"
-																					onblur="setOptionValue('48936886', '42781664', this.value, 'Pork for{}<BR>Chicken for{}<BR>Fish for{}<BR>Vegetarian for{}', '78517038');">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781664', 'n42781664_78517038', 'Pork for{}<BR>Chicken for{}<BR>Fish for{}<BR>Vegetarian for{}', '78517038');"><br>Chicken
-																					for</span>
-																				<input type="text"
-																					name="n42781664_78517038" value=""
-																					size="20"
-																					onkeyup="setOptionValue('48936886', '42781664', this.value, 'Pork for{}<BR>Chicken for{}<BR>Fish for{}<BR>Vegetarian for{}', '78517038');"
-																					onblur="setOptionValue('48936886', '42781664', this.value, 'Pork for{}<BR>Chicken for{}<BR>Fish for{}<BR>Vegetarian for{}', '78517038');">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781664', 'n42781664_78517038', 'Pork for{}<BR>Chicken for{}<BR>Fish for{}<BR>Vegetarian for{}', '78517038');"><br>Fish
-																					for</span>
-																				<input type="text"
-																					name="n42781664_78517038" value=""
-																					size="20"
-																					onkeyup="setOptionValue('48936886', '42781664', this.value, 'Pork for{}<BR>Chicken for{}<BR>Fish for{}<BR>Vegetarian for{}', '78517038');"
-																					onblur="setOptionValue('48936886', '42781664', this.value, 'Pork for{}<BR>Chicken for{}<BR>Fish for{}<BR>Vegetarian for{}', '78517038');">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781664', 'n42781664_78517038', 'Pork for{}<BR>Chicken for{}<BR>Fish for{}<BR>Vegetarian for{}', '78517038');"><br>Vegetarian
-																					for</span>
-																				<input type="text"
-																					name="n42781664_78517038" value=""
-																					size="20"
-																					onkeyup="setOptionValue('48936886', '42781664', this.value, 'Pork for{}<BR>Chicken for{}<BR>Fish for{}<BR>Vegetarian for{}', '78517038');"
-																					onblur="setOptionValue('48936886', '42781664', this.value, 'Pork for{}<BR>Chicken for{}<BR>Fish for{}<BR>Vegetarian for{}', '78517038');">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781664', 'n42781664_78517038', 'Pork for{}<BR>Chicken for{}<BR>Fish for{}<BR>Vegetarian for{}', '78517038');"></span>
-																			</span>
-																		</div>
-																	</div>
-																</div>
-															</td>
-														</tr>
-
-														<tr id="ta42781665"
-															style=" padding: 3px; margin-top:10px; display: block">
-															<td width="100%" height="50" align="left">
-																<input type="hidden" name="questionid" value="42781665">
-																<input type="hidden" name="answertype" value="1">
-																<input type="hidden" name="q42781665" value="">
-																<input type="hidden" name="b42781665" value="0">
-
-																<span class="seq">3</span>.<span id="qq42781665">A
-																	message for us:&nbsp;<span
-																		id="nn42781665"></span></span>&nbsp;<br>
-
-																<div style="margin-left:10px">
-																	<div id="q42781665">
-																		<div id="s78517039" style="padding: 3px;">
-																			<input type="radio" name="t42781665"
-																				style="display: none;"
-																				value="{<BR><BR><BR>}"
-																				onclick="setOptionValue_noValue('48936886', '42781665', 'n42781665_78517039', '{<BR><BR><BR>}', '78517039');">
-
-																			<span id="o78517039">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781665', 'n42781665_78517039', '{<BR><BR><BR>}', '78517039');"></span>
-																				<textarea
-																					style="display:inline-block;vertical-align:top;"
-																					name="n42781665_78517039" cols="20"
-																					rows="3"
-																					onkeyup="setOptionValue('48936886', '42781665', this.value, '{<BR><BR><BR>}', '78517039');"
-																					onblur="setOptionValue('48936886', '42781665', this.value, '{<BR><BR><BR>}', '78517039');"></textarea>
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781665', 'n42781665_78517039', '{<BR><BR><BR>}', '78517039');"></span>
-																			</span>
-																		</div>
-																	</div>
-																</div>
-															</td>
-														</tr>
-
-														<tr id="ta42781666"
-															style=" padding: 3px; margin-top:10px; display: none">
-															<td width="100%" height="50" align="left">
-																<input type="hidden" name="questionid" value="42781666">
-																<input type="hidden" name="answertype" value="1">
-																<input type="hidden" name="q42781666" value="">
-																<input type="hidden" name="b42781666" value="0">
-																<span class="seq">3</span>.<span id="qq42781666">Spare
-																	question (Single line text)&nbsp;<span
-																		id="nn42781666"></span></span>&nbsp;<br>
-
-																<div style="margin-left:10px">
-																	<div id="q42781666">
-																		<div id="s78517040" style="padding: 3px;">
-																			<input type="radio" name="t42781666"
-																				style="display: none;" value="{}"
-																				onclick="setOptionValue_noValue('48936886', '42781666', 'n42781666_78517040', '{}', '78517040');">
-
-																			<span id="o78517040">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781666', 'n42781666_78517040', '{}', '78517040');"></span>
-																				<input type="text"
-																					name="n42781666_78517040" value=""
-																					size="20"
-																					onkeyup="setOptionValue('48936886', '42781666', this.value, '{}', '78517040');"
-																					onblur="setOptionValue('48936886', '42781666', this.value, '{}', '78517040');">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781666', 'n42781666_78517040', '{}', '78517040');"></span>
-																			</span>
-																		</div>
-																	</div>
-																</div>
-															</td>
-														</tr>
-
-														<tr id="ta42781667"
-															style=" padding: 3px; margin-top:10px; display: none">
-															<td width="100%" height="50" align="left">
-																<input type="hidden" name="questionid" value="42781667">
-																<input type="hidden" name="answertype" value="1">
-																<input type="hidden" name="q42781667" value="">
-																<input type="hidden" name="b42781667" value="0">
-
-																<span class="seq">3</span>.<span id="qq42781667">Spare
-																	question (Single choice)&nbsp;<span
-																		id="nn42781667"></span></span>&nbsp;<br>
-
-																<div style="margin-left:10px">
-																	<div id="q42781667">
-																		<div id="s78517041" style="padding: 3px;">
-																			<input type="radio" name="t42781667"
-																				style="display:inline-block; vertical-align:top;"
-																				value="choice 1"
-																				onclick="setOptionValue_noValue('48936886', '42781667', 'n42781667_78517041', 'choice 1', '78517041');">
-
-																			<span id="o78517041">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781667', 'n42781667_78517041', 'choice 1', '78517041');">choice
-																					1</span>
-																			</span>
-																		</div>
-
-																		<div id="s78517042" style="padding: 3px;">
-																			<input type="radio" name="t42781667"
-																				style="display:inline-block; vertical-align:top;"
-																				value="choice 2"
-																				onclick="setOptionValue_noValue('48936886', '42781667', 'n42781667_78517042', 'choice 2', '78517042');">
-
-																			<span id="o78517042">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781667', 'n42781667_78517042', 'choice 2', '78517042');">choice
-																					2</span>
-																			</span>
-																		</div>
-
-																		<div id="s78517043" style="padding: 3px;">
-																			<input type="radio" name="t42781667"
-																				style="display:inline-block; vertical-align:top;"
-																				value="choice 3"
-																				onclick="setOptionValue_noValue('48936886', '42781667', 'n42781667_78517043', 'choice 3', '78517043');">
-
-																			<span id="o78517043">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781667', 'n42781667_78517043', 'choice 3', '78517043');">choice
-																					3</span>
-																			</span>
-																		</div>
-																	</div>
-																</div>
-															</td>
-														</tr>
-
-														<tr id="ta42781668"
-															style=" padding: 3px; margin-top:10px; display: none">
-															<td width="100%" height="50" align="left">
-																<input type="hidden" name="questionid" value="42781668">
-																<input type="hidden" name="answertype" value="1">
-																<input type="hidden" name="q42781668" value="">
-																<input type="hidden" name="b42781668" value="0">
-
-																<span class="seq">3</span>.<span id="qq42781668">Spare
-																	question (Multiple line text)&nbsp;<span
-																		id="nn42781668"></span></span>&nbsp;<br>
-
-																<div style="margin-left:10px">
-																	<div id="q42781668">
-																		<div id="s78517044" style="padding: 3px;">
-																			<input type="radio" name="t42781668"
-																				style="display: none;"
-																				value="{<BR><BR><BR>}"
-																				onclick="setOptionValue_noValue('48936886', '42781668', 'n42781668_78517044', '{<BR><BR><BR>}', '78517044');">
-
-																			<span id="o78517044">
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781668', 'n42781668_78517044', '{<BR><BR><BR>}', '78517044');"></span>
-																				<textarea
-																					style="display:inline-block;vertical-align:top;"
-																					name="n42781668_78517044" cols="20"
-																					rows="3"
-																					onkeyup="setOptionValue('48936886', '42781668', this.value, '{<BR><BR><BR>}', '78517044');"
-																					onblur="setOptionValue('48936886', '42781668', this.value, '{<BR><BR><BR>}', '78517044');"></textarea>
-																				<span
-																					onclick="setOptionValue_noValue('48936886', '42781668', 'n42781668_78517044', '{<BR><BR><BR>}', '78517044');"></span>
-																			</span>
-																		</div>
-																	</div>
-																</div>
-															</td>
-														</tr>
-
-														<tr id="ta42781669"
-															style=" padding: 3px; margin-top:10px; display: none">
-															<td width="100%" height="50" align="left">
-																<input type="hidden" name="questionid" value="42781669">
-																<input type="hidden" name="answertype" value="1">
-																<input type="hidden" name="q42781669" value="">
-																<input type="hidden" name="b42781669" value="0">
-
-																<span class="seq">3</span>.<span id="qq42781669">Spare
-																	question&nbsp;<span
-																		id="nn42781669"></span></span>&nbsp;<br>
-
-																<div style="margin-left:10px">
-																	<div id="q42781669">
-																	</div>
-																</div>
-															</td>
-														</tr>
-
-														<tr>
-															<td width="100%" height="25" align="center" valign="middle">
-																<input type="hidden" name="bshowbless" value="">
-															</td>
-														</tr>
-
-														<tr>
-															<td width="100%" height="30" align="center" valign="middle">
-																<input id="rsvp_btn48936886" type="button"
-																	value=" Submit">
-																<br><br>
-																<div id="qrcode_185A8B6EE5E168642448936886"
-																	style="display: none;">
-																</div>
-															</td>
-														</tr>
-													</tbody>
-												</table>
-											</form>
-
-											<style style="display: none;">
-												hr.style-two {
-													clear: left;
-													border: 0;
-													height: 1px;
-													border: 0;
-													height: 0;
-													border-top: 1px solid rgba(0, 0, 0, 0.1);
-													border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-												}
-
-												span.two {
-													font-size: 8pt;
-												}
-
-												.bless_sortable {
-													display: block;
-													width: 100%;
-													list-style-type: none;
-													margin: 0;
-													padding: 0;
-												}
-
-												.bless_sortable li {
-													float: left;
-												}
-
-												.bless_sortable li:first-child {
-													text-align: left;
-													width: 50%;
-												}
-
-												.bless_sortable li:last-child {
-													text-align: right;
-													width: 50%;
-												}
-
-												.bless_first {
-													width: 100%;
-													list-style-type: none;
-													margin: 0;
-													padding: 0;
-													text-align: right;
-												}
-
-												.bless_other {
-													display: block;
-													width: 100%;
-													list-style-type: none;
-													margin: 0;
-													padding: 0;
-												}
-
-												.bless_other li {
-													width: 100%;
-													float: left;
-												}
-											</style>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="detail-br">
-							<div class="detail-bl">
-								<div class="detail-bm"></div>
-							</div>
-						</div>
-					</div>
-				</div> -->
-
+				
 				<!-- <h3 class="detail-compact ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"
 					style="display:" id="invite_detail_title48936888" role="tab" aria-expanded="false"
 					aria-selected="false" tabindex="-1">
