@@ -89,7 +89,6 @@
 
 		function getMinTextInOrder(txt) {
 			var txt_array_inorder = filterEmoji(txt).split('').sort();
-
 			if (txt_array_inorder.length > 0) {
 				txt_min = txt_array_inorder[0];
 				prechr = txt_array_inorder[0];
@@ -118,7 +117,7 @@
 		function processButtonBackground() {
 			if (invite_styletype == 1) {
 				$("h3:visible>.button").each(function (index) {
-					// $('#detail' + $(this).attr('id').split('button')[1]).attr('id', 'detail' + (index + 1) );			
+					// $('#detail' + $(this).attr('id').split('button')[1]).attr('id', 'detail' + (index + 1));			
 					$(this).attr('id', 'button' + (index + 1));
 				});
 				$("h3:visible+div>.detail").each(function (index) {
@@ -191,7 +190,6 @@
 		function clickObj(o) {
 			// bPlayVideo = 0;
 			var o = document.getElementById(o);
-
 			if (document.all) {
 				o.click();
 			} else {
@@ -199,6 +197,16 @@
 				e.initEvent('click', false, false);
 				o.dispatchEvent(e);
 			}
+		}
+	</script>
+
+	<script type="text/javascript">
+		function loadScript() {
+			// var script = document.createElement('script');
+			// script.type = 'text/javascript';
+			// script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCF5MS1Oeo_dPBEQu9hyzZc5WnBPJaBwkE&callback=mapCallBackFunc';
+			// document.body.appendChild(script);
+			setSlideshow();
 		}
 	</script>
 
@@ -608,7 +616,7 @@
 			margin-bottom: 8px;
 		}
 		*/
-		/*no use now */
+		/* no use now */
 
 		.title {
 			-webkit-border-radius: 6px;
@@ -1339,10 +1347,6 @@
 													style="background: url('./images/viaan/main/01.jpeg') 50% 50% / cover no-repeat; min-width: 100%; min-height: 100%; display: none;">
 												</div>
 
-												<!-- <div class="invite_webimg_album"
-													style="background: url('./images/viaan/main/one.gif') 50% 50% / cover no-repeat; min-width: 100%; min-height: 100%; display: none;">
-												</div> -->
-
 												<div class="invite_webimg_album"
 													style="background: url('./images/viaan/main/03.jpeg') 50% 50% / cover no-repeat; min-width: 100%; min-height: 100%; display: none;">
 												</div>
@@ -2057,8 +2061,6 @@
                                                 z-index: 5;
                                                 overflow-y: hidden; */
 											}
-
-
 
 											#prev,
 											#next {

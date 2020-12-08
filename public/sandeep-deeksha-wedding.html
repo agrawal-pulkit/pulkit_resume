@@ -141,8 +141,7 @@
 		var mapCallBackFunc = function () { };
 
 		var dragFlag48175811 = false;
-		var start48175811 = 0,
-			end48175811 = 0;
+		var start48175811 = 0, end48175811 = 0;
 
 		function thisTouchStart48175811(e) {
 			dragFlag48175811 = true;
@@ -168,19 +167,12 @@
 		var map48175811_lngmarker = 77.00432;
 
 		$(document).ready(function () {
-			$("#accordion").accordion({
-				autoHeight: false
-			}, {
-				collapsible: true,
-				active: 0
-			});
+			$("#accordion").accordion({ autoHeight: false }, { collapsible: true, active: 0 });
 			// $("#accordion").accordion("activate",0);
 			// $("#accordion").accordion("activate","#accordion10");
 			$("#accordion").bind('accordionchange', function (event, ui) {
 				if ($(ui.newHeader).offset() != null) {
-					$('html, body').animate({
-						scrollTop: $(ui.newHeader).offset().top
-					});
+					$('html, body').animate({ scrollTop: $(ui.newHeader).offset().top });
 				}
 				bVideoPlaying = 0;
 			});
@@ -355,14 +347,10 @@
 		function showCheckin(invite_detail_id, bcheckin) {
 			var obj = eval('document.iform' + invite_detail_id);
 			if (bcheckin == true) {
-				$("#qrcode_F000F975333C9F7A35748175811").css({
-					"display": ""
-				});
+				$("#qrcode_F000F975333C9F7A35748175811").css({ "display": "" });
 				obj.bcheckin.value = "1";
 			} else {
-				$("#qrcode_F000F975333C9F7A35748175811").css({
-					"display": "none"
-				});
+				$("#qrcode_F000F975333C9F7A35748175811").css({ "display": "none" });
 				obj.bcheckin.value = "0";
 			}
 		}
@@ -413,7 +401,6 @@
 						inputstr += '&nbsp;<select id="n' + qid + '" name="n' + qid + '" onchange="setOptionValue(' + invite_detail_id + ', ' + qid + ', this.value, ' + replaceAll(option_title, "'", "\'") + ', ' + o + ')">';
 						inputstr += '<option value="">Select</option>';
 						option_array = midstr.split('|');
-						// alert(option_array.length);
 						cc = 1;
 						for (i = 0; i < option_array.length; i++) {
 							range_array = option_array[i].split('-');
