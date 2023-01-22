@@ -89,7 +89,6 @@
 
 		function getMinTextInOrder(txt) {
 			var txt_array_inorder = filterEmoji(txt).split('').sort();
-
 			if (txt_array_inorder.length > 0) {
 				txt_min = txt_array_inorder[0];
 				prechr = txt_array_inorder[0];
@@ -191,7 +190,6 @@
 		function clickObj(o) {
 			// bPlayVideo = 0;
 			var o = document.getElementById(o);
-
 			if (document.all) {
 				o.click();
 			} else {
@@ -426,7 +424,6 @@
 						inputstr += '</select>&nbsp;';
 					}
 					// inputstr += leftstr;
-
 					leftpos = parseInt(option_title_left.indexOf('{'));
 					rightpos = parseInt(option_title_left.indexOf('}'));
 					option_title_right = option_title_left.substring(rightpos + 1, txt.length);
@@ -471,7 +468,6 @@
 				document.getElementById(parent_node.replace('q', 'ta')).style.display = 'none';
 				document.getElementById(parent_node.replace('q', 'nn')).innerHTML = '';
 			}
-
 			var n = 0;
 			$("#rsvptable" + invite_detail_id + " tr[style*='block']").each(function (n) {
 				n++;
@@ -550,7 +546,7 @@
 		// var audioPlayer; //initialize in $(window).load(function()
 
 		function setMusic(mp3Url) {
-			if (mp3Url.indexOf("music_1.mpeg") >= 0) {
+			if (mp3Url.indexOf("music_1.mp3") >= 0) {
 				bMute = 1;
 				$("#jquery_jplayer_1").jPlayer("option", "loop", false);
 			} else {
@@ -762,7 +758,6 @@
 	<script type="text/javascript" src="./assets/plu231/js/plupload.full.min.js"></script>
 	<!-- activate language -->
 	<script type="text/javascript" src="./assets/plu231/js/i18n/en_US.js"></script>
-
 	<script>
 		// run the currently selected effect
 		function runEffect(controlID, page) {
@@ -1005,14 +1000,14 @@
 			*/
 			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 				$('#Loading').on('touchstart', function (e) {
-					// stopLoading();
+					stopLoading();
 					if (bWinOnLoadFired == 0) {
 						winOnloadFunc();
 					}
 				});
 			} else {
 				$('#Loading').on('click', function (e) {
-					// stopLoading();
+					stopLoading();
 					if (bWinOnLoadFired == 0) {
 						winOnloadFunc();
 					}
@@ -1142,7 +1137,7 @@
 			$("#jquery_jplayer_1").jPlayer({
 				ready: function () {
 					$(this).jPlayer("setMedia", {
-						mp3: "assets/musics/music_1.mpeg"
+						mp3: "assets/musics/music_1.mp3"
 					}).jPlayer("play");
 					var click = document.ontouchstart === undefined ? 'click' : 'touchstart';
 					var kickoff = function () {
@@ -1619,15 +1614,15 @@
 											<p style="text-align: center;">
 												<span style="font-size:20px;">
 													<span style="font-family:dancing script,cursive;">
-														As they walked through life
-														Holding each other hands... 
-														We can't think a better way to celebrate
-														The lifetime of love and commitment 
-														Between a woman and a man					
+														As they walked through life<br>
+														Holding each other hands...<br>
+														We can't think a better way to celebrate<br>
+														The lifetime of love and commitment<br>
+														Between a woman and a man		
 														<br>
-														With the blessings of Shri nath ji. 
+														With the blessings of Shri nath ji.
 														<br>
-														Shri Shyam bihari and Manju Maheshwari 
+														Shri Shyam bihari and Manju Maheshwari
 														Invited you to the
 														Silver wedding anniversary
 														Of their Son and Daughter in law
@@ -2286,15 +2281,13 @@
 
 	<div id="jquery_jplayer_1" style="width: 0px; height: 0px;"><img id="jp_poster_0"
 			style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata"
-			src="https://e-invitation.netlify.app/assets/musics/music_1.mpeg"></audio></div>
+			src="https://e-invitation.netlify.app/assets/musics/music_1.mp3"></audio></div>
 
 
 	<!-- Root element of PhotoSwipe. Must have class pswp. -->
 	<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
 		<!-- Background of PhotoSwipe. It's a separate element as animating opacity is faster than rgba(). -->
 		<div class="pswp__bg"></div>
-
 		<!-- Slides wrapper with overflow:hidden. -->
 		<div class="pswp__scroll-wrap">
 			<!-- Container that holds slides. 
@@ -2305,7 +2298,6 @@
 				<div class="pswp__item"></div>
 				<div class="pswp__item"></div>
 			</div>
-
 			<!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
 			<div class="pswp__ui pswp__ui--hidden">
 				<div class="pswp__top-bar">
@@ -2326,14 +2318,11 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
 					<div class="pswp__share-tooltip"></div>
 				</div>
-
 				<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
 				<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-
 				<div class="pswp__caption">
 					<div class="pswp__caption__center"></div>
 				</div>
